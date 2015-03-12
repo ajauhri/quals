@@ -17,6 +17,7 @@
 \usepackage[upright]{fourier}
 \usetikzlibrary{matrix,arrows,decorations.pathmorphing}
 \usepackage{xparse}
+\usepackage[nomessages]{fp}% http://ctan.org/pkg/fp
 \usetikzlibrary{calc}
 \usepackage{breqn} %for dmath
 \usepackage{hyperref} 
@@ -94,18 +95,28 @@
         \vspace{5mm}
         \centering\only<4->{How can we automate the process by use of stochastic algorithms?}
     \end{frame}
+ 
+    \begin{frame}[t]{Contributions}
+        \begin{itemize}
+            \item Formulation of the antenna placement problem
+            \item Evaluation of standard stochastic algorithms on a real-world problem
+            \item Able to achieve global optimum with as low as 21\% evaluations
+        \end{itemize}
+        \vspace{5mm}
+    \end{frame}
+   
 
     \begin{frame}[t]{Antenna Placement Example}
         \begin{figure}
             \centering
-            \includegraphics[width=75mm]{car.png}
+            \includegraphics[width=.6\textwidth]{car.png}
         \end{figure}
         \begin{itemize}
             \item \textcolor{red}{$A_1$} has $24$ possible antenna placements
             \item \textcolor{cyan}{$A_2$} has $33$ possible antenna placements
             \item \textcolor{black}{$A_3$} has $136$ possible antenna placements
         \end{itemize}
-        Size of search space $= m^n$\\
+        Size of search space $= m^n$, where $m$ is the number of allowable placements for one antenna, and $n$ is the number of antennas.
     \end{frame}
 
     \begin{frame}[t]{Antenna Placement Problem}
@@ -130,13 +141,22 @@
         \end{itemize}
     \end{frame}
 
+    \begin{frame}[t]{Characterstics of Stochastic Algorithms}
+    \begin{itemize} \itemsep1.5em
+            \item A set of solution candidates (or hypothesis) maintained
+            \item Mating selection process is performed on the solution candidates
+            \item Several solutions are combined to generate new candidate solutions
+        \end{itemize}
+    \end{frame}
+
+
 
     \begin{frame}[t]{Representation}
         \begin{figure}
             \centering
-            \includegraphics[width=75mm]{car.png}
+            \includegraphics[width=.6\textwidth]{car.png}
         \end{figure}
-        A hypothesis is represented by a set of antenna placements. For instance - $(\textcolor{red}{(x_1, y_1, z_1)}, \textcolor{cyan}{(x_1, y_1, z_1)}, \textcolor{black}{(x_1, y_1, z_1)})$
+        A hypothesis is represented by a set of antenna placements. For instance - $(\textcolor{red}{(x_i, y_i, z_i)}, \textcolor{cyan}{(x_j, y_j, z_j)}, \textcolor{black}{(x_k, y_k, z_k)})$
     \end{frame}
 
     \begin{frame}[t]{Evolutionary Strategy}
@@ -183,46 +203,20 @@
             \end{algorithm}
         \end{frame}
 
-        \begin{frame}[t]{Antenna Placement Objectives}
-            \begin{columns}[T]
-                \begin{column}{.48\textwidth}
-                    \color{black}\rule{\linewidth}{2pt}
-                    Antenna Placement Issues
-                    \vspace{10px}
-                    \begin{itemize}
-                        \item[\chemarrow] Coupling among antennas 
-                        \item[\chemarrow] Parasitic effects and reflections from the host platform 
-                        \item[\chemarrow] Loss of efficiency
-                        \item[\chemarrow] Difficulty conforming to aerodynamic, thermal, other enovironment factors 
-                    \end{itemize} 
-                \end{column}%
-                \hfill%
-                \begin{column}{.48\textwidth}
-                    \color{black}\rule{\linewidth}{2pt}
-                    Desired Antenna Placement Objectives
-                    \vspace{10px}
-                    \begin{itemize}
-                        \item[\chemarrow] Gain in radiation pattern 
-                        \item [\chemarrow] Minimize coupling
-                    \end{itemize}
-                \end{column}%
-            \end{columns}
-        \end{frame}
-
         \begin{frame}{Minimize Difference in Radiation Pattern}
             Pattern defines the ratio of energy radiated and input energy in a particular direction. For each antenna $A_i$:
             \begin{tcolorbox}[colback=green!5]
                 \begin{equation} \label{eq:rp}
                     F_{RP}(A_i) = \sum_{\theta}\sum_{\phi} 
-                    \| ISG_i(\theta,\phi) - FSG_i(\theta,\phi) \| ^2,
+                    \| FSG_i(\theta,\phi) - ISG_i(\theta,\phi) \| ^2,
                 \end{equation}
             \end{tcolorbox}
             where
             \begin{itemize}
                     \small
                 \item $\theta, \phi$ spherical and cylindrical coordinates
-                \item $ISG(\cdot)$ returns in-situ gain pattern
                 \item $FSG(\cdot)$ returns free-space gain pattern  
+                \item $ISG(\cdot)$ returns in-situ gain pattern
             \end{itemize}
 
             \tdplotsetmaincoords{60}{110}
@@ -271,17 +265,17 @@
                     F = \alpha F_{MC} + \beta \sum_{i} F_{RP}(A_i),
                 \end{equation}
             \end{tcolorbox}
-            TODO: about weights
+            where $\alpha + \beta = 1$
         \end{frame}
 
 
         \begin{frame}[t]{Experimental Setup}
-            \begin{itemize}
+            \begin{enumerate}
                 \item Create (s) such that each individual is defined by a placement for each of the $m$ antennas
                 \item Run all individuals through \textit{NEC} simulator \footnote{http://www.nec2.org} to get fitness parameters 
                 \item Apply EA operators 
-                \item Repeat\dots 
-            \end{itemize}
+                \item Repeat till either global minimum is reached or 50\% evaluations of search space
+            \end{enumerate}
             \vspace{10mm}
         \end{frame}
 
@@ -313,22 +307,6 @@
             \end{center}
         \end{frame}
 
-        \begin{frame}{Results: Mean Evaluations}
-            Mean number of evaluations to reach the best solution (over 10 runs):
-            \begin{table}
-                \centering
-                \begin{tabular}{|>{\small}c|>{\small}c|>{\small}c|>{\small}c|c|} \hline
-                    \centering
-                    \backslashbox{test case}{method} & GA & ES & SA & HC\\\hline
-                    tc1(7056)\footnote{Total number of possible evaluations within parenthesis} & \num{2350} & \num{1728} & \num{667} & \num{164} \\ \hline
-                    tc2(50,625) & \num{31680} & \num{11165} & \num{1653} & \num{174} \\ \hline
-                    tc3(126,025) & \num{45900} & \num{26880} & \num{4809} & \num{227} \\ \hline
-                    tc4(20,736) & \num{6150} & \num{4466} & \num{423} & \num{90} \\ \hline
-                \end{tabular}
-            \end{table}
-        \end{frame}
-
-
         \begin{frame}{Equivalence of fitness to efficiency}
             \small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).
             \begin{table}
@@ -348,10 +326,10 @@
             where $N = \;\mid \theta \mid \cdot \mid \phi \mid$
         \end{frame}
 
-        \begin{frame}[t]{Conclusion}
+        \begin{frame}{Conclusion}
             \begin{itemize}
                 \item Formulation of the antenna placement problem
-                \item Generic to accommodate multiple antennas and platforms
+                \item Generic problem formulation to accommodate multiple antennas and platforms
                 \item Optimal placements found using stochastic algorithms
             \end{itemize}
         \end{frame}
