@@ -1,0 +1,232 @@
+\documentclass{beamer}
+\usepackage{lmodern}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage{graphicx}
+\usepackage{chemarrow}
+\usepackage[english]{babel}
+\usepackage{caption}
+\usepackage{epstopdf}
+\usepackage{pgfplots}
+\usepackage{rotating}
+\usepackage{tcolorbox}
+\usepackage{slashbox}
+\usepackage{tablefootnote}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{lipsum}
+\usepackage{adjustbox}
+\epstopdfsetup{update}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, calc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usetikzlibrary{decorations.pathmorphing, decorations.text}
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{footline}{%
+\hfill\usebeamertemplate***{navigation symbols}
+\hspace{1cm}\insertframenumber{}/\inserttotalframenumber}
+\usetikzlibrary{trees}
+\DeclareMathOperator*{\argmax}{argmax}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\bigO}[1]{\ensuremath{\mathop{}\mathopen{}\mathcal{O}\mathopen{}\left(#1\right)}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\suchthat}{\, \mid \,} 
+\setbeamertemplate{frametitle}{\color{black}\bfseries\insertframetitle\par\vskip-6pt\hrulefill}
+\setbeamercolor*{item}{fg=black}
+
+\begin{document}
+\begin{frame}[plain]
+    \centering{\Huge A Comparison of Antenna Placement Algorithms}
+    \vspace{30px}
+    \begin{center}
+        \Large Abhinav Jauhri, Jason D. Lohn, Derek S. Linden
+    \end{center}
+\end{frame}
+
+\begin{frame}[t]{Antenna Placement Example}
+\begin{figure}
+    \centering
+    \includegraphics[width=75mm]{car.png}
+\end{figure}
+\begin{itemize}
+    \item \textcolor{red}{$A_1$} has $24$ possible antenna placements
+    \item \textcolor{cyan}{$A_2$} has $33$ possible antenna placements
+    \item \textcolor{black}{$A_3$} has $136$ possible antenna placements
+\end{itemize}
+Size of search space $= m^n$\\
+\small Goal: Find a placement for each of three antennas.
+\end{frame}
+
+\begin{frame}[t]{The Problem}
+    Given:
+\begin{itemize} \itemsep1.5em
+        \item platform $P$ with its surface gridded so that grid points represent possible antenna placement
+        \item set of  $m (m > 1)$ antennas $A = {A_1, A_2, \dots, A_m}$
+        \item for each $A_i$, a set of $n$ possible placement locations $(n>1)$; $A_i = \{(x_{i1}, y_{i1}, z_{i1}), (x_{i2}, y_{i2}, z_{i2}) \dots (x_{in}, y_{in}, z_{in})\}$
+    \end{itemize}
+\vspace{10px}
+    Find: A set of $m$ optimal antenna locations on $P$
+\end{frame}
+
+\begin{frame}[t]{Antenna Placement Objectives}
+    \begin{columns}[T]
+    \begin{column}{.48\textwidth}
+\color{black}\rule{\linewidth}{2pt}
+Antenna Placement Issues
+\vspace{10px}
+\begin{itemize}
+    \item[\chemarrow] Coupling among antennas 
+    \item[\chemarrow] Parasitic effects and reflections from the host platform 
+    \item[\chemarrow] Loss of efficiency
+    \item[\chemarrow] Difficulty conforming to aerodynamic, thermal, other enovironment factors 
+\end{itemize} 
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\color{black}\rule{\linewidth}{2pt}
+Desired Antenna Placement Objectives
+\vspace{10px}
+\begin{itemize}
+    \item[\chemarrow] Gain in radiation pattern 
+    \item [\chemarrow] Minimize coupling
+\end{itemize}
+\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{frame}{Fitness Functions - I}
+    To minimize difference in gain:
+\begin{tcolorbox}[colback=green!5]
+\begin{equation} \label{eq:rp}
+  F_{RP}(A_i) = \sum_{\theta}\sum_{\phi} 
+           \| ISG_i(\theta,\phi) - FSG_i(\theta,\phi) \| ^2,
+\end{equation}
+\end{tcolorbox}
+where
+\begin{itemize}
+        \small
+    \item $\theta, \phi$ spherical and cylindrical coordinates
+    \item $ISG(\cdot)$ returns in-situ gain pattern
+    \item $FSG(\cdot)$ returns free-space gain pattern  
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=40mm, height=30mm]{rad.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Fitness Functions - II}
+    To minimize coupling: 
+\begin{tcolorbox}[colback=green!5]
+\begin{equation}
+  F_{MC} = \sum_{i=1}^{m-1}\sum_{j=i+1}^{m} CP(A_i, A_j),
+\end{equation}
+\end{tcolorbox}
+where
+\begin{itemize}
+    \item $CP(\cdot)$ computes the coupling between two antennas
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Overall Fitness Function}
+For an individual/hypothesis, fitness is defined as:
+\begin{tcolorbox}[colback=green!5]
+\begin{equation} \label{eq:optimal}
+  F = \alpha F_{MC} + \beta \sum_{i} F_{RP}(A_i),
+\end{equation}
+\end{tcolorbox}
+where $\alpha + \beta = 1$
+\end{frame}
+
+\begin{frame}[t]{Experimental Setup}
+    \begin{itemize}
+        \item Create individual(s) such that each individual is defined by a placement for each of the $m$ antennas
+        \item Run all individuals through \textit{NEC} simulator \footnote{http://www.nec2.org} to get fitness parameters 
+        \item Apply EA operators 
+        \item Repeat\dots 
+    \end{itemize}
+    \vspace{10mm}
+    Algorithms explored: Simple GA, Simulated Annealing, Evolutionary Strategy, and Hill Climber \footnote{https://github.com/ajauhri/evol-ant-placement} 
+\end{frame}
+\begin{frame}{Experiments: Test Cases}
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|} \hline
+    ID&Antennas&Total allowable placements\\ \hline
+tc1 & 2 & 7,056 (83x83) \\ \hline
+tc2 & 3 & 50,625 (45x45x25) \\ \hline
+tc3 & 3 & 126,025 (71x71x25) \\ \hline
+tc4 & 4 & 20,736 (12x12x12x12) \\
+\hline\end{tabular}
+\end{table}
+\small *Allowable placements for each antenna are provided within parenthesis
+\end{frame}
+
+\begin{frame}{Results: Mean Evaluations}
+    Mean number of evaluations to reach the best solution (over 10 runs):
+\begin{table}
+\centering
+\begin{tabular}{|>{\small}c|>{\small}c|>{\small}c|>{\small}c|c|} \hline
+\centering
+\backslashbox{test case}{method} & GA & ES & SA & HC\\\hline
+tc1(7056)\footnote{Total number of possible evaluations within parenthesis} & \num{2350} & \num{1728} & \num{667} & \num{164} \\ \hline
+tc2(50,625) & \num{31680} & \num{11165} & \num{1653} & \num{174} \\ \hline
+tc3(126,025) & \num{45900} & \num{26880} & \num{4809} & \num{227} \\ \hline
+tc4(20,736) & \num{6150} & \num{4466} & \num{423} & \num{90} \\ \hline
+\end{tabular}
+\end{table}
+\begin{itemize}
+    \item Simulated Annealing was the fastest
+    \item Evolutionary Strategy always found optimal, but was relatively slow
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Results - Mean Best Fitness}
+\small
+\begin{itemize}
+    \item[--] Lower fitness is better
+    \item[--] Mean taken over $10$ runs
+    \item[--] In all test cases, antennas were subjected to same frequency
+\end{itemize}
+
+\vspace{10px}
+    \resizebox{\linewidth}{!}{
+\begin{tabular}{|>{\small}c|>{\small}c|>{\small}c|>{\small}c|>{\small}c|c|} \hline
+\backslashbox{test case}{method} & Exhaustive($H^*$) & GA & ES & SA & HC\\\hline
+test case 1 & \num{0.4968} & \num{0.4993} & \num{0.4968} & \num{0.4994} & \num{0.5015} \\ \hline
+test case 2 & \num{0.4968} & \num{0.4979} & \num{0.4968} & \num{0.5042} & \num{0.5138} \\ \hline
+test case 3 & \num{0.4974} & \num{0.4976} & \num{0.4974} & \num{0.4974} & \num{0.4987}\footnote{Best performing individuals lie within a small fitness range} \\ \hline
+test case 4 & \num{0.4992} & \num{0.4992} & \num{0.4992} & \num{0.4992} & \num{0.4992} \\ \hline
+\end{tabular}}
+
+\end{frame}
+
+
+\begin{frame}{Equivalence of fitness to efficiency}
+\small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).
+\begin{table}
+\centering
+  \begin{threeparttable}
+      \begin{tabular}{|C{1cm}|C{2.5cm}|C{2.5cm}|} \hline
+          ID& $\mathbb E_g$ & $\Delta_{c}$ (dB) \\ \hline
+tc1 & 872.277 & 0.5474 \\ \hline
+tc2 & 862.082 & 1.3034 \\ \hline
+tc3 & 861.845 & 1.5180 \\ \hline
+tc4 & 871.049 & 0.5693 \\
+\hline\end{tabular}
+\end{threeparttable}
+\end{table}
+\tiny
+    $\mathbb E_g = \frac{1}{N \cdot m} \sum_{i}^m F_{RP}(A_i),$
+where $N = \;\mid \theta \mid \cdot \mid \phi \mid$
+\end{frame}
+\begin{frame}
+    Thanks!
+\end{frame}
+\end{document}

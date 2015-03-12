@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: eap_paper.aux
+The style file: plain.bst
+Database file #1: eap_paper.bib
+Warning--empty journal in banzhaf1997genetic
+Warning--there's a number but no volume in burke1981numerical
+Warning--empty journal in davis1987genetic
+Warning--empty journal in leivo2009improving
+You've used 35 entries,
+            2118 wiz_defined-function locations,
+            690 strings with 10120 characters,
+and the built_in function-call counts, 11797 in all, are:
+= -- 1204
+> -- 472
+< -- 14
++ -- 191
+- -- 152
+* -- 743
+:= -- 1909
+add.period$ -- 115
+call.type$ -- 35
+change.case$ -- 176
+chr.to.int$ -- 0
+cite$ -- 39
+duplicate$ -- 500
+empty$ -- 967
+format.name$ -- 152
+if$ -- 2541
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 41
+newline$ -- 178
+num.names$ -- 70
+pop$ -- 216
+preamble$ -- 1
+purify$ -- 146
+quote$ -- 0
+skip$ -- 348
+stack$ -- 0
+substring$ -- 731
+swap$ -- 128
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 126
+warning$ -- 4
+while$ -- 124
+width$ -- 37
+write$ -- 388
+(There were 4 warnings)
