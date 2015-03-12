@@ -88,7 +88,7 @@
 
     \begin{frame}[t]{Motivation}
         \begin{itemize}
-            \item<1->Antenna placement on a multi-platform is a manual, and time consuming process
+            \item<1->Multiple antenna placement on a platform is a manual, and time consuming process
             \item<2->Number of possible placements (search space) of antennas becomes exponentially large in the number of antennas to be placed
             \item<3-> Stochastic algorithms have been used effectively to find antenna designs {\textit{\small (Reference: Hornby, Lohn, \& Linden. "Computer-Automated Evolution of an X-Band Antenna for NASA's Space Technology 5 Mission." 2011)}}
         \end{itemize}
@@ -127,7 +127,7 @@
             \item<3-> for each $A_i$, let $L_i$ denote the set of allowable placements locations $\in \mathbb R^3$ such that $\mid L_i \mid = n_i$ and $\forall i, n_i > 1$; $L_i = \{(x_{1}, y_{1}, z_{1}) \dots (x_{n_i}, y_{n_i}, z_{n_i})\}$
         \end{itemize}
         \vspace{10px}
-        \centering\only<4->{\textbf{Goal}: A set of $m$ optimal antenna locations on $P$}
+        \centering\only<4->{\textbf{Goal}: Find a set of $n$ antenna locations on $P$}
     \end{frame}
 
     \begin{frame}[t]{Stochastic Algorithms}
