@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  12 MAR 2015 00:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  12 MAR 2015 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1106,15 +1106,20 @@ een already used, duplicate ignored
 l.336 
        [5 <./FIG/ga_mut-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <FIG/tc1_sp.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 1232774 bytes
+(epstopdf)                    date: 2015-03-12 00:17:18
+(epstopdf)                    size: 1232764 bytes
 (epstopdf)             Output file: <FIG/tc1_sp-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-03-11 23:26:52
 (epstopdf)                    size: 15553 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc1_sp-eps-converted-t
 o.pdf FIG/tc1_sp.eps>
 (epstopdf)             \includegraphics on input line 355.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=FIG/tc1_sp-eps-converted-to.pdf FIG/tc1_sp.eps)..
+.executed safely (allowed).
+
+Package epstopdf Info: Result file: <FIG/tc1_sp-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-12 00:25:12
+(epstopdf)                    size: 15533 bytes.
 
 <FIG/tc1_sp-eps-converted-to.pdf, id=309, 578.16pt x 433.62pt>
 File: FIG/tc1_sp-eps-converted-to.pdf Graphic file (type pdf)
@@ -1129,15 +1134,20 @@ Overfull \hbox (6.96277pt too wide) in paragraph at lines 355--356
  []
 
 Package epstopdf Info: Source file: <FIG/tc2_sp.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 1232258 bytes
+(epstopdf)                    date: 2015-03-12 00:17:20
+(epstopdf)                    size: 1232248 bytes
 (epstopdf)             Output file: <FIG/tc2_sp-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-03-11 23:26:52
 (epstopdf)                    size: 15368 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc2_sp-eps-converted-t
 o.pdf FIG/tc2_sp.eps>
 (epstopdf)             \includegraphics on input line 363.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=FIG/tc2_sp-eps-converted-to.pdf FIG/tc2_sp.eps)..
+.executed safely (allowed).
+
+Package epstopdf Info: Result file: <FIG/tc2_sp-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-12 00:25:13
+(epstopdf)                    size: 15348 bytes.
 <FIG/tc2_sp-eps-converted-to.pdf, id=310, 578.16pt x 433.62pt>
 File: FIG/tc2_sp-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1151,15 +1161,20 @@ Overfull \hbox (6.96277pt too wide) in paragraph at lines 363--364
  []
 
 Package epstopdf Info: Source file: <FIG/tc3_sp.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 1232431 bytes
+(epstopdf)                    date: 2015-03-12 00:17:21
+(epstopdf)                    size: 1232421 bytes
 (epstopdf)             Output file: <FIG/tc3_sp-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-03-11 23:26:51
 (epstopdf)                    size: 15241 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc3_sp-eps-converted-t
 o.pdf FIG/tc3_sp.eps>
 (epstopdf)             \includegraphics on input line 371.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=FIG/tc3_sp-eps-converted-to.pdf FIG/tc3_sp.eps)..
+.executed safely (allowed).
+
+Package epstopdf Info: Result file: <FIG/tc3_sp-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-12 00:25:13
+(epstopdf)                    size: 15221 bytes.
 <FIG/tc3_sp-eps-converted-to.pdf, id=311, 578.16pt x 433.62pt>
 File: FIG/tc3_sp-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1173,15 +1188,20 @@ Overfull \hbox (6.96277pt too wide) in paragraph at lines 371--372
  []
 
 Package epstopdf Info: Source file: <FIG/tc4_sp.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 1232249 bytes
+(epstopdf)                    date: 2015-03-12 00:17:22
+(epstopdf)                    size: 1232239 bytes
 (epstopdf)             Output file: <FIG/tc4_sp-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-03-11 23:26:51
 (epstopdf)                    size: 15054 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc4_sp-eps-converted-t
 o.pdf FIG/tc4_sp.eps>
 (epstopdf)             \includegraphics on input line 379.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=FIG/tc4_sp-eps-converted-to.pdf FIG/tc4_sp.eps)..
+.executed safely (allowed).
+
+Package epstopdf Info: Result file: <FIG/tc4_sp-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-12 00:25:14
+(epstopdf)                    size: 15034 bytes.
 <FIG/tc4_sp-eps-converted-to.pdf, id=312, 578.16pt x 433.62pt>
 File: FIG/tc4_sp-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1280,7 +1300,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb>
-Output written on eap_paper.pdf (8 pages, 387722 bytes).
+Output written on eap_paper.pdf (8 pages, 387695 bytes).
 PDF statistics:
  458 PDF objects out of 1000 (max. 8388607)
  403 compressed objects within 5 object streams
