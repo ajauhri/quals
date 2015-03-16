@@ -1,8 +1,8 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Related Works}{}% 2
+\BOOKMARK [1][-]{section.2}{Related Work}{}% 2
 \BOOKMARK [1][-]{section.3}{Problem Formulation}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Inputs}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Fitness Evaluation}{section.3}% 5
+\BOOKMARK [2][-]{subsubsection.3.0.1}{Inputs}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.0.2}{Fitness Evaluation}{subsubsection.3.0.1}% 5
 \BOOKMARK [1][-]{section.4}{Stochastic Search Algorithms}{}% 6
 \BOOKMARK [2][-]{subsection.4.1}{Genetic Algorithm}{section.4}% 7
 \BOOKMARK [2][-]{subsection.4.2}{Evolutionary Strategy}{section.4}% 8

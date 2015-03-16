@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: eap_paper.aux
 The style file: plain.bst
 Database file #1: eap_paper.bib
-Warning--there's a number but no volume in burke1981numerical
-You've used 13 entries,
+You've used 2 entries,
             2118 wiz_defined-function locations,
-            576 strings with 6423 characters,
-and the built_in function-call counts, 4340 in all, are:
-= -- 443
-> -- 162
-< -- 6
-+ -- 67
-- -- 52
-* -- 268
-:= -- 704
-add.period$ -- 43
-call.type$ -- 13
-change.case$ -- 63
+            510 strings with 4521 characters,
+and the built_in function-call counts, 1053 in all, are:
+= -- 108
+> -- 45
+< -- 4
++ -- 18
+- -- 16
+* -- 73
+:= -- 160
+add.period$ -- 8
+call.type$ -- 2
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 188
-empty$ -- 363
-format.name$ -- 52
-if$ -- 939
+cite$ -- 2
+duplicate$ -- 44
+empty$ -- 80
+format.name$ -- 16
+if$ -- 235
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 15
-newline$ -- 68
-num.names$ -- 26
-pop$ -- 77
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 18
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 12
 quote$ -- 0
-skip$ -- 130
+skip$ -- 35
 stack$ -- 0
-substring$ -- 268
-swap$ -- 52
-text.length$ -- 6
+substring$ -- 66
+swap$ -- 22
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
-warning$ -- 1
-while$ -- 45
-width$ -- 15
-write$ -- 148
-(There was 1 warning)
+type$ -- 8
+warning$ -- 0
+while$ -- 10
+width$ -- 3
+write$ -- 28

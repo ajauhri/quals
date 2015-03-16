@@ -1,52 +1,4 @@
-\begin{thebibliography}{10}
-
-\bibitem{ben2004computing}
-Walid Ben-Ameur.
-\newblock Computing the initial temperature of simulated annealing.
-\newblock {\em Computational Optimization and Applications}, 29(3):369--385,
-  2004.
-
-\bibitem{burke1981numerical}
-GJ~Burke and AJ~Poggio.
-\newblock Numerical electromagnetics code (nec)-method of moments, part iii:
-  User's guide.
-\newblock {\em Lawrence Livermore National Laboratory}, (1), 1981.
-
-\bibitem{famdie2007optimal}
-Celestin~Tamgue Famdie, Werner~L Schroeder, and Klaus Solbach.
-\newblock Optimal antenna location on mobile phones chassis based on the
-  numerical analysis of characteristic modes.
-\newblock In {\em Microwave Conference, 2007. European}, pages 987--990. IEEE,
-  2007.
-
-\bibitem{fogel1994introduction}
-David~B Fogel.
-\newblock An introduction to simulated evolutionary optimization.
-\newblock {\em Neural Networks, IEEE Transactions on}, 5(1):3--14, 1994.
-
-\bibitem{haupt2007genetic}
-Randy~L Haupt and Douglas~H Werner.
-\newblock {\em Genetic algorithms in electromagnetics}.
-\newblock Wiley. com, 2007.
-
-\bibitem{holland1975adaptation}
-John~H Holland.
-\newblock {\em Adaptation in natural and artificial systems: An introductory
-  analysis with applications to biology, control, and artificial intelligence.}
-\newblock U Michigan Press, 1975.
-
-\bibitem{hornby2006alps}
-Gregory~S Hornby.
-\newblock Alps: the age-layered population structure for reducing the problem
-  of premature convergence.
-\newblock In {\em Proceedings of the 8th annual conference on Genetic and
-  evolutionary computation}, pages 815--822. ACM, 2006.
-
-\bibitem{linden1997automated}
-Derek~S Linden.
-\newblock Automated design and optimization of wire antennas using genetic
-  algorithms.
-\newblock Technical report, DTIC Document, 1997.
+\begin{thebibliography}{1}
 
 \bibitem{linden2000wire}
 Derek~S Linden.
@@ -62,23 +14,5 @@ Jason~D Lohn, Derek~S Linden, Gregory~S Hornby, Adan Rodriguez-Arroyo,
   antenna for nasa's space technology 5 mission.
 \newblock In {\em Antennas and Propagation Society International Symposium,
   2005 IEEE}, volume~2, pages 267--270. IEEE, 2005.
-
-\bibitem{miller1995genetic}
-Brad~L Miller and David~E Goldberg.
-\newblock Genetic algorithms, tournament selection, and the e ects of noise.
-\newblock {\em Urbana}, 51:61801, 1995.
-
-\bibitem{pan2008discrete}
-Quan-Ke Pan, Mehmet~Fatih Tasgetiren, and Yun-Chia Liang.
-\newblock A discrete differential evolution algorithm for the permutation
-  flowshop scheduling problem.
-\newblock {\em Computers \& Industrial Engineering}, 55(4):795--816, 2008.
-
-\bibitem{schwefel1977numerische}
-Hans-Paul Schwefel.
-\newblock {\em Numerische Optimierung von Computer-Modellen mittels der
-  Evolutionsstrategie: mit einer vergleichenden Einf{\"u}hrung in die
-  Hill-Climbing-und Zufallsstrategie}.
-\newblock Birkh{\"a}user Basel, 1977.
 
 \end{thebibliography}
