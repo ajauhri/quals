@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  12 MAR 2015 00:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  16 MAR 2015 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -994,228 +994,185 @@ Overfull \hbox (6.6496pt too wide) in paragraph at lines 62--63
 g,
  []
 
-Package epstopdf Info: Source file: <FIG/plate.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 679860 bytes
-(epstopdf)             Output file: <FIG/plate-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:52
-(epstopdf)                    size: 7560 bytes
-(epstopdf)             Command: <repstopdf --outfile=FIG/plate-eps-converted-to
-.pdf FIG/plate.eps>
-(epstopdf)             \includegraphics on input line 94.
+Package epstopdf Info: Source file: <FIG/tc_1_figure.eps>
+(epstopdf)                    date: 2015-03-16 10:19:49
+(epstopdf)                    size: 53204 bytes
+(epstopdf)             Output file: <FIG/tc_1_figure-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-16 10:22:59
+(epstopdf)                    size: 39556 bytes
+(epstopdf)             Command: <repstopdf --outfile=FIG/tc_1_figure-eps-conver
+ted-to.pdf FIG/tc_1_figure.eps>
+(epstopdf)             \includegraphics on input line 92.
 Package epstopdf Info: Output file is already uptodate.
-<FIG/plate-eps-converted-to.pdf, id=75, 279.0425pt x 224.84pt>
-File: FIG/plate-eps-converted-to.pdf Graphic file (type pdf)
+<FIG/tc_1_figure-eps-converted-to.pdf, id=63, 578.16pt x 433.62pt>
+File: FIG/tc_1_figure-eps-converted-to.pdf Graphic file (type pdf)
 
-<use FIG/plate-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/plate-eps-converted-to.pdf used on input line 94.
-(pdftex.def)             Requested size: 206.64185pt x 166.50592pt.
+<use FIG/tc_1_figure-eps-converted-to.pdf>
+Package pdftex.def Info: FIG/tc_1_figure-eps-converted-to.pdf used on input lin
+e 92.
+(pdftex.def)             Requested size: 206.64185pt x 154.97827pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 148.
+(Font)              <8> on input line 146.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.160 \end{itemize}
-                    [2 <./FIG/plate-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 264.
+l.166 
+       [2 <./FIG/tc_1_figure-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 183.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.265 
-       [3]
-Package epstopdf Info: Source file: <FIG/s6.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 520015 bytes
-(epstopdf)             Output file: <FIG/s6-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 8115 bytes
-(epstopdf)             Command: <repstopdf --outfile=FIG/s6-eps-converted-to.pd
-f FIG/s6.eps>
-(epstopdf)             \includegraphics on input line 271.
-Package epstopdf Info: Output file is already uptodate.
- <FIG/s6-eps-converted-to.pdf, id=219, 242.9075pt x 197.73875pt>
-File: FIG/s6-eps-converted-to.pdf Graphic file (type pdf)
-
-<use FIG/s6-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/s6-eps-converted-to.pdf used on input line 271.
-(pdftex.def)             Requested size: 206.64185pt x 168.21451pt.
-Package epstopdf Info: Source file: <FIG/s5.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 758716 bytes
-(epstopdf)             Output file: <FIG/s5-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 14178 bytes
-(epstopdf)             Command: <repstopdf --outfile=FIG/s5-eps-converted-to.pd
-f FIG/s5.eps>
-(epstopdf)             \includegraphics on input line 279.
+)
+Package epstopdf Info: Source file: <FIG/tc_2_figure.eps>
+(epstopdf)                    date: 2015-03-16 10:19:53
+(epstopdf)                    size: 96128 bytes
+(epstopdf)             Output file: <FIG/tc_2_figure-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-16 10:21:49
+(epstopdf)                    size: 37344 bytes
+(epstopdf)             Command: <repstopdf --outfile=FIG/tc_2_figure-eps-conver
+ted-to.pdf FIG/tc_2_figure.eps>
+(epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/s5-eps-converted-to.pdf, id=220, 291.0875pt x 241.90375pt>
-File: FIG/s5-eps-converted-to.pdf Graphic file (type pdf)
+<FIG/tc_2_figure-eps-converted-to.pdf, id=145, 578.16pt x 433.62pt>
+File: FIG/tc_2_figure-eps-converted-to.pdf Graphic file (type pdf)
 
-<use FIG/s5-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/s5-eps-converted-to.pdf used on input line 279.
-(pdftex.def)             Requested size: 206.64185pt x 171.73071pt.
+<use FIG/tc_2_figure-eps-converted-to.pdf>
+Package pdftex.def Info: FIG/tc_2_figure-eps-converted-to.pdf used on input lin
+e 190.
+(pdftex.def)             Requested size: 206.64185pt x 154.97827pt.
+Package epstopdf Info: Source file: <FIG/tc_3_figure.eps>
+(epstopdf)                    date: 2015-03-16 10:19:56
+(epstopdf)                    size: 94756 bytes
+(epstopdf)             Output file: <FIG/tc_3_figure-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-16 10:21:15
+(epstopdf)                    size: 44426 bytes
+(epstopdf)             Command: <repstopdf --outfile=FIG/tc_3_figure-eps-conver
+ted-to.pdf FIG/tc_3_figure.eps>
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
+
+<FIG/tc_3_figure-eps-converted-to.pdf, id=146, 578.16pt x 433.62pt>
+File: FIG/tc_3_figure-eps-converted-to.pdf Graphic file (type pdf)
+
+<use FIG/tc_3_figure-eps-converted-to.pdf>
+Package pdftex.def Info: FIG/tc_3_figure-eps-converted-to.pdf used on input lin
+e 198.
+(pdftex.def)             Requested size: 206.64185pt x 154.97827pt.
+
+Overfull \hbox (2.99615pt too wide) in paragraph at lines 204--205
+\T1/lmr/m/n/9 All ex-per-i-ments com-puted the ra-di-a-tion gain over $\OT1/lmr
+/m/n/9 4140$ \T1/lmr/m/n/9 points
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.288 
-       [4 <./FIG/s6-eps-converted-to.pdf> <./FIG/s5-eps-converted-to.pdf>]
-Overfull \hbox (3.06348pt too wide) in paragraph at lines 309--310
+l.205 
+       [3 <./FIG/tc_2_figure-eps-converted-to.pdf> <./FIG/tc_3_figure-eps-conve
+rted-to.pdf>]
+Overfull \hbox (3.06348pt too wide) in paragraph at lines 228--229
 []\T1/lmr/m/n/9 Each test case was first eval-u-ated with an ex-haus-tive searc
 h
  []
 
-Package epstopdf Info: Source file: <FIG/ga_mut.eps>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 1237478 bytes
-(epstopdf)             Output file: <FIG/ga_mut-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 15226 bytes
-(epstopdf)             Command: <repstopdf --outfile=FIG/ga_mut-eps-converted-t
-o.pdf FIG/ga_mut.eps>
-(epstopdf)             \includegraphics on input line 317.
-Package epstopdf Info: Output file is already uptodate.
-<FIG/ga_mut-eps-converted-to.pdf, id=277, 578.16pt x 433.62pt>
-File: FIG/ga_mut-eps-converted-to.pdf Graphic file (type pdf)
-
-<use FIG/ga_mut-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/ga_mut-eps-converted-to.pdf used on input line 317
-.
-(pdftex.def)             Requested size: 257.03723pt x 192.77834pt.
-
-Overfull \hbox (17.03723pt too wide) in paragraph at lines 317--318
- [] 
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.336 
-       [5 <./FIG/ga_mut-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <FIG/tc1_sp.eps>
-(epstopdf)                    date: 2015-03-12 00:17:18
-(epstopdf)                    size: 1232764 bytes
+(epstopdf)                    date: 2015-03-12 16:02:33
+(epstopdf)                    size: 1229758 bytes
 (epstopdf)             Output file: <FIG/tc1_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:52
-(epstopdf)                    size: 15553 bytes
+(epstopdf)                    date: 2015-03-12 16:04:09
+(epstopdf)                    size: 12852 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc1_sp-eps-converted-t
 o.pdf FIG/tc1_sp.eps>
-(epstopdf)             \includegraphics on input line 355.
-runsystem(repstopdf --outfile=FIG/tc1_sp-eps-converted-to.pdf FIG/tc1_sp.eps)..
-.executed safely (allowed).
-
-Package epstopdf Info: Result file: <FIG/tc1_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-12 00:25:12
-(epstopdf)                    size: 15533 bytes.
-
-<FIG/tc1_sp-eps-converted-to.pdf, id=309, 578.16pt x 433.62pt>
+(epstopdf)             \includegraphics on input line 258.
+Package epstopdf Info: Output file is already uptodate.
+<FIG/tc1_sp-eps-converted-to.pdf, id=227, 578.16pt x 433.62pt>
 File: FIG/tc1_sp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc1_sp-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc1_sp-eps-converted-to.pdf used on input line 355
+Package pdftex.def Info: FIG/tc1_sp-eps-converted-to.pdf used on input line 258
 .
 (pdftex.def)             Requested size: 246.96277pt x 185.22229pt.
 
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 355--356
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 258--259
  [] 
  []
 
 Package epstopdf Info: Source file: <FIG/tc2_sp.eps>
-(epstopdf)                    date: 2015-03-12 00:17:20
-(epstopdf)                    size: 1232248 bytes
+(epstopdf)                    date: 2015-03-12 16:02:34
+(epstopdf)                    size: 1229498 bytes
 (epstopdf)             Output file: <FIG/tc2_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:52
-(epstopdf)                    size: 15368 bytes
+(epstopdf)                    date: 2015-03-12 16:04:09
+(epstopdf)                    size: 12841 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc2_sp-eps-converted-t
 o.pdf FIG/tc2_sp.eps>
-(epstopdf)             \includegraphics on input line 363.
-runsystem(repstopdf --outfile=FIG/tc2_sp-eps-converted-to.pdf FIG/tc2_sp.eps)..
-.executed safely (allowed).
-
-Package epstopdf Info: Result file: <FIG/tc2_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-12 00:25:13
-(epstopdf)                    size: 15348 bytes.
-<FIG/tc2_sp-eps-converted-to.pdf, id=310, 578.16pt x 433.62pt>
+(epstopdf)             \includegraphics on input line 266.
+Package epstopdf Info: Output file is already uptodate.
+<FIG/tc2_sp-eps-converted-to.pdf, id=228, 578.16pt x 433.62pt>
 File: FIG/tc2_sp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc2_sp-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc2_sp-eps-converted-to.pdf used on input line 363
+Package pdftex.def Info: FIG/tc2_sp-eps-converted-to.pdf used on input line 266
 .
 (pdftex.def)             Requested size: 246.96277pt x 185.22229pt.
 
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 363--364
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 266--267
  [] 
  []
 
 Package epstopdf Info: Source file: <FIG/tc3_sp.eps>
-(epstopdf)                    date: 2015-03-12 00:17:21
-(epstopdf)                    size: 1232421 bytes
+(epstopdf)                    date: 2015-03-12 16:02:35
+(epstopdf)                    size: 1229563 bytes
 (epstopdf)             Output file: <FIG/tc3_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 15241 bytes
+(epstopdf)                    date: 2015-03-12 16:04:10
+(epstopdf)                    size: 12801 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc3_sp-eps-converted-t
 o.pdf FIG/tc3_sp.eps>
-(epstopdf)             \includegraphics on input line 371.
-runsystem(repstopdf --outfile=FIG/tc3_sp-eps-converted-to.pdf FIG/tc3_sp.eps)..
-.executed safely (allowed).
-
-Package epstopdf Info: Result file: <FIG/tc3_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-12 00:25:13
-(epstopdf)                    size: 15221 bytes.
-<FIG/tc3_sp-eps-converted-to.pdf, id=311, 578.16pt x 433.62pt>
+(epstopdf)             \includegraphics on input line 274.
+Package epstopdf Info: Output file is already uptodate.
+<FIG/tc3_sp-eps-converted-to.pdf, id=229, 578.16pt x 433.62pt>
 File: FIG/tc3_sp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc3_sp-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc3_sp-eps-converted-to.pdf used on input line 371
+Package pdftex.def Info: FIG/tc3_sp-eps-converted-to.pdf used on input line 274
 .
 (pdftex.def)             Requested size: 246.96277pt x 185.22229pt.
 
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 371--372
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 274--275
  [] 
  []
 
 Package epstopdf Info: Source file: <FIG/tc4_sp.eps>
-(epstopdf)                    date: 2015-03-12 00:17:22
-(epstopdf)                    size: 1232239 bytes
+(epstopdf)                    date: 2015-03-12 16:02:35
+(epstopdf)                    size: 1229394 bytes
 (epstopdf)             Output file: <FIG/tc4_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-11 23:26:51
-(epstopdf)                    size: 15054 bytes
+(epstopdf)                    date: 2015-03-12 16:04:10
+(epstopdf)                    size: 12520 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc4_sp-eps-converted-t
 o.pdf FIG/tc4_sp.eps>
-(epstopdf)             \includegraphics on input line 379.
-runsystem(repstopdf --outfile=FIG/tc4_sp-eps-converted-to.pdf FIG/tc4_sp.eps)..
-.executed safely (allowed).
-
-Package epstopdf Info: Result file: <FIG/tc4_sp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-12 00:25:14
-(epstopdf)                    size: 15034 bytes.
-<FIG/tc4_sp-eps-converted-to.pdf, id=312, 578.16pt x 433.62pt>
+(epstopdf)             \includegraphics on input line 282.
+Package epstopdf Info: Output file is already uptodate.
+<FIG/tc4_sp-eps-converted-to.pdf, id=230, 578.16pt x 433.62pt>
 File: FIG/tc4_sp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc4_sp-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc4_sp-eps-converted-to.pdf used on input line 379
+Package pdftex.def Info: FIG/tc4_sp-eps-converted-to.pdf used on input line 282
 .
 (pdftex.def)             Requested size: 246.96277pt x 185.22229pt.
 
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 379--380
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 282--283
  [] 
  []
 
 
-Overfull \hbox (4.12791pt too wide) in paragraph at lines 388--389
+Overfull \hbox (4.12791pt too wide) in paragraph at lines 291--292
 \T1/lmr/m/n/9 The other generation-based al-go-rithm (\T1/lmr/m/it/9 AP-GA\T1/l
 mr/m/n/9 ) did not prove
  []
@@ -1224,86 +1181,70 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.389 
-       [6 <./FIG/tc1_sp-eps-converted-to.pdf> <./FIG/tc2_sp-eps-converted-to.pd
-f> <./FIG/tc3_sp-eps-converted-to.pdf> <./FIG/tc4_sp-eps-converted-to.pdf>]
-(./eap_paper.bbl
-Underfull \hbox (badness 1430) in paragraph at lines 106--110
-[]\T1/lmr/m/n/9 Vladimiro Mi-randa, JV Ran-ito, and Luis Miguel
- []
-
-
-Underfull \hbox (badness 1087) in paragraph at lines 123--128
-[]\T1/lmr/m/n/9 Ramesh K Pokharel, Masaru Ishii, and Yoshi-hiro
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+l.292 
+       [4 <./FIG/tc1_sp-eps-converted-to.pdf>] (./eap_paper.bblpdfTeX warning (
+ext4): destination with the same identifier (name{page.}) has been already used
+, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 
-       [7]
-Underfull \hbox (badness 3396) in paragraph at lines 154--159
+l.21 
+      [5 <./FIG/tc2_sp-eps-converted-to.pdf> <./FIG/tc3_sp-eps-converted-to.pdf
+> <./FIG/tc4_sp-eps-converted-to.pdf>]
+Underfull \hbox (badness 3396) in paragraph at lines 78--83
 \T1/lmr/m/it/9 Computer-Modellen mit-tels der Evo-lu-tion-sstrate-gie:
  []
 
 
-Underfull \hbox (badness 2799) in paragraph at lines 154--159
+Underfull \hbox (badness 2799) in paragraph at lines 78--83
 \T1/lmr/m/it/9 mit einer ver-gle-ichen-den Ein-führung in die Hill-
  []
 
-
-Underfull \hbox (badness 1320) in paragraph at lines 193--198
-\T1/lmr/m/n/9 Quin-tanilla.  A hy-brid ge-netic al-go-rithm for the
- []
-
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 398.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.398 \end{document}
-                     [8
+l.297 \end{document}
+                     [6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 398.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
  (./eap_paper.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 398.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 398.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 297.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
 Package rerunfilecheck Info: File `eap_paper.out' has not changed.
-(rerunfilecheck)             Checksum: 232E57A48E05AA54D6DD082EA65BE66F;816.
+(rerunfilecheck)             Checksum: B30616C76443ABAAD0456F21A73E98B5;772.
  ) 
 Here is how much of TeX's memory you used:
- 17215 strings out of 495028
- 322466 string characters out of 6181498
- 738733 words of memory out of 5000000
- 19974 multiletter control sequences out of 15000+600000
- 91603 words of font info for 78 fonts, out of 8000000 for 9000
+ 17043 strings out of 495028
+ 319276 string characters out of 6181498
+ 730733 words of memory out of 5000000
+ 19893 multiletter control sequences out of 15000+600000
+ 85618 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,18n,35p,10428b,904s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,35p,10428b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmbx6.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
-6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-sy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmb8a.pfb>
-Output written on eap_paper.pdf (8 pages, 387695 bytes).
+are/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
+8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+tt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on eap_paper.pdf (6 pages, 405908 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 135 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 359 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

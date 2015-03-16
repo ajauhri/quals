@@ -100,7 +100,7 @@
         \begin{itemize}
             \item Formulation of the antenna placement problem
             \item Evaluation of standard stochastic algorithms on a real-world problem
-            \item Able to achieve global optimum with as low as 21\% evaluations
+            \item Able to achieve global optimum with as low as 21\% evaluations of search space
         \end{itemize}
         \vspace{5mm}
     \end{frame}
@@ -141,11 +141,11 @@
         \end{itemize}
     \end{frame}
 
-    \begin{frame}[t]{Characterstics of Stochastic Algorithms}
+    \begin{frame}[t]{Characteristics of EAs}
     \begin{itemize} \itemsep1.5em
             \item A set of solution candidates (or hypothesis) maintained
             \item Mating selection process is performed on the solution candidates
-            \item Several solutions are combined to generate new candidate solutions
+            \item Several solutions are combined to generate new candidate set solutions
         \end{itemize}
     \end{frame}
 
@@ -163,8 +163,8 @@
         \fontsize{8}{12}\selectfont
         \begin{algorithm}[H]
 %\scriptsize
-            \KwData{Set of placements $L=\{L_1, \cdots, L_m\}$; $\mu$; $\lambda$; $gen_{max}$ - maximum number of generations}
-            \KwResult{$H^*$ from $P$ }
+            %\KwData{Set of placements $L=\{L_1, \cdots, L_m\}$; $\mu$; $\lambda$; $gen_{max}$ - maximum number of generations}
+            %\KwResult{$H^*$ from $P$ }
             Initialize $P\leftarrow$ generate $\mu$ random hypothesis \;
             $gen_{id}=0$ \;
             \While{$gen_{id}<gen_{max}$} {
@@ -181,8 +181,8 @@
         \fontsize{8}{8}\selectfont
         \begin{algorithm}[H]
 %\scriptsize
-            \KwData{Set of placements $L=\{L_1, \cdots, L_m\}$; $T$ - initial temperature; $i_{m}$ - maximum iterations; $f_{cooling}$ - cooling factor }
-            \KwResult{$H^*$ from $P$}
+            %\KwData{Set of placements $L=\{L_1, \cdots, L_m\}$; $T$ - initial temperature; $i_{m}$ - maximum iterations; $f_{cooling}$ - cooling factor }
+            %\KwResult{$H^*$ from $P$}
             Initialize $H\leftarrow$ generate a random hypothesis \;
             Compute $fitness(H)$  \;
             $i=0$ \;
@@ -202,6 +202,32 @@
                 \label{alg:ap-sa}
             \end{algorithm}
         \end{frame}
+
+\begin{frame}[t]{Antenna Placement Objectives}
+    \begin{columns}[T]
+    \begin{column}{.48\textwidth}
+\color{black}\rule{\linewidth}{2pt}
+Antenna Placement Issues
+\vspace{10px}
+\begin{itemize}
+    \item[\chemarrow] Coupling among antennas 
+    \item[\chemarrow] Parasitic effects and reflections from the host platform 
+    \item[\chemarrow] Loss of efficiency
+    \item[\chemarrow] Difficulty conforming to aerodynamic, thermal, other enovironment factors 
+\end{itemize} 
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\color{black}\rule{\linewidth}{2pt}
+Desired Antenna Placement Objectives
+\vspace{10px}
+\begin{itemize}
+    \item[\chemarrow] Gain in radiation pattern 
+    \item [\chemarrow] Minimize coupling
+\end{itemize}
+\end{column}%
+\end{columns}
+\end{frame}
 
         \begin{frame}{Minimize Difference in Radiation Pattern}
             Pattern defines the ratio of energy radiated and input energy in a particular direction. For each antenna $A_i$:
@@ -274,7 +300,7 @@
                 \item Create (s) such that each individual is defined by a placement for each of the $m$ antennas
                 \item Run all individuals through \textit{NEC} simulator \footnote{http://www.nec2.org} to get fitness parameters 
                 \item Apply EA operators 
-                \item Repeat till either global minimum is reached or 50\% evaluations of search space
+                \item Repeat till either global minimum is reached or 50\% evaluations of search space 
             \end{enumerate}
             \vspace{10mm}
         \end{frame}
@@ -292,7 +318,6 @@
             \end{table}
             \small *Allowable placements for each antenna are provided within parenthesis
         \end{frame}
-
         \begin{frame}{Results - Success Probability}
             \begin{center}
                 \includegraphics[width=.49\textwidth]{../paper/FIG/tc1_sp.eps}

@@ -1,39 +1,16 @@
 \begin{thebibliography}{10}
 
-\bibitem{banzhaf1997genetic}
-Wolfgang Banzhaf, Peter Nordin, Robert~E Keller, and Frank~D Francone.
-\newblock Genetic programming: An introduction: On the automatic evolution of
-  computer programs and its applications (the morgan kaufmann series in
-  artificial intelligence).
-\newblock 1997.
-
 \bibitem{ben2004computing}
 Walid Ben-Ameur.
 \newblock Computing the initial temperature of simulated annealing.
 \newblock {\em Computational Optimization and Applications}, 29(3):369--385,
   2004.
 
-\bibitem{borghoff2011hill}
-Julia Borghoff, Lars~R Knudsen, and Krystian Matusiewicz.
-\newblock Hill climbing algorithms and trivium.
-\newblock In {\em Selected Areas in Cryptography}, pages 57--73. Springer,
-  2011.
-
 \bibitem{burke1981numerical}
 GJ~Burke and AJ~Poggio.
 \newblock Numerical electromagnetics code (nec)-method of moments, part iii:
   User's guide.
 \newblock {\em Lawrence Livermore National Laboratory}, (1), 1981.
-
-\bibitem{davis1987genetic}
-Lawrence Davis.
-\newblock Genetic algorithms and simulated annealing.
-\newblock 1987.
-
-\bibitem{eiben2010introduction}
-Agosten~E Eiben and James~E Smith.
-\newblock {\em Introduction to evolutionary computing}, volume~2.
-\newblock Springer Berlin, 2010.
 
 \bibitem{famdie2007optimal}
 Celestin~Tamgue Famdie, Werner~L Schroeder, and Klaus Solbach.
@@ -65,12 +42,6 @@ Gregory~S Hornby.
 \newblock In {\em Proceedings of the 8th annual conference on Genetic and
   evolutionary computation}, pages 815--822. ACM, 2006.
 
-\bibitem{leivo2009improving}
-Janne Leivo and Tin Vukusic.
-\newblock Improving the performance of strongly coupled antennas using a
-  compensating transmission line network.
-\newblock 2009.
-
 \bibitem{linden1997automated}
 Derek~S Linden.
 \newblock Automated design and optimization of wire antennas using genetic
@@ -92,26 +63,10 @@ Jason~D Lohn, Derek~S Linden, Gregory~S Hornby, Adan Rodriguez-Arroyo,
 \newblock In {\em Antennas and Propagation Society International Symposium,
   2005 IEEE}, volume~2, pages 267--270. IEEE, 2005.
 
-\bibitem{michalewicz2000escaping}
-Zbigniew Michalewicz and David~B Fogel.
-\newblock {\em Escaping Local Optima}.
-\newblock Springer, 2000.
-
 \bibitem{miller1995genetic}
 Brad~L Miller and David~E Goldberg.
 \newblock Genetic algorithms, tournament selection, and the e ects of noise.
 \newblock {\em Urbana}, 51:61801, 1995.
-
-\bibitem{miranda1994genetic}
-Vladimiro Miranda, JV~Ranito, and Luis~Miguel Proenca.
-\newblock Genetic algorithms in optimal multistage distribution network
-  planning.
-\newblock {\em Power Systems, IEEE Transactions on}, 9(4):1927--1933, 1994.
-
-\bibitem{mitchell}
-Thomas~M. Mitchell.
-\newblock {\em Machine Learning}.
-\newblock McGraw-Hill, Inc., New York, NY, USA, 1 edition, 1997.
 
 \bibitem{pan2008discrete}
 Quan-Ke Pan, Mehmet~Fatih Tasgetiren, and Yun-Chia Liang.
@@ -119,99 +74,11 @@ Quan-Ke Pan, Mehmet~Fatih Tasgetiren, and Yun-Chia Liang.
   flowshop scheduling problem.
 \newblock {\em Computers \& Industrial Engineering}, 55(4):795--816, 2008.
 
-\bibitem{pokharel2003numerical}
-Ramesh~K Pokharel, Masaru Ishii, and Yoshihiro Baba.
-\newblock Numerical electromagnetic analysis of lightning-induced voltage over
-  ground of finite conductivity.
-\newblock {\em Electromagnetic Compatibility, IEEE Transactions on},
-  45(4):651--656, 2003.
-
-\bibitem{rahmat1999electromagnetic}
-Yahya Rahmat-Samii and Eric Michielssen.
-\newblock {\em Electromagnetic optimization by genetic algorithms}.
-\newblock John Wiley \& Sons, Inc., 1999.
-
-\bibitem{rahola2006optimal}
-Jussi Rahola and Jani Ollikainen.
-\newblock Optimal antenna placement for mobile terminals using characteristic
-  mode analysis.
-\newblock In {\em Antennas and Propagation, 2006. EuCAP 2006. First European
-  Conference on}, pages 1--6. IEEE, 2006.
-
-\bibitem{raisanen2005comparison}
-Larry Raisanen and Roger~M Whitaker.
-\newblock Comparison and evaluation of multiple objective genetic algorithms
-  for the antenna placement problem.
-\newblock {\em Mobile Networks and Applications}, 10(1-2):79--88, 2005.
-
-\bibitem{rudolph2001evolutionary}
-G~Rudolph.
-\newblock Evolutionary search under partially ordered sets.
-\newblock {\em Dept. Comput. Sci./LS11, Univ. Dortmund, Dortmund, Germany,
-  Tech. Rep. CI-67/99}, 1999.
-
 \bibitem{schwefel1977numerische}
 Hans-Paul Schwefel.
 \newblock {\em Numerische Optimierung von Computer-Modellen mittels der
   Evolutionsstrategie: mit einer vergleichenden Einf{\"u}hrung in die
   Hill-Climbing-und Zufallsstrategie}.
 \newblock Birkh{\"a}user Basel, 1977.
-
-\bibitem{sexton1999optimization}
-Randall~S Sexton, Robert~E Dorsey, and John~D Johnson.
-\newblock Optimization of neural networks: A comparative analysis of the
-  genetic algorithm and simulated annealing.
-\newblock {\em European Journal of Operational Research}, 114(3):589--601,
-  1999.
-
-\bibitem{skalak1994prototype}
-David~B Skalak.
-\newblock Prototype and feature selection by sampling and random mutation hill
-  climbing algorithms.
-\newblock In {\em ICML}, pages 293--301. Citeseer, 1994.
-
-\bibitem{stjernman2006antenna}
-Anders Stjernman.
-\newblock Antenna mutual coupling effects on correlation, efficiency and
-  shannon capacity.
-\newblock In {\em Antennas and Propagation, 2006. EuCAP 2006. First European
-  Conference on}, pages 1--6. IEEE, 2006.
-
-\bibitem{tange2011gnu}
-Ole Tange.
-\newblock Gnu parallel-the command-line power tool.
-\newblock {\em login: The USENIX Magazine}, pages 42--47, 2011.
-
-\bibitem{topa2011using}
-Tomasz Topa, Andrzej Karwowski, and Artur Noga.
-\newblock Using gpu with cuda to accelerate mom-based electromagnetic
-  simulation of wire-grid models.
-\newblock {\em Antennas and Wireless Propagation Letters, IEEE}, 10:342--345,
-  2011.
-
-\bibitem{valls2008hybrid}
-Vicente Valls, Francisco Ballestin, and Sacramento Quintanilla.
-\newblock A hybrid genetic algorithm for the resource-constrained project
-  scheduling problem.
-\newblock {\em European Journal of Operational Research}, 185(2):495--508,
-  2008.
-
-\bibitem{xi2004smart}
-Bowei Xi, Zhen Liu, Mukund Raghavachari, Cathy~H Xia, and Li~Zhang.
-\newblock A smart hill-climbing algorithm for application server configuration.
-\newblock In {\em Proceedings of the 13th international conference on World
-  Wide Web}, pages 287--296. ACM, 2004.
-
-\bibitem{xu1990improved}
-Lei Xu and Erkki Oja.
-\newblock Improved simulated annealing, boltzmann machine, and attributed graph
-  matching.
-\newblock In {\em Neural Networks}, pages 151--160. Springer, 1990.
-
-\bibitem{zitzler2000comparison}
-Eckart Zitzler, Kalyanmoy Deb, and Lothar Thiele.
-\newblock Comparison of multiobjective evolutionary algorithms: Empirical
-  results.
-\newblock {\em Evolutionary computation}, 8(2):173--195, 2000.
 
 \end{thebibliography}
