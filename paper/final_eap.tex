@@ -505,7 +505,7 @@ We used an open source antenna modeling software called Numerical Electromagneti
 
 For our experiments, the candidate solution is written to an input file (to be referred as $N_{in}$) which is used by NEC2 modeler to generate an output file (to be referred as $N_{out}$). The platform and all antennas of a candidate solution are written to $N_{in}$ as a set of wires with a start-point and an end-point in 3-dimensional space.  
 
-Figure \ref{fig:plat2} shows the meshed platform depicting a squared plate with box and a sloped front used in test case 2 of our experiments. A square plate with box and sides fixed was the platform for test case 3. For test case 4, the platform was a squared plate as in test case 1 but with four antennas. Possible antenna locations, for all test cases, are defined by either start-points or end-points of platform wires.  
+Figure \ref{fig:plat2} shows the meshed platform depicting a squared plate with box and a sloped front used in test case 2 of our experiments. A square plate with box and sides fixed was the platform for test case 3. For test case 4, the platform was a squared plate as in test case 1 but with four antennas with allowable placements on the four corners of the plate. Possible antenna locations, for all test cases, are defined by either start-point or end-point of a platform wire.  
 \begin{figure}
     \begin{center}
         \includegraphics[width=.41\textwidth]{FIG/tc_2_figure}
@@ -564,7 +564,7 @@ As known in general, the HC algorithm made progress only in the initial phases o
         \caption{Test Case 4}%
         \label{fig:tc4_mf}%
     \end{subfigure}\hfill%
-    \caption{Mean best fitness shown for $10$ runs of each algorithm for all test cases. Global minimum calculated using exhaustive search algorithm for each test case shown in magenta on the y-axis. The x-axis is representative of the percentage of fitness evaluations of the search space. They may not be unique points in the search space.}
+    \caption{Mean best fitness shown for $10$ runs of each algorithm for all test cases. Global minimum calculated using exhaustive search algorithm for each test case shown in magenta on the y-axis. The x-axis is representative of the percentage of fitness evaluations of the search space. The number of evaluations may not be unique points in the search space.}
 \end{figure*}
  
 
