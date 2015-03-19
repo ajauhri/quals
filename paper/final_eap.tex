@@ -349,6 +349,7 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 \usepackage{amsmath,amssymb,graphicx}
 \usepackage{tablefootnote}
+\usepackage{textcomp}
 \makeatletter
 \setlength{\@fptop}{0pt}
 \makeatother
@@ -446,7 +447,7 @@ For example, Figure \ref{fig:tc1_figure} has $n=2$ and $m=83$ for each antenna.
 %\end{figure*}
 Using the allowable placements, $L_i$, a \textit{candidate solution/individual}, is a placement configuration of $n$ antenna locations, one for each of the $n$ antennas, in 3-dimensional space:
 \[
-    \text{Candidate Solution}  = \left\{(x_1, y_1, z_1), \cdots, (x_n, y_n, z_n)\right\}
+    \text{Candidate Solution}  = \left\{l_i | l_i \in L_i, i \in [1,n]\right\}
 \]
 It is important to note that the number of allowable placements for any antenna are finite and discretized. 
 
@@ -481,7 +482,7 @@ Radiation pattern and antenna coupling are measured in decibels (dB) which is a 
 %\end{itemize}
 \subsection{Genetic Algorithm}
 \label{sec:algorithms-ga}
-Genetic algorithms aims to model different DNA operations in nature like crossover and mutation. They have been used extensively as stochastic search procedures for numerous applications \cite{fogel1994}.
+Genetic Algorithm aims to model different DNA operations in nature like crossover and mutation. They have been used extensively as stochastic search procedures for numerous applications \cite{fogel1994}.
 
 Operators in our version of GA are \textit{one-point crossover} and \textit{mutation}. Each pair used for one-point crossover operation comprises of an individual uniformly selected from the population and the other from a tournament selection. For all experiments, crossover probability was $60\%$ and mutation probability as $10\%$. Intuitively, a high mutation rate drives the algorithm into a random search and renders evolutionary aspect of the algorithm weak. The size of the individual is not arbitrarily large, and therefore it was preferred to keep the mutation restricted to just manipulating one antenna placement. Since we have a discrete set of placements (end points of wires of a platform), \textit{mutation's} step size involves a new placement from the set of allowable placements for the antenna. This mutation operator is applied to all other algorithms as well.
 
@@ -503,9 +504,9 @@ Hill climbing is a greedy search algorithm different from a simulated annealing 
 \label{sec:setup}
 We used an open source antenna modeling software called Numerical Electromagnetic Code (NEC2) to calculate the fitness of an individual. NEC2 provides a convenient interface to input details about platform with antennas mounted, and to collect simulation results.
 
-For our purposes, the candidate solution is written to an input file (to be referred as $N_{in}$) which is used by NEC2 modeler to generate an output file (to be referred as $N_{out}$). The platform and all antennas of an individual are written to $N_{in}$ as a set of wires with a start-point and an end-point in 3-dimensional space.  
+For our experiments, the candidate solution is written to an input file (to be referred as $N_{in}$) which is used by NEC2 modeler to generate an output file (to be referred as $N_{out}$). The platform and all antennas of a candidate solution are written to $N_{in}$ as a set of wires with a start-point and an end-point in 3-dimensional space.  
 
-Figure \ref{fig:plat2} shows the meshed platform depicting a squared plate with box and a sloped front used in test case 2 of our experiments. The platform and antenna are just a set of tuples similar to $w$. A square plate with box and sides fixed was the platform for test case 3. Possible antenna locations, for all test cases, are defined by either start-points or end-points of platform wires.  
+Figure \ref{fig:plat2} shows the meshed platform depicting a squared plate with box and a sloped front used in test case 2 of our experiments. A square plate with box and sides fixed was the platform for test case 3. Possible antenna locations, for all test cases, are defined by either start-points or end-points of platform wires.  
 \begin{figure}
     \begin{center}
         \includegraphics[width=.41\textwidth]{FIG/tc_2_figure}
@@ -514,9 +515,9 @@ Figure \ref{fig:plat2} shows the meshed platform depicting a squared plate with 
 \label{fig:plat2}
 \end{figure}
 
-The number of field points in a radiation pattern is determined by the product of total number of unique $\theta$ and $\phi$ values which encompass points in a sphere. All experiments computed the radiation gain over $4140$ points i.e.$ = \; \mid \theta \mid \cdot \mid \phi \mid$.
+The number of field points in a radiation pattern is determined by the product of total number of unique $\theta$ and $\phi$ values which encompass points in a sphere. All experiments computed the radiation gain over $4140$ points with stepping size being $4$\textdegree $~$ for $\theta$ and $\phi$.
 
-For our placement study, $n$ input files would be generated for a candidate solution with $n$ antennas and only one of the $n$ antennas excited in each input file. Subsequently, NEC2 would generate $n$ output files with performance measures. By exciting one antenna in each input file, we are able to quantify the radiation pattern of an antenna in presence of the platform and other antennas. To determine the free-space gain pattern(FSG) for an antenna, an input file is formed with just the antenna and no platform. $F_{RP}$ is then calculated by \textit{EAP} parsing $2m$($m$ files with platform and antennas; $n$ files for free space pattern) output files generated by NEC2.
+For our placement study, $n$ input files would be generated for a candidate solution with $n$ antennas and only one of the $n$ antennas excited in each input file. Subsequently, NEC2 would generate $n$ output files with performance measures. By exciting one antenna in each input file, we are able to quantify the radiation pattern of an antenna in presence of the platform and other antennas. To determine the free-space gain pattern (FSG) for an antenna, an input file is formed with just the antenna and no platform. $F_{RP}$ is then calculated by \textit{EAP} parsing $2n$ ($n$ files with platform and antennas; $n$ files for free space pattern) output files generated by NEC2.
 
 The second fitness parameter - mutual coupling, is gathered by using $(n+1)th$ file generated. NEC2 generates an output file with mutual coupling results between all possible pairs of antenna placements. If $n=4$, then there are $\binom{4}{2}$ pairs. All test cases were subjected to the same frequency of $100$ MegaHertz.
 
@@ -571,9 +572,9 @@ As known in general, the HC algorithm made progress only in the initial phases o
  
 
 \section{Conclusion}
-A comparison of four stochastic search algorithms applied to antenna placement optimization was presented. The results showed that a trade-off space exists: faster, less successful Simulated Annealing search versus slower, more successful search by Evolutionary Strategy. The other generation-based algorithm Genetic Algorithm is not as effective as Evolutionary Strategy, and also much slower to find the optimal placements. Also, a random search was studied to ascertain that the antenna placement problem may not be effectively solved by a greedy algorithm. Moreover, our methodology can be applied to any type of a platform which otherwise may be time consuming and expensive in case of large objects like satellites, warships, and aircrafts. 
+A comparison of four stochastic search algorithms applied to antenna placement optimization was presented. The results showed that a trade-off space exists: faster, less successful Simulated Annealing search versus slower, more successful search by Evolutionary Strategy. The other generation-based algorithm Genetic Algorithm is not as effective as Evolutionary Strategy, and also much slower to find the optimal placements. Our methodology can be applied to any type of a platform which otherwise may be time consuming and expensive in case of large objects like satellites, warships, and aircrafts. Also, a random search was studied to ascertain that the antenna placement problem may not be effectively solved by a greedy algorithm.
 
-Most of the stochastic algorithms presented here were elementary. More experiments can be conducted for population based algorithms with different population sizes, and to statistically compare how this may affect the performance of the algorithm. Also, bigger search spaces need to be considered with more number of antennas. Other evolutionary techniques like ALPS, and Differential Evolution algorithm need to be compared for quality and convergence.
+Most of the stochastic algorithms presented here were elementary. More experiments can be conducted for population based algorithms with different population sizes, and to statistically compare how this may affect the performance of the algorithm. Also, bigger search spaces need to be considered with more number of antennas. Other evolutionary techniques like ALPS, and Differential Evolution algorithm can also be compared for quality and convergence.
 
 \begin{thebibliography}{1}
 
