@@ -3,5 +3,10 @@
 - Have a graph of success probablity along with the size of the search space.
 - How does different function parameters play a role in determining the fitness?
 
+====
 - Small mesh wires will not observe difference in the gain pattern, and coupling
 - Plot RP of freespace and in the presence of platforms, and antennas
+
+- legacy antennas make the problem more interesting; frequency bands change over time and new antennas are needed therefore one needs to find new placements.
+- mutual coupling and radiation pattern are independent
+- classic and polular antennas used
