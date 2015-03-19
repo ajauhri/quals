@@ -401,7 +401,7 @@ In this work, we have analyzed stochastic algorithms to help determine optimal o
 \label{sec:related}
 The problem of optimizing the placement of multiple antennas on a single platform has rarely been studied, if at all.  The closest research we have found concerns algorithms for locating and configuring infrastructure for cellular wireless networks with the assumption of isotropic radiation pattern. Another related work computes optimal antenna locations restricted to a mobile device. In our work, none of the algorithms discussed have prior information of good antenna placements or type of antennas to be placed on the platform.
 
-It is naught to note that the related problem of co-designing antennas for a given platform ({\em in-situ} design) using EAs has been investigated in \cite{linden2000wire} with encouraging results. Because antenna placement bears many similarities to antenna design, we believe that such algorithms will prove effective.
+The related problem of co-designing antennas for a given platform ({\em in-situ} design) using stochastic algorithms has been investigated in \cite{linden2000wire} with encouraging results. Because antenna placement bears many similarities to antenna design, we believe that such algorithms will prove effective.
 
 \section{Problem Formulation}
 \label{sec:problem}
@@ -427,10 +427,10 @@ Using the allowable placements, $l_i$, a \textit{candidate solution/individual},
 It is important to note that the number of allowable placements for any antenna are finite and discretized. 
 
 \subsection{Fitness Evaluation}
-The placement optimization algorithms aim to find the best candidate solution such that the radiation pattern and mutual coupling are optimal. For optimal radiation pattern, we minimize the difference between the free-space gain pattern (FSG) of each antenna $A_i$, and its pattern when placed on $P$ and in the presence of all remaining antennas (in-situ gain, or ISG). Minimizing the difference from the free-space gain pattern will ensure better communication capability. For each antenna $A_i$ we compute multiple field points around an antenna in 3d space:
+The placement optimization algorithms aim to find the best candidate solution such that the radiation pattern and mutual coupling are optimal. For optimal radiation pattern, we minimize the difference between the free-space gain pattern (FSG) of each antenna $A_i$, and its pattern when placed on $P$ and in the presence of all remaining antennas (in-situ gain, or ISG). Minimizing the difference from the free-space gain pattern will ensure better communication capability. For each antenna $A_i$ we compute multiple field points around an antenna in 3-dimensional space:
 
 \begin{equation} \label{eq:rp}
-  F_{RP}(A_i) = \sum_{\theta}\sum_{\phi} 
+    F_{RP} = \sum_{i=1}^n\sum_{\theta=0}^\pi\sum_{\phi=0}^{2\pi}
            \left| FSG_i(\theta,\phi) - ISG_i(\theta,\phi) \right| ^2,
 \end{equation}
 
@@ -443,7 +443,7 @@ For the second objective, it is desired to minimize the mutual coupling between 
 
 The overall objective for a given placement configuration is to minimize fitness, $F$:
 \begin{equation} \label{eq:optimal}
-  F = \alpha F_{MC} + \beta \sum_{i} F_{RP}(A_i),
+  F = \alpha F_{MC} + \beta F_{RP},
 \end{equation}
 where $\alpha$ and $\beta$ are constants such that $\alpha + \beta = 1$.
 
@@ -460,7 +460,7 @@ Radiation pattern and antenna coupling are measured in decibels (dB) which is a 
 \label{sec:algorithms-ga}
 Genetic algorithms aims to model different DNA operations in nature like crossover and mutation. They have been used extensively as stochastic search procedures for numerous applications. 
 
-Operators in our version of GA (referred as Antenna Placement Genetic Algorithm (AP-GA)) are \textit{one-point crossover} and \textit{mutation}. Each pair for one-point crossover operation comprises of an individual uniformly selected from the population and the other individual from a tournament selection. For all experiments, crossover probability was $60\%$ and mutation probability as $10\%$. The size of the individual is not arbitrarily large, and therefore it was preferred to keep the mutation restricted to just manipulating one antenna placement. Since we have a discrete set of placements (end points of wires of a platform), \textit{mutation's} step size involves a new placement from the set of allowable placements for the antenna. This mutation operator is applied to all other algorithms as well.
+Operators in our version of GA are \textit{one-point crossover} and \textit{mutation}. Each pair for one-point crossover operation comprises of an individual uniformly selected from the population and the other individual from a tournament selection. For all experiments, crossover probability was $60\%$ and mutation probability as $10\%$. Intuitively, a high mutation rate drives the algorithm into a random search and renders evolutionary aspect of the algorithm weak. The size of the individual is not arbitrarily large, and therefore it was preferred to keep the mutation restricted to just manipulating one antenna placement. Since we have a discrete set of placements (end points of wires of a platform), \textit{mutation's} step size involves a new placement from the set of allowable placements for the antenna. This mutation operator is applied to all other algorithms as well.
 
 For arbitrarily large number of antennas, one may need to consider changing the mutation operator to manipulate more than one antenna placement. 
 \subsection{Evolutionary Strategy}
@@ -471,7 +471,7 @@ mutation is the primary operator here for maintaining diversity in the populatio
 For mutation, both the antenna and its new placement are selected uniformly at random from the allowable placements while ensuring there is no overlap with any other antenna. \textit{Mutation} operator is surely applied once on an individual to generate the offspring.
 \subsection{Simulated Annealing}
 \label{sec:algoriths-sa}
-Simulated annealing models thermodynamics by including a temperature cooling schedule such that it can accept fitness worsening mutation steps with a probability given by Boltzmann distribution. We used a linear cooling schedule for temperature $T_i = c T_{i-1}$ with $c >= 0.995$. The cooling temperature was adjusted based on the size of the search space.
+Simulated annealing models thermodynamics by including a temperature cooling schedule such that it can accept fitness worsening mutation steps with a probability given by Boltzmann distribution. We used a linear cooling schedule for temperature $T_i = \tau T_{i-1}$ with $\tau = f(m_{iters})$. Due to the multi-modal nature of the search space, cooling schedule is a function of the maximum iterations ($m_iters$) which are about $50\%$ of the total allowable placements. The initial temperature ranged $\in [0.23, 0.27]$.
 \subsection{Hill-Climbing}
 \label{sec:algoriths-hc}
 Hill climbing is a greedy search algorithm different from a simulated annealing since there is no cooling schedule. This makes a hill-climbing prone to get stuck in local optimal solutions. However, the ease of implementation and effectiveness in numerous optimization problems makes hill-climbing a popular approach.
@@ -511,52 +511,47 @@ The second fitness parameter - mutual coupling, is gathered by using $(n+1)th$ f
 
 \section{Simulation Results}
 \label{sec:results}
-Comparative study of algorithms is based on multiple test cases listed in Table \ref{tab:tcs}. 
+Comparative study of algorithms is based on multiple test cases listed in Table \ref{tab:tcs}. Each test case was first evaluated with an exhaustive search to determine fitness for all allowable placements and antennas. The results from exhaustive search were also used to normalize fitness function values between $[0,1]$. For all experiments $\alpha = \beta = 0.5$ in Eq.\eqref{eq:optimal}. 
 
-Each test case was first evaluated with an exhaustive search to determine fitness for all allowable placements and antennas. The results from exhaustive search were also used to normalize fitness function values between $[0,1]$. For all experiments $\alpha = \beta = 0.5$ in Eq.\eqref{eq:optimal}. 
+Genetic Algorithm (GA) and Evolutionary Strategy (ES) operate on a population of candidate solutions at any given time as oppose to Simulated Annealing (SA) and Hill Climber (HC) which operate on one candidate solution. For this reason the mean best fitness in all Figures \ref{fig:tc1_mf}, \ref{fig:tc2_mf}, \ref{fig:tc3_mf}, \& \ref{fig:tc4_mf} is higher in the initial stages of a run for SA/HC than GA/ES. In terms of computational time of any algorithm, the bottleneck is the NEC2 simulator. Therefore, the mean best fitness is shown against the percentage of fitness evaluations which is equivalent to the number of runs of NEC2 simulator. In all four test cases, the best candidate solution was found in less than $25\%$ fitness evaluations of the search space. The termination criteria was either when the global minimum is reached or algorithm evaluates the fitness $0.5 \cdot \left|S\right|$, where $\left|S\right|$ is the size of the search space.
 
-Intuitively, a high mutation rate, referred as $p_m$ in Section \ref{sec:algorithms-ga}, drives the algorithm into a random search and renders evolutionary aspect of the algorithm weak. It is preferred to have a high value for $p_c$. For all test cases, \textit{AP-GA} uses $p_m=0.1$ \& $p_c=0.6$. $gen_{max}$ for \textit{AP-GA} and \textit{AP-ES} is $10$.
-
-For similuted annealing, the cooling factor was kept as $1 - \tau$, where $\tau = 0.01 \cdot m_{iters}$. Maximum iterations($m_{iters}$) were about $70\%$ of the total allowable placements of a test case. The initial temperature ranged $\in [0.23, 0.27]$.
-
-The other important observation is of how many number of fitness function evaluations did each algorithm take to find a good hypothesis? Evolutionary strategy and simulated annealing outperformed the genetic algorithm in terms of mean number of fitness evaluations to find the best hypothesis as seen in Table \dots . The number of evaluations recorded were until the algorithm found the best hypothesis or got stuck at some local optimal hypothesis. Number of function evaluations is more appropriate here rather than the CPU clock time as the time may vary for each machine based on the hardware configuration.
-
-We also visualized the fitness terrain of the best hypothesis followed by each of the stochastic algorithms. Such visualization is a good tool to observe the correctness of the algorithm. For instance, a simulated annealing is prone to have an event of accepting a bad hypothesis with a higher probability initially in the run and this event should happen with low probability as algorithm proceeds. For all simulated annealing graphs in Figures \ref{fig:tc2_sp}, \ref{fig:tc3_sp}, \& \ref{fig:tc4_sp}, we observe that the gap between any two consecutive events of such nature increases as the algorithm proceeds in the search space. 
-
-The genetic algorithm in Figure \ref{fig:tc2_sp} accepted a worse hypothesis because of the fact that mutation could happen even in the group of elite hypothesis. The elites were included in the mutation pool to maintain diversity. For evolutionary strategy and hill climbing, the fitness terrain does not have unorthodox patterns. The values in parenthesis for all population based algorithms viz. genetic algorithm and evolutionary strategy, represent the population size. They were kept at approximately the same ratio with the corresponding size of the search space in Table \ref{tab:tcs}.
-
-This is not the case, since the top ten hypotheses lie within a small fitness range of $[0.49747, 0.498428]$. As known in general, the hill-climbing algorithm made progress only in the initial phases of the run and got stuck in local optimums for $80\%$ of the runs for test case 3. The purpose for inclusion of such a random search algorithm was to highlight that antenna placements may not be a trivial task to solve with high probability, if the search space is large as in the case of test case $3$. For smaller test cases like test case 4, hill-climbing may be appropriate.
+Regions in the plot where the mean best fitness of GA/ES is constant relates to the fitness evaluation of offsprings created by mutation and crossover operators applied on the population. In the case of SA and HC, we notice the SA curve crossing the HC curve in all four test cases. This is due temperature parameter of the SA allowing it to accept fitness worsening individuals with high probability initially in the run. Moreover, the cooling schedule allows SA to reach a more optimal candidate solution in comparison to the HC.
 
 \begin{figure}
     \begin{center}
-        \includegraphics[width=.41\textwidth]{FIG/tc1_mf.eps}
+        \includegraphics[width=.41\textwidth]{FIG/tc1_ss}
 \end{center}
-\caption{Test Case 1 Comparison}
-\label{fig:tc1_sp}
+\caption{Test Case 2}
+\label{fig:tc1_ss}
 \end{figure}
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=.41\textwidth]{FIG/tc2_mf.eps}
-\end{center}
-\caption{Test Case 2 Comparison}
-\label{fig:tc2_sp}
-\end{figure}
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=.41\textwidth]{FIG/tc3_mf.eps}
-\end{center}
-\caption{Test Case 3 Comparison}
-\label{fig:tc3_sp}
-\end{figure}
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=.41\textwidth]{FIG/tc4_mf.eps}
-\end{center}
-\caption{Test Case 4 Comparison}
-\label{fig:tc4_sp}
-\end{figure}
+As known in general, the HC algorithm made progress only in the initial phases of the run and got stuck in local optimums. The purpose for inclusion of such a random search algorithm was to highlight that antenna placements may not be a trivial optimization task always. In test case $4$, the search landscape always has a lower fitness candidate solution in the neighbourhood, therefore allowing HC to converge quickly.
+
+\begin{figure*}%
+    \centering
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\columnwidth]{FIG/tc1_mf.eps}%
+        \caption{Test Case 1}%
+    \label{fig:tc1_mf}%
+    \end{subfigure}\hfill%
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\columnwidth]{FIG/tc2_mf.eps}%
+        \caption{Test Case 2}%
+        \label{fig:tc2_mf}%
+    \end{subfigure}\hfill\\
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\columnwidth]{FIG/tc3_mf.eps}%
+        \caption{Test Case 3}%
+        \label{fig:tc3_mf}%
+    \end{subfigure}\hfill%
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\columnwidth]{FIG/tc4_mf.eps}%
+        \caption{Test Case 4}%
+        \label{fig:tc4_mf}%
+    \end{subfigure}\hfill%
+    \caption{Mean best fitness shown $10$ runs of each algorithm for all test cases. Global minimum calculated using exhaustive search algorithm for each test case shown in magenta on the y-axis. The x-axis is representative of the percentage of fitness evaluations of the search space. They may not be unique search points.}
+\end{figure*}
 
 
 \section{Conclusion}
