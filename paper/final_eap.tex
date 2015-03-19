@@ -358,7 +358,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{A Comparison of Antenna Placement Algorithms}
+\title{A Comparison of Antenna Placement Algorithms\vspace{-1.5ex}}
 
 \author{\IEEEauthorblockN{Abhinav Jauhri}
 \IEEEauthorblockA{Carnegie Mellon University\\
@@ -393,9 +393,9 @@ Co-location of multiple antenna systems on a single fixed or mobile platform can
 
 
 \section{Introduction}
-Antenna placement on a multi-antenna platform currently involves a manual process that is challenging, time consuming, and may result in sub-optimal placements leading to lowered communication systems' performance. Moreover, the search space is multimodal and becomes exponentially large with regard to the number of antennas to be placed ($|\text{search space}| = m^n$, where $m$ is the number of allowable placements for each antenna and $n$ is number of antennas). 
+Antenna placement on a multi-antenna platform currently involves a manual process that is challenging, time consuming, and may result in sub-optimal placements leading to lowered communication systems' performance. Moreover, the search space is highly complex and becomes exponentially large with regard to the number of antennas to be placed ($|\text{search space}| = m^n$, where $m$ is the number of allowable placements for each antenna and $n$ is number of antennas). 
 
-Stochastic optimization techniques have been used extensively for non-convex and nonlinear search spaces to avoid sub-optimal results due to multimodal nature of the search space. Applying Evolutionary algorithms (EA), a type of stochastic optimization technique, to the antenna placement problem could greatly improve determining acceptable antenna placements. Evolutionary algorithms encompass a variety of computer search technologies, with the Genetic Algorithm (GA) being the most well-known. Moreover, EAs have proven very capable in discovering high performance antenna designs deployed in space \cite{lohn2005evolutionary}. 
+Stochastic optimization techniques have been used extensively for non-convex and nonlinear search spaces to avoid sub-optimal results due to multimodal nature of the search space (see Figure \ref{fig:tc1_ss}). Applying Evolutionary algorithms (EA), a type of stochastic optimization technique, to the antenna placement problem could greatly improve determining acceptable antenna placements. Evolutionary algorithms encompass a variety of computer search technologies, with the Genetic Algorithm (GA) being the most well-known. Moreover, EAs have proven very capable in discovering high performance antenna designs deployed in space \cite{lohn2005evolutionary}. 
 
 In this work, we have analyzed stochastic algorithms to help determine optimal or near-optimal antenna placements on a platform. The problems have been modeled and simulated using antenna modeling software package called NEC2. The approach is agnostic to specifications of the antenna, and the platform. The algorithmic-set include Genetic Algorithm, Evolutionary Strategy, Simulated Annealing, and Hill Climbing.
 
@@ -426,7 +426,6 @@ For example, Figure \ref{fig:tc1_figure} has $n=2$ and $m=83$ for each antenna.
         \caption{Search space for test case 1}%
         \label{fig:tc1_ss}%
     \end{subfigure}\hfill\\
-    \caption{Mean best fitness shown $10$ runs of each algorithm for all test cases}
 \end{figure}
 
 
@@ -495,7 +494,7 @@ mutation is the primary operator here for maintaining diversity in the populatio
 For mutation, both the antenna and its new placement are selected uniformly at random from the allowable placements while ensuring there is no overlap with any other antenna. \textit{Mutation} operator is surely applied once on an individual to generate the offspring.
 \subsection{Simulated Annealing}
 \label{sec:algoriths-sa}
-Simulated annealing models thermodynamics by including a temperature cooling schedule such that it can accept fitness worsening mutation steps with a probability given by Boltzmann distribution. We used a linear cooling schedule for temperature $T_i = \tau T_{i-1}$ with $\tau = f(m_{iters})$. Due to different sizes and multimodal nature of the search space, cooling schedule is a function of the maximum iterations ($m_iters$), which are approximately $50\%$ of the total allowable placements. The initial temperature ranged $\in [0.23, 0.27]$.
+Simulated annealing models thermodynamics by including a temperature cooling schedule such that it can accept fitness worsening mutation steps with a probability given by Boltzmann distribution. We used a linear cooling schedule for temperature $T_i = \tau T_{i-1}$ with $\tau = f(m_{iters})$. Due to different sizes of the search space, cooling schedule is a function of the maximum iterations ($m_iters$), which are approximately $50\%$ of the total allowable placements. The initial temperature ranged $\in [0.23, 0.27]$.
 \subsection{Hill-Climbing}
 \label{sec:algoriths-hc}
 Hill climbing is a greedy search algorithm different from a simulated annealing since there is no cooling schedule. This makes a hill-climbing prone to get stuck in local optimal solutions. However, the ease of implementation and effectiveness in numerous optimization problems \cite{skalak1994} makes hill-climbing a popular approach.
@@ -506,12 +505,12 @@ We used an open source antenna modeling software called Numerical Electromagneti
 
 For our experiments, the candidate solution is written to an input file (to be referred as $N_{in}$) which is used by NEC2 modeler to generate an output file (to be referred as $N_{out}$). The platform and all antennas of a candidate solution are written to $N_{in}$ as a set of wires with a start-point and an end-point in 3-dimensional space.  
 
-Figure \ref{fig:plat2} shows the meshed platform depicting a squared plate with box and a sloped front used in test case 2 of our experiments. A square plate with box and sides fixed was the platform for test case 3. Possible antenna locations, for all test cases, are defined by either start-points or end-points of platform wires.  
+Figure \ref{fig:plat2} shows the meshed platform depicting a squared plate with box and a sloped front used in test case 2 of our experiments. A square plate with box and sides fixed was the platform for test case 3. For test case 4, the platform was a squared plate as in test case 1 but with four antennas. Possible antenna locations, for all test cases, are defined by either start-points or end-points of platform wires.  
 \begin{figure}
     \begin{center}
         \includegraphics[width=.41\textwidth]{FIG/tc_2_figure}
 \end{center}
-\caption{Test Case 2}
+\caption{Test Case 2 with three antennas}
 \label{fig:plat2}
 \end{figure}
 
@@ -543,7 +542,7 @@ Regions in the plot where the mean best fitness of GA/ES is constant relates to 
 
 As known in general, the HC algorithm made progress only in the initial phases of the run and got stuck in local optimums. The purpose for inclusion of such a random search algorithm was to highlight that antenna placements may not always be a trivial optimization task. In test case $4$, the search landscape always has a lower fitness candidate solution in the neighbourhood, therefore allowing HC to converge quickly.
 
-\begin{figure}%
+\begin{figure*}%
     \centering
     \begin{subfigure}{\columnwidth}
         \includegraphics[width=\columnwidth]{FIG/tc1_mf.eps}%
@@ -555,9 +554,6 @@ As known in general, the HC algorithm made progress only in the initial phases o
         \caption{Test Case 2}%
         \label{fig:tc2_mf}%
     \end{subfigure}\hfill\\
-    \caption{Mean best fitness shown $10$ runs of each algorithm for all test cases. Global minimum calculated using exhaustive search algorithm for each test case shown in magenta on the y-axis. The x-axis is representative of the percentage of fitness evaluations of the search space. They may not be unique points in the search space.}
-\end{figure}
-\begin{figure}
     \begin{subfigure}{\columnwidth}
         \includegraphics[width=\columnwidth]{FIG/tc3_mf.eps}%
         \caption{Test Case 3}%
@@ -568,7 +564,8 @@ As known in general, the HC algorithm made progress only in the initial phases o
         \caption{Test Case 4}%
         \label{fig:tc4_mf}%
     \end{subfigure}\hfill%
-\end{figure}
+    \caption{Mean best fitness shown for $10$ runs of each algorithm for all test cases. Global minimum calculated using exhaustive search algorithm for each test case shown in magenta on the y-axis. The x-axis is representative of the percentage of fitness evaluations of the search space. They may not be unique points in the search space.}
+\end{figure*}
  
 
 \section{Conclusion}
