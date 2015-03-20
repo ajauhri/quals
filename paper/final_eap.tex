@@ -154,7 +154,7 @@ All test cases describe platforms which are replicas of real-world use cases lik
 \begin{figure}
     \centering
     \begin{subfigure}{.5\columnwidth}
-        \includegraphics[width=\columnwidth]{FIG/tc_1_figure}%
+        \includegraphics[width=\columnwidth,height=\columnwidth]{FIG/tc_1_figure}%
         \caption{Test Case 1}%
     \label{fig:tc1_figure}%
     \end{subfigure}\hfill%
@@ -176,10 +176,6 @@ All test cases describe platforms which are replicas of real-world use cases lik
     \caption{Figures of all test cases used for experiments}
     \label{fig:tc_figures}
 \end{figure}
- 
-For radiation pattern, the number of field points is determined by the product of total number of unique $\theta$ and $\phi$ values which encompass points in a sphere around the antenna. All experiments computed the radiation gain over $4140$ points with increments of $4$\textdegree $~$ for $\theta$ and $\phi$. For all test cases antennas were excited with the same frequency of $100$ MegaHertz.
-
-For fitness evaluation of a candidate solution, input files are generated with all specifications of antennas and the platform. NEC2 would use the input files to generate radiation pattern values for all pairs of $(\theta, \phi)$. Similarly, for the second fitness parameter - mutual coupling, NEC2 provides results between all possible pairs of antennas. If $n=4$, then there are $\binom{4}{2}$ pairs for which mutual coupling is calculated.
 
 \begin{table}
 \centering
@@ -193,10 +189,15 @@ For fitness evaluation of a candidate solution, input files are generated with a
 \hline\end{tabular}
 \end{table}
 
+ 
+For radiation pattern, the number of field points is determined by the product of total number of unique $\theta$ and $\phi$ values which encompass points in a sphere around the antenna. All experiments computed the radiation gain over $4140$ points with increments of $4$\textdegree $~$ for $\theta$ and $\phi$. For all test cases antennas were excited with the same frequency of $100$ MegaHertz.
+
+For fitness evaluation of a candidate solution, input files are generated with all specifications of antennas and the platform. NEC2 would use the input files to generate radiation pattern values for all pairs of $(\theta, \phi)$. Similarly, for the second fitness parameter - mutual coupling, NEC2 provides results between all possible pairs of antennas. If $n=4$, then there are $\binom{4}{2}$ pairs for which mutual coupling is calculated.
+
+Each test case was first evaluated with an exhaustive search algorithm to determine optimal fitness value, and the corresponding candidate solution amongst the entire search space. The results from exhaustive search were also used to normalize fitness function values between $[0,1]$. For all experiments $\alpha = \beta = 0.5$ in Eq.\eqref{eq:optimal}. The termination criteria for a run of an algorithm was either when the global minimum was reached or $0.5 \cdot \left|S\right|$, where $\left|S\right|$ is the size of the search space, function evaluations were completed.
+
 \section{Simulation Results}
 \label{sec:results}
-Comparative study of algorithms is based on multiple test cases listed in Table \ref{tab:tcs}. Each test case was first evaluated with an exhaustive search algorithm to determine optimal fitness value, and the corresponding candidate solution amongst the entire search space. The results from exhaustive search were also used to normalize fitness function values between $[0,1]$. For all experiments $\alpha = \beta = 0.5$ in Eq.\eqref{eq:optimal}. The termination criteria for a run of an algorithm was either when the global minimum was reached or $0.5 \cdot \left|S\right|$, where $\left|S\right|$ is the size of the search space, function evaluations were completed.
-
 Genetic Algorithm (GA) and Evolutionary Strategy (ES) operate on a population of candidate solutions at any given iteration as oppose to Simulated Annealing (SA) and Hill Climbing (HC) which operate on one candidate solution. For this reason the mean best fitness in figures \ref{fig:tc1_mf}, \ref{fig:tc2_mf}, \ref{fig:tc3_mf}, \& \ref{fig:tc4_mf} is higher in the initial stages of a run for SA or HC than GA or ES as in a population there is higher probability of creating a fitter individual. In terms of computational time of any algorithm, the bottleneck is the NEC2 simulator. Therefore, the mean best fitness is shown against the percentage of fitness evaluations which is equivalent to the number of runs of NEC2 simulator. In all four test cases, the best candidate solution was found by ES in less than $25\%$ fitness evaluations of the search space. 
 
 Regions in the plot where the mean best fitness of GA or ES is constant relates to the fitness evaluation of offsprings created by evolutionary operators applied on the population of candidate solutions. For SA and HC, we notice the SA curve crossing the HC curve in all four test cases. This is due temperature parameter of the SA allowing it to accept fitness worsening individuals with high probability initially in the run. However, later in the run the cooling schedule reduces the probability of SA accepting a worse individual. Eventually, SA has a better probability to reach the optimal solution in comparison to the HC.
