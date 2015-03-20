@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  20 MAR 2015 08:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  20 MAR 2015 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -442,6 +442,21 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<FIG/tc1_ss.png, id=1, 578.16pt x 433.62pt>
+File: FIG/tc1_ss.png Graphic file (type png)
+ <use FIG/tc1_ss.png>
+Package pdftex.def Info: FIG/tc1_ss.png used on input line 72.
+(pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./FIG/tc1_ss.png>]
+[2]
 Package epstopdf Info: Source file: <FIG/tc_1_figure.eps>
 (epstopdf)                    date: 2015-03-19 10:23:04
 (epstopdf)                    size: 57435 bytes
@@ -450,26 +465,15 @@ Package epstopdf Info: Source file: <FIG/tc_1_figure.eps>
 (epstopdf)                    size: 42537 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc_1_figure-eps-conver
 ted-to.pdf FIG/tc_1_figure.eps>
-(epstopdf)             \includegraphics on input line 73.
+(epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
-
-<FIG/tc_1_figure-eps-converted-to.pdf, id=1, 578.16pt x 433.62pt>
+ <FIG/tc_1_figure-eps-converted-to.pdf, id=25, 578.16pt x 433.62pt>
 File: FIG/tc_1_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc_1_figure-eps-converted-to.pdf>
 Package pdftex.def Info: FIG/tc_1_figure-eps-converted-to.pdf used on input lin
-e 73.
-(pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
-
-<FIG/tc1_ss.png, id=2, 578.16pt x 433.62pt>
-File: FIG/tc1_ss.png Graphic file (type png)
- <use FIG/tc1_ss.png>
-Package pdftex.def Info: FIG/tc1_ss.png used on input line 78.
-(pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
-] [2 <./FIG/tc_1_figure-eps-converted-to.pdf> <./FIG/tc1_ss.png>]
+e 157.
+(pdftex.def)             Requested size: 126.52493pt x 94.89383pt.
 Package epstopdf Info: Source file: <FIG/tc_2_figure.eps>
 (epstopdf)                    date: 2015-03-19 10:23:08
 (epstopdf)                    size: 101241 bytes
@@ -478,15 +482,15 @@ Package epstopdf Info: Source file: <FIG/tc_2_figure.eps>
 (epstopdf)                    size: 40324 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc_2_figure-eps-conver
 ted-to.pdf FIG/tc_2_figure.eps>
-(epstopdf)             \includegraphics on input line 163.
+(epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc_2_figure-eps-converted-to.pdf, id=58, 578.16pt x 433.62pt>
+<FIG/tc_2_figure-eps-converted-to.pdf, id=26, 578.16pt x 433.62pt>
 File: FIG/tc_2_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc_2_figure-eps-converted-to.pdf>
 Package pdftex.def Info: FIG/tc_2_figure-eps-converted-to.pdf used on input lin
-e 163.
+e 162.
 (pdftex.def)             Requested size: 126.52512pt x 126.5207pt.
 Package epstopdf Info: Source file: <FIG/tc_3_figure.eps>
 (epstopdf)                    date: 2015-03-19 10:23:12
@@ -496,17 +500,35 @@ Package epstopdf Info: Source file: <FIG/tc_3_figure.eps>
 (epstopdf)                    size: 47413 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc_3_figure-eps-conver
 ted-to.pdf FIG/tc_3_figure.eps>
-(epstopdf)             \includegraphics on input line 168.
+(epstopdf)             \includegraphics on input line 167.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc_3_figure-eps-converted-to.pdf, id=59, 578.16pt x 433.62pt>
+<FIG/tc_3_figure-eps-converted-to.pdf, id=27, 578.16pt x 433.62pt>
 File: FIG/tc_3_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc_3_figure-eps-converted-to.pdf>
 Package pdftex.def Info: FIG/tc_3_figure-eps-converted-to.pdf used on input lin
-e 168.
+e 167.
 (pdftex.def)             Requested size: 126.52512pt x 126.5207pt.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 174.
+Package epstopdf Info: Source file: <FIG/tc_4_figure.eps>
+(epstopdf)                    date: 2015-03-19 10:23:14
+(epstopdf)                    size: 60654 bytes
+(epstopdf)             Output file: <FIG/tc_4_figure-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-20 10:01:11
+(epstopdf)                    size: 27033 bytes
+(epstopdf)             Command: <repstopdf --outfile=FIG/tc_4_figure-eps-conver
+ted-to.pdf FIG/tc_4_figure.eps>
+(epstopdf)             \includegraphics on input line 172.
+Package epstopdf Info: Output file is already uptodate.
+
+<FIG/tc_4_figure-eps-converted-to.pdf, id=28, 578.16pt x 433.62pt>
+File: FIG/tc_4_figure-eps-converted-to.pdf Graphic file (type pdf)
+
+<use FIG/tc_4_figure-eps-converted-to.pdf>
+Package pdftex.def Info: FIG/tc_4_figure-eps-converted-to.pdf used on input lin
+e 172.
+(pdftex.def)             Requested size: 126.52512pt x 126.5207pt.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 180.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -520,14 +542,14 @@ Package epstopdf Info: Source file: <FIG/tc1_mf.eps>
 (epstopdf)                    size: 22520 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc1_mf-eps-converted-t
 o.pdf FIG/tc1_mf.eps>
-(epstopdf)             \includegraphics on input line 204.
+(epstopdf)             \includegraphics on input line 210.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc1_mf-eps-converted-to.pdf, id=60, 578.16pt x 433.62pt>
+<FIG/tc1_mf-eps-converted-to.pdf, id=29, 578.16pt x 433.62pt>
 File: FIG/tc1_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc1_mf-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc1_mf-eps-converted-to.pdf used on input line 204
+Package pdftex.def Info: FIG/tc1_mf-eps-converted-to.pdf used on input line 210
 .
 (pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
 Package epstopdf Info: Source file: <FIG/tc2_mf.eps>
@@ -538,14 +560,14 @@ Package epstopdf Info: Source file: <FIG/tc2_mf.eps>
 (epstopdf)                    size: 22489 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc2_mf-eps-converted-t
 o.pdf FIG/tc2_mf.eps>
-(epstopdf)             \includegraphics on input line 209.
+(epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc2_mf-eps-converted-to.pdf, id=61, 578.16pt x 433.62pt>
+<FIG/tc2_mf-eps-converted-to.pdf, id=30, 578.16pt x 433.62pt>
 File: FIG/tc2_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc2_mf-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc2_mf-eps-converted-to.pdf used on input line 209
+Package pdftex.def Info: FIG/tc2_mf-eps-converted-to.pdf used on input line 215
 .
 (pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
 Package epstopdf Info: Source file: <FIG/tc3_mf.eps>
@@ -556,14 +578,14 @@ Package epstopdf Info: Source file: <FIG/tc3_mf.eps>
 (epstopdf)                    size: 21762 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc3_mf-eps-converted-t
 o.pdf FIG/tc3_mf.eps>
-(epstopdf)             \includegraphics on input line 214.
+(epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc3_mf-eps-converted-to.pdf, id=62, 578.16pt x 433.62pt>
+<FIG/tc3_mf-eps-converted-to.pdf, id=31, 578.16pt x 433.62pt>
 File: FIG/tc3_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc3_mf-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc3_mf-eps-converted-to.pdf used on input line 214
+Package pdftex.def Info: FIG/tc3_mf-eps-converted-to.pdf used on input line 220
 .
 (pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
 Package epstopdf Info: Source file: <FIG/tc4_mf.eps>
@@ -574,18 +596,19 @@ Package epstopdf Info: Source file: <FIG/tc4_mf.eps>
 (epstopdf)                    size: 22387 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc4_mf-eps-converted-t
 o.pdf FIG/tc4_mf.eps>
-(epstopdf)             \includegraphics on input line 219.
+(epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc4_mf-eps-converted-to.pdf, id=63, 578.16pt x 433.62pt>
+<FIG/tc4_mf-eps-converted-to.pdf, id=32, 578.16pt x 433.62pt>
 File: FIG/tc4_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc4_mf-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc4_mf-eps-converted-to.pdf used on input line 219
+Package pdftex.def Info: FIG/tc4_mf-eps-converted-to.pdf used on input line 225
 .
 (pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
- [3 <./FIG/tc_2_figure-eps-converted-to.pdf> <./FIG/tc_3_figure-eps-converted-t
-o.pdf>]
+ [3 <./FIG/tc_1_figure-eps-converted-to.pdf> <./FIG/tc_2_figure-eps-converted-t
+o.pdf> <./FIG/tc_3_figure-eps-converted-to.pdf> <./FIG/tc_4_figure-eps-converte
+d-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -604,10 +627,10 @@ Before submitting the final camera ready copy, remember to:
 IG/tc3_mf-eps-converted-to.pdf> <./FIG/tc4_mf-eps-converted-to.pdf>]
 (./final_eap.aux) ) 
 Here is how much of TeX's memory you used:
- 5329 strings out of 495028
- 81416 string characters out of 6181498
- 139258 words of memory out of 5000000
- 8426 multiletter control sequences out of 15000+600000
+ 5336 strings out of 495028
+ 81630 string characters out of 6181498
+ 139274 words of memory out of 5000000
+ 8432 multiletter control sequences out of 15000+600000
  42939 words of font info for 88 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
  42i,13n,40p,1160b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -624,10 +647,10 @@ nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on final_eap.pdf (4 pages, 550268 bytes).
+Output written on final_eap.pdf (4 pages, 574872 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 254 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
