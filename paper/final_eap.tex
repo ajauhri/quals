@@ -48,7 +48,7 @@ Co-location of multiple antenna systems on a single fixed or mobile platform can
 \section{Introduction}
 Antenna placement on a multi-antenna platform currently involves a manual process that is challenging, time consuming, and may result in sub-optimum placements leading to low communication system performance. Moreover, the search space is highly complex and becomes exponentially large with the number of antennas to be placed ($|\text{search space}| = m^n$, where $m$ is the number of allowable placements for each antenna and $n$ is number of antennas). 
 
-Stochastic optimization techniques have been used extensively for non-convex and non-linear search spaces to avoid sub-optimum results due to the multimodal nature of the search space (see Figure \ref{fig:tc1_ss}). Applying Evolutionary Algorithms (EA), a type of stochastic optimization technique, to the antenna placement problem could help determine placements which increase the effectiveness of each antenna. Evolutionary algorithms encompass a variety of computer search technologies, the Genetic Algorithm (GA) being the most well-known. Moreover, EAs have been proven capable in discovering high performance antenna designs deployed in space \cite{lohn2005evolutionary}. 
+Stochastic optimization techniques have been used extensively for non-convex and non-linear search spaces to avoid sub-optimum results due to the multimodal nature of the search space (see figure \ref{fig:tc1_ss}). Applying Evolutionary Algorithms (EA), a type of stochastic optimization technique, to the antenna placement problem could help determine placements which increase the effectiveness of each antenna. Evolutionary algorithms encompass a variety of computer search technologies, the Genetic Algorithm (GA) being the most well-known. Moreover, EAs have been proven capable in discovering high performance antenna designs deployed in space \cite{lohn2005evolutionary}. 
 
 In this work, we have analyzed stochastic algorithms to help determine optimum or near-optimum antenna placements on a platform. The problem has been modeled and simulated using antenna modeling software package called NEC2. The approach does not depend on the specifications of antennas, and platforms. The algorithmic-set includes Genetic Algorithm, Evolutionary Strategy, Simulated Annealing, and Hill Climbing.
 
@@ -66,7 +66,7 @@ A platform for placing multiple antennas could vary from a simple rectangular bo
 \[
 L_i = \{(x_{1}, y_{1}, z_{1}), ..., (x_{m_i}, y_{m_i}, z_{m_i})\}
 \]
-For example, Figure \ref{fig:tc1_figure} has $n=2$ and $m=83$ for each antenna.
+For example, figure \ref{fig:tc1_figure} has $n=2$ and $m=83$ for each antenna.
 \begin{figure}%
     \begin{subfigure}{\columnwidth}
         \includegraphics[width=\columnwidth]{FIG/tc1_ss.png}%
@@ -204,7 +204,7 @@ Regions in the plot where the mean best fitness of GA or ES is constant relates 
 
 As known in general, the HC algorithm made progress only in the initial phases of the run and got stuck in local optimums. The purpose for inclusion of such a random search algorithm was to highlight antenna placements may not always be a trivial optimization task as shown in figure \ref{fig:tc1_ss}. The search landscape for test case 4 always had a lower fitness candidate solution in the neighbourhood, therefore allowing HC to converge quickly.
 
-To summarize, Figure \ref{fig:tc_mf} shows that ES was successful in finding optimum candidate solutions for all test cases. Alternatively, SA took less number of fitness evaluations to converge but had a lower probability to succeed by finding the optimum solution.
+To summarize, figure \ref{fig:tc_mf} shows that ES was successful in finding optimum candidate solutions for all test cases. Alternatively, SA took less number of fitness evaluations to converge but had a lower probability to succeed by finding the optimum solution.
 \begin{figure*}
     \centering
     \begin{subfigure}{\columnwidth}
