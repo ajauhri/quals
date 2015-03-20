@@ -9,7 +9,7 @@
 \setlength{\@fptop}{0pt}
 \makeatother
 \renewcommand{\figurename}{Figure}
-\setlength{\textfloatsep}{2pt}
+\setlength{\textfloatsep}{6pt}
 \def\IEEEbibitemsep{0pt plus .5pt}
 \begin{document}
 %
@@ -63,7 +63,7 @@ The related problem of co-designing antennas for a given platform ({\em in-situ}
 \label{sec:problem}
 \subsection{Inputs}
 \label{sec:inputs}
-A platform for placing multiple antennas could vary from a simple rectangular box to an aircraft. Our inputs to an algorithm comprise of a platform and set of antennas each with allowable placements on the platform. Formally, a platform, $P$, in 3-dimensional space with its surface discretized into a regular grid with some spacing consisting of potential antenna placement points. Let $n$ denote the number of antennas to be placed on $P$ such that $n>1$, and $A$ represent the set of antennas: $A = \{A_1, ..., A_n\}$. For each antenna $A_i$, $L_i$ denote the set allowable placement coordinates $\in \mathbb R^3$ on $P$ such that the size of $\mid L_i \mid =m_i$, and $ \forall i, m_i>1$:
+A platform for placing multiple antennas could vary from a simple rectangular box to an aircraft. Our inputs to an algorithm comprise of a platform and set of antennas each with allowable placements on the platform. Formally, a platform, $P$, is defined in 3-dimensional space with its surface discretized into a regular grid with some spacing consisting of potential antenna placement points. Let $n$ denote the number of antennas to be placed on $P$ such that $n>1$, and $A$ represent the set of antennas: $A = \{A_1, ..., A_n\}$. For each antenna $A_i$, $L_i$ denote the set allowable placement coordinates $\in \mathbb R^3$ on $P$ such that the size of $\mid L_i \mid =m_i$, and $ \forall i, m_i>1$:
 \[
 L_i = \{(x_{1}, y_{1}, z_{1}), ..., (x_{m_i}, y_{m_i}, z_{m_i})\}
 \]
@@ -99,7 +99,7 @@ Using the allowable placements ($L_i$), a \textit{candidate solution} or \textit
 Candidate solutions are the building blocks for each algorithm we evaluate the antenna placement problem on. It is important to note that the number of allowable placements for any antenna are finite. 
 
 \subsection{Fitness Evaluation}
-The stochastic algorithms used to optimize the placement of antennas find the best candidate solution such that the radiation pattern and mutual coupling are optimum. For radiation pattern, we minimize the difference between the free-space gain pattern (FSG) of each antenna $A_i$, and its in-situ gain (ISG) pattern when placed on a platform along with other antennas. Minimizing the difference from the free-space gain pattern will ensure better communication capability. For each antenna $A_i$ we compute multiple field points around an antenna in 3-dimensional space:
+The stochastic algorithms used to optimize the placement of antennas find the best candidate solution such that the radiation pattern and mutual coupling are optimum. For radiation pattern, we minimize the difference between the free-space gain pattern (FSG) of each antenna $A_i$, and its in-situ gain (ISG) pattern when placed on a platform along with other antennas. Minimizing the difference from the free-space gain pattern will ensure better communication capability. For each antenna $A_i$ we compute multiple field points around an antenna:
 
 \begin{equation} \label{eq:rp}
     F_{RP} = \sum_{i=1}^n\sum_{\theta=0}^\pi\sum_{\phi=0}^{2\pi}
@@ -131,7 +131,7 @@ Radiation pattern and antenna coupling are measured in decibels (dB) which is a 
 \label{sec:algorithms-ga}
 Genetic algorithm is the simplest of all evolutionary algorithms which aim to model Darwinian evolution and natural selection to evolve a population of candidate solutions. They have been used extensively as stochastic search procedures for numerous applications \cite{fogel1994}.
 
-Evolution operators in our version of GA are \textit{one-point crossover} and \textit{mutation}. For one-point crossover operation, two individuals are selected with one being uniformly chosen from the population and the other from a tournament selection. For all experiments, crossover probability was $60\%$ and mutation probability as $10\%$. Intuitively, a high mutation probability drives the algorithm into a random search and renders the evolutionary aspect of the algorithm weak. The size of the individual is not arbitrarily large, and therefore it was preferred to restrict the mutation such that only one antenna placement was manipulated. Since we have a discrete set of placements (end points of wires of a platform), mutation step size renders a new placement from the set of allowable placements. This mutation operator is similar for all other algorithms as well.
+Evolution operators in our version of GA are \textit{one-point crossover} and \textit{uniform mutation}. For one-point crossover operation, two individuals are selected with one being uniformly chosen from the population and the other from a tournament selection. For all experiments, crossover probability was $60\%$ and mutation probability as $10\%$. Intuitively, a high mutation probability drives the algorithm into a random search and renders the evolutionary aspect of the algorithm weak. The size of the individual is not arbitrarily large, and therefore it was preferred to restrict the mutation such that only one antenna placement was manipulated. Since we have a discrete set of placements (end points of wires of a platform), mutation step size renders a new placement from the set of allowable placements. This mutation operator is similar for all other algorithms as well.
 
 For arbitrarily large number of antennas, one may consider changing the mutation operator to manipulate more than one antenna placement. 
 \subsection{Evolutionary Strategy}
@@ -142,7 +142,7 @@ mutation is the primary operator here for maintaining diversity in the populatio
 For mutation of an individual, both the antenna and its new placement are selected uniformly at random from the allowable placements. We ensure that there is no overlap with any other antenna defining the individual during the mutation. ES is more effective than GA since the mutation operator is applied multiple times on the same individual ($\lambda$ times on each of the $\mu$ individuals). Preservation of the best $\mu$ individuals helps the algorithm to maintain more diversification in the population, making the search more useful.
 \subsection{Simulated Annealing}
 \label{sec:algoriths-sa}
-Simulated annealing is a local search algorithm with a neighborhood structure. The algorithm moves from one individual to one of its neighbours in accordance to a probabilistic criterion. If the fitness improves then the neighbouring individual is accepted. Otherwise, the move is accepted only with a probability depending on fitness change and control parameter called temperature. Probability is given by: $exp( \frac{\Delta fitness}{T_i})$. This helps the algorithm to escape local optimum solutions in a multimodal search space. We used a linear cooling schedule for temperature $T_i = \tau T_{i-1}$ with $\tau = f(m_{iters})$. Due to different sizes of the search space, cooling schedule is a function of the maximum iterations ($m_iters$), which are approximately $50\%$ of the total allowable placements. The initial temperature for SA range $\in [0.23, 0.27]$.
+Simulated annealing is a local search algorithm with a neighborhood structure. The algorithm moves from one individual to one of its neighbours in accordance to a probabilistic criterion. If the fitness improves then the neighbouring individual is accepted. Otherwise, the move is accepted only with a probability depending on fitness change and control parameter called temperature. Probability is given by: $exp( \frac{\Delta fitness}{T_i})$. This helps the algorithm to escape local optimum solutions in a multimodal search space. We used a linear cooling schedule for temperature $T_i = \tau T_{i-1}$ with $\tau = f(m_{iters})$. Due to different sizes of the search space, cooling schedule is a function of the maximum iterations ($m_{iters}$), which are approximately $50\%$ of the total allowable placements. The initial temperature for SA range $\in [0.23, 0.27]$.
 \subsection{Hill Climbing}
 \label{sec:algoriths-hc}
 Hill climbing is a greedy search algorithm different from simulated annealing as there is no temperature cooling schedule. This property and its greedy nature of accepting only fitter individuals make HC prone to getting stuck with locally optimum solutions. However, the ease of implementation and effectiveness in numerous optimization problems \cite{skalak1994} makes hill climber a popular approach for optimization.
