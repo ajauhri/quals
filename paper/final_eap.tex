@@ -8,6 +8,7 @@
 \makeatletter
 \setlength{\@fptop}{0pt}
 \makeatother
+\renewcommand{\figurename}{Figure}
 \setlength{\textfloatsep}{2pt}
 \def\IEEEbibitemsep{0pt plus .5pt}
 \begin{document}
@@ -71,7 +72,7 @@ For example, figure \ref{fig:tc1_figure} has $n=2$ and $m=83$ for each antenna.
     \begin{subfigure}{\columnwidth}
         \includegraphics[width=\columnwidth]{FIG/tc1_ss.png}%
     \end{subfigure}\hfill\\
-    \caption{Search space for one of the experiments with multiple local optimum solutions shown in shades of blue.}%
+    \caption{Search space for test case 1, having multiple local optimum solutions shown in shades of blue.}%
     \label{fig:tc1_ss}%
 \end{figure}
 
@@ -173,7 +174,7 @@ All test cases describe platforms which are replicas of real-world use cases lik
         \caption{Test Case 4}%
         \label{fig:plat3}%
     \end{subfigure}\hfill
-    \caption{Figures of all test cases used for experiments}
+    \caption{Antennas and platforms for $4$ test cases used}
     \label{fig:tc_figures}
 \end{figure}
 
@@ -194,17 +195,17 @@ For radiation pattern, the number of field points is determined by the product o
 
 For fitness evaluation of a candidate solution, input files are generated with all specifications of antennas and the platform. NEC2 would use the input files to generate radiation pattern values for all pairs of $(\theta, \phi)$. Similarly, for the second fitness parameter - mutual coupling, NEC2 provides results between all possible pairs of antennas. If $n=4$, then there are $\binom{4}{2}$ pairs for which mutual coupling is calculated.
 
-Each test case was first evaluated with an exhaustive search algorithm to determine optimum fitness value, and the corresponding candidate solution amongst the entire search space. The results from exhaustive search were also used to normalize fitness function values between $[0,1]$. For all experiments $\alpha = \beta = 0.5$ in Eq.\eqref{eq:optimal}. The termination criteria for a run of an algorithm was either when the global minimum was reached or $0.5 \cdot \left|S\right|$, where $\left|S\right|$ is the size of the search space, function evaluations were completed. The criterion was kept as half of the search space as most of the algorithms had stagnated their search as visible from plots in figure \ref{fig:tc_mf}.
+Each test case was first evaluated with an exhaustive search algorithm to determine an optimum fitness value, and its corresponding candidate solution from the entire search space. The results from the exhaustive search were also used to normalize fitness function values between $[0,1]$. For all experiments $\alpha = \beta = 0.5$ in Eq.\eqref{eq:optimal}. The termination criteria for a run of an algorithm was either the global minimum or $0.5 \cdot \left|S\right|$, where $\left|S\right|$ is the size of the search space. The criterion was determined as half of the search space as most of the algorithms had stagnated their search as visible from plots in figure \ref{fig:tc_mf}.
 
 \section{Simulation Results}
 \label{sec:results}
-Genetic Algorithm (GA) and Evolutionary Strategy (ES) operate on a population of candidate solutions at any given iteration as oppose to Simulated Annealing (SA) and Hill Climbing (HC) which operate on one candidate solution. For this reason the mean best fitness in figures \ref{fig:tc1_mf}, \ref{fig:tc2_mf}, \ref{fig:tc3_mf}, \& \ref{fig:tc4_mf} is higher in the initial stages of a run for SA or HC than GA or ES as in a population there is higher probability of creating a fitter individual. In terms of computational time of any algorithm, the bottleneck is the running time of NEC2 simulator. Therefore, the mean best fitness is shown against the percentage of fitness evaluations which is equivalent to the number of runs of NEC2 simulator. In all four test cases, the best candidate solution was found by ES in less than $25\%$ fitness evaluations of the search space. 
+Genetic Algorithm (GA) and Evolutionary Strategy (ES) operate on a population of candidate solutions at any given iteration as oppose to Simulated Annealing (SA) and Hill Climbing (HC) which operate on one candidate solution. For this reason the mean best fitness in figure \ref{fig:tc_mf} is higher in the initial stages of a run for SA and HC than GA and ES, because in a population there is higher probability of creating a fitter individual. In terms of computational time of any algorithm, the bottleneck is the running time of NEC2 simulator. Therefore, the mean best fitness is shown against the percentage of fitness evaluations which is equivalent to the number of runs of NEC2 simulator. In all four test cases, the best candidate solution was found by ES in less than $25\%$ fitness evaluations of the search space. 
 
-Regions in the plot where the mean best fitness of GA or ES is constant relates to the fitness evaluation of offsprings created by evolutionary operators applied on the population of candidate solutions. For SA and HC, we notice the SA curve crossing the HC curve in all four test cases. This is due temperature parameter of the SA allowing it to accept fitness worsening individuals with high probability initially in the run. However, later in the run the cooling schedule reduces the probability of SA accepting a worse individual. Eventually, SA has a better probability to reach the optimum solution in comparison to the HC.
+Regions in the plot where the mean best fitness of GA and ES is constant relates to the fitness evaluation of offsprings created by evolutionary operators applied on the population of candidate solutions. For SA and HC, we notice the SA curve crossing the HC curve in all four test cases. This is due to the temperature parameter of SA, allowing it to accept fitness worsening individuals with high probability initially in the run. However, later in the run the cooling schedule reduces the probability of SA accepting a worse individual. Eventually, SA has a better probability to reach the optimum solution in comparison to HC.
 
-As known in general, the HC algorithm made progress only in the initial phases of the run and got stuck in local optimums. The purpose for inclusion of such a random search algorithm was to highlight antenna placements may not always be a trivial optimization task as shown in figure \ref{fig:tc1_ss}. The search landscape for test case 4 always had a lower fitness candidate solution in the neighbourhood, therefore allowing HC to converge quickly.
+As known in general, the HC algorithm made progress only in the initial phases of the run and got stuck in local optimums. The purpose for inclusion of such a random search algorithm was to highlight that antenna placement may not always be a trivial optimization task as can be seen from the search space figure \ref{fig:tc1_ss}. The search space for test case 4 always had a lower fitness candidate solution in the neighbourhood, therefore allowing HC to converge quickly.
 
-To summarize, figure \ref{fig:tc_mf} shows that ES was successful in finding optimum candidate solutions for all test cases. Alternatively, SA took less number of fitness evaluations to converge but had a lower probability to succeed by finding the optimum solution.
+To summarize, figure \ref{fig:tc_mf} shows that ES was successful in finding optimum candidate solutions for all test cases. Alternatively, SA took less number of fitness evaluations to converge but had a lower probability in finding the optimum solution.
 \begin{figure*}
     \centering
     \begin{subfigure}{\columnwidth}
@@ -227,15 +228,15 @@ To summarize, figure \ref{fig:tc_mf} shows that ES was successful in finding opt
         \caption{Test Case 4}%
         \label{fig:tc4_mf}%
     \end{subfigure}\hfill%
-    \caption{Mean best fitness shown for $10$ independent runs of each algorithm for all test cases. Global minimum calculated using exhaustive search algorithm for each test case shown in magenta on the vertical axis. The horizontal axis is representative of the percentage of fitness evaluations of the search space. The number of evaluations may not be unique points in the search space.}
+    \caption{Mean best fitness shown for $10$ independent runs of each algorithm for $4$ test cases. Global minimum calculated using exhaustive search algorithm for each test case shown in magenta on the vertical axis. The horizontal axis is representative of the percentage of fitness evaluations of the search space. The number of evaluations may not be unique points in the search space.}
 \label{fig:tc_mf}
 \end{figure*}
  
 
-\section{Conclusion}
-A comparison of four stochastic search algorithms applied to antenna placement optimization was presented. The results showed that a trade-off space exists: faster, less successful SA search versus slower, more successful search by ES. GA was not very effective, and also slower to find the optimum individuals. More importantly, our formulation is generic such that it can be applied to any type of a platform which otherwise may be time consuming and expensive in case of large objects like satellites, warships, and aircrafts. 
+\section{Conclusion \& Future Work}
+In this paper, a comparison of four stochastic algorithms applied to antenna placement optimization problem has been presented. The results show that a trade-off space exists: faster, less successful search by SA versus slower, more successful search by ES. GA was not very effective, and slower in finding the optimum individual. More importantly, our formulation is generic such that it can be applied to any type of a platform which otherwise may be time consuming and expensive in case of large objects like satellites, warships, and aircrafts. 
 
-Most of the stochastic algorithms presented here were elementary. More experiments can be conducted for population based algorithms with different population sizes, and to statistically compare how this may affect the performance of the algorithm. Also, bigger search spaces need to be considered with more number of antennas. Other evolutionary techniques like ALPS, and Differential Evolution algorithm can also be compared for quality and convergence.
+Most of the stochastic algorithms presented here were elementary. More experiments can be conducted for population based algorithms with different population sizes, to statistically compare how this may affect the performance of the algorithm. Also, bigger search spaces need to be considered with more number of antennas. Other evolutionary techniques like ALPS, and Differential Evolution can also be compared for quality and convergence.
 
 \begin{thebibliography}{1}
 
