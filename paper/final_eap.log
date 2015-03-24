@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  23 MAR 2015 17:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  24 MAR 2015 13:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -458,10 +458,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--75
  <./FIG/tc1_ss.png>]
 [2]
 Package epstopdf Info: Source file: <FIG/tc_1_figure.eps>
-(epstopdf)                    date: 2015-03-23 17:29:05
+(epstopdf)                    date: 2015-03-24 13:55:04
 (epstopdf)                    size: 57435 bytes
 (epstopdf)             Output file: <FIG/tc_1_figure-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-23 11:20:09
+(epstopdf)                    date: 2015-03-24 09:20:36
 (epstopdf)                    size: 36834 bytes
 (epstopdf)             Command: <repstopdf --outfile=FIG/tc_1_figure-eps-conver
 ted-to.pdf FIG/tc_1_figure.eps>
@@ -470,7 +470,7 @@ runsystem(repstopdf --outfile=FIG/tc_1_figure-eps-converted-to.pdf FIG/tc_1_fig
 ure.eps)...executed safely (allowed).
 
 Package epstopdf Info: Result file: <FIG/tc_1_figure-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-23 17:30:02
+(epstopdf)                    date: 2015-03-24 13:55:16
 (epstopdf)                    size: 42537 bytes.
  <FIG/tc_1_figure-eps-converted-to.pdf, id=25, 578.16pt x 433.62pt>
 File: FIG/tc_1_figure-eps-converted-to.pdf Graphic file (type pdf)
@@ -649,7 +649,7 @@ nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on final_eap.pdf (4 pages, 574565 bytes).
+Output written on final_eap.pdf (4 pages, 574564 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
