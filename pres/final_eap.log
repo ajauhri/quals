@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  27 MAR 2015 11:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  27 MAR 2015 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2082,6 +2082,29 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \cur@col=\count335
 \conditionsep=\skip99
 )
+(/usr/share/texlive/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2004/08/31 v1.71 
+\dashlinedash=\dimen332
+\dashlinegap=\dimen333
+\adl@box=\box108
+\adl@height=\dimen334
+\adl@heightsave=\dimen335
+\adl@depth=\dimen336
+\adl@depthsave=\dimen337
+\adl@finaldepth=\dimen338
+\adl@columns=\count336
+\adl@ncol=\count337
+\adl@currentcolumn=\count338
+\adl@currentcolumnsave=\count339
+\adl@totalheight=\count340
+\adl@totalheightsave=\count341
+\adl@dash=\count342
+\adl@gap=\count343
+\adl@cla=\count344
+\adl@clb=\count345
+\adl@everyvbox=\toks53
+\adl@LTpagetotal=\dimen339
+)
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
 s.code.tex
 File: tikzlibraryshapes.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
@@ -2129,135 +2152,135 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 (/usr/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.c
 ode.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v2.10 (rcs-revision 1.2)
-\pgfnodepartlowerbox=\box108
-\pgfnodeparttwobox=\box109
-\pgfnodepartthreebox=\box110
-\pgfnodepartfourbox=\box111
-\pgfnodeparttwentybox=\box112
-\pgfnodepartnineteenbox=\box113
-\pgfnodeparteighteenbox=\box114
-\pgfnodepartseventeenbox=\box115
-\pgfnodepartsixteenbox=\box116
-\pgfnodepartfifteenbox=\box117
-\pgfnodepartfourteenbox=\box118
-\pgfnodepartthirteenbox=\box119
-\pgfnodeparttwelvebox=\box120
-\pgfnodepartelevenbox=\box121
-\pgfnodeparttenbox=\box122
-\pgfnodepartninebox=\box123
-\pgfnodeparteightbox=\box124
-\pgfnodepartsevenbox=\box125
-\pgfnodepartsixbox=\box126
-\pgfnodepartfivebox=\box127
+\pgfnodepartlowerbox=\box109
+\pgfnodeparttwobox=\box110
+\pgfnodepartthreebox=\box111
+\pgfnodepartfourbox=\box112
+\pgfnodeparttwentybox=\box113
+\pgfnodepartnineteenbox=\box114
+\pgfnodeparteighteenbox=\box115
+\pgfnodepartseventeenbox=\box116
+\pgfnodepartsixteenbox=\box117
+\pgfnodepartfifteenbox=\box118
+\pgfnodepartfourteenbox=\box119
+\pgfnodepartthirteenbox=\box120
+\pgfnodeparttwelvebox=\box121
+\pgfnodepartelevenbox=\box122
+\pgfnodeparttenbox=\box123
+\pgfnodepartninebox=\box124
+\pgfnodeparteightbox=\box125
+\pgfnodepartsevenbox=\box126
+\pgfnodepartsixbox=\box127
+\pgfnodepartfivebox=\box128
 )))
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 64.
+(hyperref)                removing `\<def>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\reserved@a' on input line 64.
+(hyperref)                removing `\reserved@a' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 64.
+(hyperref)                removing `\<def>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\reserved@b' on input line 64.
+(hyperref)                removing `\reserved@b' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 64.
+(hyperref)                removing `\<let>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 64.
+(hyperref)                removing `\<let>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\reserved@c' on input line 64.
+(hyperref)                removing `\reserved@c' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 64.
+(hyperref)                removing `\<def>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\insertdate' on input line 64.
+(hyperref)                removing `\insertdate' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 64.
+(hyperref)                removing `\<def>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@shortdate' on input line 64.
+(hyperref)                removing `\beamer@shortdate' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 64.
+(hyperref)                removing `\<def>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\insertdate' on input line 64.
+(hyperref)                removing `\insertdate' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 64.
+(hyperref)                removing `\<def>-command' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@shortdate' on input line 64.
+(hyperref)                removing `\beamer@shortdate' on input line 67.
 
 (./final_eap.aux)
 \openout1 = `final_eap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 64.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 67.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 67.
 
  (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 64.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 64.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 67.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 64.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 64.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 67.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 64.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 64.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 67.
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2298,20 +2321,20 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count336
-\scratchdimen=\dimen332
-\scratchbox=\box128
-\nofMPsegments=\count337
-\nofMParguments=\count338
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count339
-\MPscratchDim=\dimen333
-\MPnumerator=\count340
-\makeMPintoPDFobject=\count341
-\everyMPtoPDFconversion=\toks54
+\scratchcounter=\count346
+\scratchdimen=\dimen340
+\scratchbox=\box129
+\nofMPsegments=\count347
+\nofMParguments=\count348
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count349
+\MPscratchDim=\dimen341
+\MPnumerator=\count350
+\makeMPintoPDFobject=\count351
+\everyMPtoPDFconversion=\toks55
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box129
-Package hyperref Info: Link coloring OFF on input line 64.
+\AtBeginShipoutBox=\box130
+Package hyperref Info: Link coloring OFF on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2319,62 +2342,62 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count342
+\c@section@level=\count352
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
 
 (./final_eap.out) (./final_eap.out)
 \@outlinefile=\write6
 \openout6 = `final_eap.out'.
 
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 64.
+(Font)              `operators' in the math version `normal' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  T1/futs/m/n --> OT1/cmss/m/n on input line 64.
+(Font)                  T1/futs/m/n --> OT1/cmss/m/n on input line 67.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 64.
+(Font)              `operators' in the math version `bold' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/futs/b/n --> OT1/cmss/bx/n on input line 64.
+(Font)                  T1/futs/b/n --> OT1/cmss/bx/n on input line 67.
 \symnumbers=\mathgroup8
 \sympureletters=\mathgroup9
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  T1/futs/m/n --> T1/futs/m/n on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 64.
+(Font)                  T1/futs/m/n --> T1/futs/m/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 64.
+(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 64.
+(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 64.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 64.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 64.
+(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 64.
+(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 64.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 64.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 64.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 64.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 64.
+(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 64.
+(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 64.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 64.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 64.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 67.
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -2400,52 +2423,52 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 64.
+LaTeX Info: Redefining \includegraphics on input line 67.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \dots on input line 64.
+LaTeX Info: Redefining \dots on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/config/siunitx-abbreviations.c
 fg
 File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
 ) (./final_eap.nav)
-\c__siunitx_mathsf_int=\count343
+\c__siunitx_mathsf_int=\count353
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 64.
+(Font)              scaled to size 10.07397pt on input line 67.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 64.
+(Font)              scaled to size 7.63599pt on input line 67.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 64.
-LaTeX Font Info:    Try loading font information for U+msa on input line 64.
+(Font)              scaled to size 5.51999pt on input line 67.
+LaTeX Font Info:    Try loading font information for U+msa on input line 67.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 64.
+LaTeX Font Info:    Try loading font information for U+msb on input line 67.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 64
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 67
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 64.
+(Font)              scaled to size 10.07397pt on input line 67.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 64.
+(Font)              scaled to size 7.63599pt on input line 67.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 64.
+(Font)              scaled to size 5.51999pt on input line 67.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 64.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 67.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8.3> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 64.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 67.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 64.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 67.
 Missing character: There is no ^^L in font fourier-mex!
-\c__siunitx_mathtt_int=\count344
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 64.
+\c__siunitx_mathtt_int=\count354
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 67.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2453,38 +2476,38 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 77.
+(Font)              scaled to size 7.35999pt on input line 80.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 77.
+(Font)              scaled to size 6.25598pt on input line 80.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 77.
+(Font)              scaled to size 7.35999pt on input line 80.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 77.
+(Font)              scaled to size 6.25598pt on input line 80.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 77.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 80.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6.8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 77.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 80.
 Missing character: There is no ^^L in font fourier-mex!
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 77.
+(textpos)                Alignment may work out wrongly. on input line 80.
 
 <cm_logo.png, id=44, 675.52374pt x 102.3825pt>
 File: cm_logo.png Graphic file (type png)
  <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 77.
+Package pdftex.def Info: cm_logo.png used on input line 80.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 
 <ece.png, id=46, 154.176pt x 31.7988pt>
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 77.
+Package pdftex.def Info: ece.png used on input line 80.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 77--77
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 80--80
 [][]  
  []
 
@@ -2497,18 +2520,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 84.
+(textpos)                Alignment may work out wrongly. on input line 87.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 84.
+Package pdftex.def Info: cm_logo.png used on input line 87.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 84.
+Package pdftex.def Info: ece.png used on input line 87.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 84--84
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 87--87
 [][]  
  []
 
@@ -2524,7 +2547,7 @@ o.pdf>
 (epstopdf)                    size: 5057 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_1_platform
 -eps-converted-to.pdf ../paper/FIG/tc_1_platform.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 117.
 runsystem(repstopdf --outfile=../paper/FIG/tc_1_platform-eps-converted-to.pdf .
 ./paper/FIG/tc_1_platform.eps)...executed safely (allowed).
 
@@ -2538,10 +2561,10 @@ File: ../paper/FIG/tc_1_platform-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc_1_platform-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_1_platform-eps-converted-to.pdf used o
-n input line 114.
+n input line 117.
 (pdftex.def)             Requested size: 104.78934pt x 40.95195pt.
 
-Overfull \hbox (19.4311pt too wide) in paragraph at lines 114--114
+Overfull \hbox (19.4311pt too wide) in paragraph at lines 117--117
  [] 
  []
 
@@ -2554,17 +2577,17 @@ Package epstopdf Info: Source file: <../paper/FIG/tc_1_figure2.eps>
 (epstopdf)                    size: 36834 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_1_figure2-
 eps-converted-to.pdf ../paper/FIG/tc_1_figure2.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 <../paper/FIG/tc_1_figure2-eps-converted-to.pdf, id=104, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc_1_figure2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc_1_figure2-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_1_figure2-eps-converted-to.pdf used on
- input line 114.
+ input line 117.
 (pdftex.def)             Requested size: 134.90137pt x 101.17603pt.
 
-Overfull \hbox (49.54314pt too wide) in paragraph at lines 114--114
+Overfull \hbox (49.54314pt too wide) in paragraph at lines 117--117
  [] 
  []
 
@@ -2572,18 +2595,18 @@ Overfull \hbox (49.54314pt too wide) in paragraph at lines 114--114
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 114.
+(textpos)                Alignment may work out wrongly. on input line 117.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 114.
+Package pdftex.def Info: cm_logo.png used on input line 117.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 114.
+Package pdftex.def Info: ece.png used on input line 117.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 114--114
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 117--117
 [][]  
  []
 
@@ -2600,7 +2623,7 @@ o.pdf>
 (epstopdf)                    size: 5057 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_1_platform
 -eps-converted-to.pdf ../paper/FIG/tc_1_platform.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 117.
 runsystem(repstopdf --outfile=../paper/FIG/tc_1_platform-eps-converted-to.pdf .
 ./paper/FIG/tc_1_platform.eps)...executed safely (allowed).
 
@@ -2611,10 +2634,10 @@ o.pdf>
 File: ../paper/FIG/tc_1_platform-eps-converted-to.pdf Graphic file (type pdf)
  <use ../paper/FIG/tc_1_platform-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_1_platform-eps-converted-to.pdf used o
-n input line 114.
+n input line 117.
 (pdftex.def)             Requested size: 104.78934pt x 40.95195pt.
 
-Overfull \hbox (19.4311pt too wide) in paragraph at lines 114--114
+Overfull \hbox (19.4311pt too wide) in paragraph at lines 117--117
  [] 
  []
 
@@ -2627,17 +2650,17 @@ Package epstopdf Info: Source file: <../paper/FIG/tc_11_figure.eps>
 (epstopdf)                    size: 13089 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_11_figure-
 eps-converted-to.pdf ../paper/FIG/tc_11_figure.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 <../paper/FIG/tc_11_figure-eps-converted-to.pdf, id=160, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc_11_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc_11_figure-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_11_figure-eps-converted-to.pdf used on
- input line 114.
+ input line 117.
 (pdftex.def)             Requested size: 134.90137pt x 101.17603pt.
 
-Overfull \hbox (49.54314pt too wide) in paragraph at lines 114--114
+Overfull \hbox (49.54314pt too wide) in paragraph at lines 117--117
  [] 
  []
 
@@ -2650,15 +2673,15 @@ Package epstopdf Info: Source file: <../paper/FIG/tc_1_figure2.eps>
 (epstopdf)                    size: 36834 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_1_figure2-
 eps-converted-to.pdf ../paper/FIG/tc_1_figure2.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 File: ../paper/FIG/tc_1_figure2-eps-converted-to.pdf Graphic file (type pdf)
 <use ../paper/FIG/tc_1_figure2-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_1_figure2-eps-converted-to.pdf used on
- input line 114.
+ input line 117.
 (pdftex.def)             Requested size: 134.90137pt x 101.17603pt.
 
-Overfull \hbox (49.54314pt too wide) in paragraph at lines 114--114
+Overfull \hbox (49.54314pt too wide) in paragraph at lines 117--117
  [] 
  []
 
@@ -2666,18 +2689,18 @@ Overfull \hbox (49.54314pt too wide) in paragraph at lines 114--114
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 114.
+(textpos)                Alignment may work out wrongly. on input line 117.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 114.
+Package pdftex.def Info: cm_logo.png used on input line 117.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 114.
+Package pdftex.def Info: ece.png used on input line 117.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 114--114
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 117--117
 [][]  
  []
 
@@ -2695,18 +2718,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 125.
+(textpos)                Alignment may work out wrongly. on input line 128.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 125.
+Package pdftex.def Info: cm_logo.png used on input line 128.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 125.
+Package pdftex.def Info: ece.png used on input line 128.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 125--125
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 128--128
 [][]  
  []
 
@@ -2717,18 +2740,18 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 125--125
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 132.
+(textpos)                Alignment may work out wrongly. on input line 135.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 132.
+Package pdftex.def Info: cm_logo.png used on input line 135.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 132.
+Package pdftex.def Info: ece.png used on input line 135.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 132--132
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 135--135
 [][]  
  []
 
@@ -2738,7 +2761,7 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 132--132
 Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
 
-Overfull \hbox (14.38536pt too wide) in paragraph at lines 157--157
+Overfull \hbox (14.38536pt too wide) in paragraph at lines 160--160
  [] 
  []
 
@@ -2746,18 +2769,18 @@ Overfull \hbox (14.38536pt too wide) in paragraph at lines 157--157
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 157.
+(textpos)                Alignment may work out wrongly. on input line 160.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 157.
+Package pdftex.def Info: cm_logo.png used on input line 160.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 157.
+Package pdftex.def Info: ece.png used on input line 160.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 157--157
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 160--160
 [][]  
  []
 
@@ -2770,35 +2793,35 @@ Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 172.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 175.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 172.
+(Font)              scaled to size 9.19998pt on input line 175.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 172.
+(Font)              scaled to size 6.99199pt on input line 175.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 172.
+(Font)              scaled to size 9.19998pt on input line 175.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 172.
+(Font)              scaled to size 6.99199pt on input line 175.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7.6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 172.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 175.
 Missing character: There is no ^^L in font fourier-mex!
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 172.
+(textpos)                Alignment may work out wrongly. on input line 175.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 172.
+Package pdftex.def Info: cm_logo.png used on input line 175.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 172.
+Package pdftex.def Info: ece.png used on input line 175.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 172--172
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 175--175
 [][]  
  []
 
@@ -2818,23 +2841,23 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 212.
+(textpos)                Alignment may work out wrongly. on input line 215.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 212.
+Package pdftex.def Info: cm_logo.png used on input line 215.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 212.
+Package pdftex.def Info: ece.png used on input line 215.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 212--212
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 215--215
 [][]  
  []
 
 
-Overfull \vbox (12.34279pt too high) detected at line 212
+Overfull \vbox (12.34279pt too high) detected at line 215
  []
 
 [10
@@ -2846,18 +2869,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 222.
+(textpos)                Alignment may work out wrongly. on input line 225.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 222.
+Package pdftex.def Info: cm_logo.png used on input line 225.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 222.
+Package pdftex.def Info: ece.png used on input line 225.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 222--222
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 225--225
 [][]  
  []
 
@@ -2870,18 +2893,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 233.
+(textpos)                Alignment may work out wrongly. on input line 236.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 233.
+Package pdftex.def Info: cm_logo.png used on input line 236.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 233.
+Package pdftex.def Info: ece.png used on input line 236.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 233--233
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 236--236
 [][]  
  []
 
@@ -2894,18 +2917,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 241.
+(textpos)                Alignment may work out wrongly. on input line 244.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 241.
+Package pdftex.def Info: cm_logo.png used on input line 244.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 241.
+Package pdftex.def Info: ece.png used on input line 244.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 241--241
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 244--244
 [][]  
  []
 
@@ -2918,18 +2941,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 251.
+(textpos)                Alignment may work out wrongly. on input line 254.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 251.
+Package pdftex.def Info: cm_logo.png used on input line 254.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 251.
+Package pdftex.def Info: ece.png used on input line 254.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 251--251
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 254--254
 [][]  
  []
 
@@ -2945,14 +2968,14 @@ Package epstopdf Info: Source file: <../paper/FIG/tc1_mut1.eps>
 (epstopdf)                    size: 11921 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mut1-eps-
 converted-to.pdf ../paper/FIG/tc1_mut1.eps>
-(epstopdf)             \includegraphics on input line 277.
+(epstopdf)             \includegraphics on input line 280.
 Package epstopdf Info: Output file is already uptodate.
  <../paper/FIG/tc1_mut1-eps-converted-to.pdf, id=449, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc1_mut1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc1_mut1-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc1_mut1-eps-converted-to.pdf used on inp
-ut line 277.
+ut line 280.
 (pdftex.def)             Requested size: 123.31233pt x 46.37369pt.
 Package epstopdf Info: Source file: <../paper/FIG/tc1_mut2.eps>
 (epstopdf)                    date: 2015-03-27 11:06:19
@@ -2963,7 +2986,7 @@ Package epstopdf Info: Source file: <../paper/FIG/tc1_mut2.eps>
 (epstopdf)                    size: 24973 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mut2-eps-
 converted-to.pdf ../paper/FIG/tc1_mut2.eps>
-(epstopdf)             \includegraphics on input line 277.
+(epstopdf)             \includegraphics on input line 280.
 Package epstopdf Info: Output file is already uptodate.
 
 <../paper/FIG/tc1_mut2-eps-converted-to.pdf, id=451, 578.16pt x 433.62pt>
@@ -2971,7 +2994,7 @@ File: ../paper/FIG/tc1_mut2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc1_mut2-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc1_mut2-eps-converted-to.pdf used on inp
-ut line 277.
+ut line 280.
 (pdftex.def)             Requested size: 140.87827pt x 46.37369pt.
 Package epstopdf Info: Source file: <../paper/FIG/tc1_mut3.eps>
 (epstopdf)                    date: 2015-03-27 11:06:20
@@ -2982,7 +3005,7 @@ Package epstopdf Info: Source file: <../paper/FIG/tc1_mut3.eps>
 (epstopdf)                    size: 12084 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mut3-eps-
 converted-to.pdf ../paper/FIG/tc1_mut3.eps>
-(epstopdf)             \includegraphics on input line 277.
+(epstopdf)             \includegraphics on input line 280.
 Package epstopdf Info: Output file is already uptodate.
 
 <../paper/FIG/tc1_mut3-eps-converted-to.pdf, id=453, 578.16pt x 433.62pt>
@@ -2990,25 +3013,25 @@ File: ../paper/FIG/tc1_mut3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc1_mut3-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc1_mut3-eps-converted-to.pdf used on inp
-ut line 277.
+ut line 280.
 (pdftex.def)             Requested size: 140.87827pt x 46.37369pt.
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 277.
+(textpos)                Alignment may work out wrongly. on input line 280.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 277.
+Package pdftex.def Info: cm_logo.png used on input line 280.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 277.
+Package pdftex.def Info: ece.png used on input line 280.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 277--277
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 280--280
 [][]  
  []
 
@@ -3016,113 +3039,132 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 277--277
 
  <../paper/FIG/tc1_mut1-eps-converted-to.pdf> <../paper/FIG/tc1_mut2-eps-conver
 ted-to.pdf> <../paper/FIG/tc1_mut3-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <../paper/FIG/tc1_mut1.eps>
-(epstopdf)                    date: 2015-03-27 11:06:18
-(epstopdf)                    size: 38131 bytes
-(epstopdf)             Output file: <../paper/FIG/tc1_mut1-eps-converted-to.pdf
->
-(epstopdf)                    date: 2015-03-27 11:06:23
-(epstopdf)                    size: 11921 bytes
-(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mut1-eps-
-converted-to.pdf ../paper/FIG/tc1_mut1.eps>
-(epstopdf)             \includegraphics on input line 304.
-Package epstopdf Info: Output file is already uptodate.
-File: ../paper/FIG/tc1_mut1-eps-converted-to.pdf Graphic file (type pdf)
+Package epstopdf Info: Source file: <../paper/FIG/tc1_reco1.eps>
+(epstopdf)                    date: 2015-03-27 12:42:52
+(epstopdf)                    size: 38132 bytes
+(epstopdf)             Output file: <../paper/FIG/tc1_reco1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-03-27 12:32:12
+(epstopdf)                    size: 11923 bytes
+(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_reco1-eps
+-converted-to.pdf ../paper/FIG/tc1_reco1.eps>
+(epstopdf)             \includegraphics on input line 312.
+runsystem(repstopdf --outfile=../paper/FIG/tc1_reco1-eps-converted-to.pdf ../pa
+per/FIG/tc1_reco1.eps)...executed safely (allowed).
 
-<use ../paper/FIG/tc1_mut1-eps-converted-to.pdf>
-Package pdftex.def Info: ../paper/FIG/tc1_mut1-eps-converted-to.pdf used on inp
-ut line 304.
+Package epstopdf Info: Result file: <../paper/FIG/tc1_reco1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-03-27 12:32:12
+(epstopdf)                    size: 11923 bytes.
+
+<../paper/FIG/tc1_reco1-eps-converted-to.pdf, id=541, 578.16pt x 433.62pt>
+File: ../paper/FIG/tc1_reco1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../paper/FIG/tc1_reco1-eps-converted-to.pdf>
+Package pdftex.def Info: ../paper/FIG/tc1_reco1-eps-converted-to.pdf used on in
+put line 312.
 (pdftex.def)             Requested size: 123.31233pt x 46.37369pt.
-Package epstopdf Info: Source file: <../paper/FIG/tc1_mut1.eps>
-(epstopdf)                    date: 2015-03-27 11:06:18
+Package epstopdf Info: Source file: <../paper/FIG/tc1_reco2.eps>
+(epstopdf)                    date: 2015-03-27 12:42:53
 (epstopdf)                    size: 38131 bytes
-(epstopdf)             Output file: <../paper/FIG/tc1_mut1-eps-converted-to.pdf
->
-(epstopdf)                    date: 2015-03-27 11:06:23
-(epstopdf)                    size: 11921 bytes
-(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mut1-eps-
-converted-to.pdf ../paper/FIG/tc1_mut1.eps>
-(epstopdf)             \includegraphics on input line 304.
+(epstopdf)             Output file: <../paper/FIG/tc1_reco2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-03-27 12:43:07
+(epstopdf)                    size: 11929 bytes
+(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_reco2-eps
+-converted-to.pdf ../paper/FIG/tc1_reco2.eps>
+(epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
-File: ../paper/FIG/tc1_mut1-eps-converted-to.pdf Graphic file (type pdf)
 
-<use ../paper/FIG/tc1_mut1-eps-converted-to.pdf>
-Package pdftex.def Info: ../paper/FIG/tc1_mut1-eps-converted-to.pdf used on inp
-ut line 304.
+<../paper/FIG/tc1_reco2-eps-converted-to.pdf, id=543, 578.16pt x 433.62pt>
+File: ../paper/FIG/tc1_reco2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../paper/FIG/tc1_reco2-eps-converted-to.pdf>
+Package pdftex.def Info: ../paper/FIG/tc1_reco2-eps-converted-to.pdf used on in
+put line 312.
 (pdftex.def)             Requested size: 123.31233pt x 46.37369pt.
-Package epstopdf Info: Source file: <../paper/FIG/tc1_mut2.eps>
-(epstopdf)                    date: 2015-03-27 11:06:19
-(epstopdf)                    size: 41230 bytes
-(epstopdf)             Output file: <../paper/FIG/tc1_mut2-eps-converted-to.pdf
->
-(epstopdf)                    date: 2015-03-27 11:06:26
-(epstopdf)                    size: 24973 bytes
-(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mut2-eps-
-converted-to.pdf ../paper/FIG/tc1_mut2.eps>
-(epstopdf)             \includegraphics on input line 304.
+Missing character: There is no ^^L in font fourier-mex!
+Package epstopdf Info: Source file: <../paper/FIG/tc1_reco3.eps>
+(epstopdf)                    date: 2015-03-27 12:42:54
+(epstopdf)                    size: 38131 bytes
+(epstopdf)             Output file: <../paper/FIG/tc1_reco3-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-03-27 12:43:10
+(epstopdf)                    size: 11926 bytes
+(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_reco3-eps
+-converted-to.pdf ../paper/FIG/tc1_reco3.eps>
+(epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
-File: ../paper/FIG/tc1_mut2-eps-converted-to.pdf Graphic file (type pdf)
 
-<use ../paper/FIG/tc1_mut2-eps-converted-to.pdf>
-Package pdftex.def Info: ../paper/FIG/tc1_mut2-eps-converted-to.pdf used on inp
-ut line 304.
-(pdftex.def)             Requested size: 140.87827pt x 46.37369pt.
-Package epstopdf Info: Source file: <../paper/FIG/tc1_mut3.eps>
-(epstopdf)                    date: 2015-03-27 11:06:20
-(epstopdf)                    size: 64837 bytes
-(epstopdf)             Output file: <../paper/FIG/tc1_mut3-eps-converted-to.pdf
->
-(epstopdf)                    date: 2015-03-27 11:06:30
-(epstopdf)                    size: 12084 bytes
-(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mut3-eps-
-converted-to.pdf ../paper/FIG/tc1_mut3.eps>
-(epstopdf)             \includegraphics on input line 304.
+<../paper/FIG/tc1_reco3-eps-converted-to.pdf, id=545, 578.16pt x 433.62pt>
+File: ../paper/FIG/tc1_reco3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../paper/FIG/tc1_reco3-eps-converted-to.pdf>
+Package pdftex.def Info: ../paper/FIG/tc1_reco3-eps-converted-to.pdf used on in
+put line 312.
+(pdftex.def)             Requested size: 123.31233pt x 46.37369pt.
+Package epstopdf Info: Source file: <../paper/FIG/tc1_reco4.eps>
+(epstopdf)                    date: 2015-03-27 12:42:54
+(epstopdf)                    size: 38132 bytes
+(epstopdf)             Output file: <../paper/FIG/tc1_reco4-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-03-27 12:43:01
+(epstopdf)                    size: 11925 bytes
+(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_reco4-eps
+-converted-to.pdf ../paper/FIG/tc1_reco4.eps>
+(epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
-File: ../paper/FIG/tc1_mut3-eps-converted-to.pdf Graphic file (type pdf)
 
-<use ../paper/FIG/tc1_mut3-eps-converted-to.pdf>
-Package pdftex.def Info: ../paper/FIG/tc1_mut3-eps-converted-to.pdf used on inp
-ut line 304.
-(pdftex.def)             Requested size: 140.87827pt x 46.37369pt.
+<../paper/FIG/tc1_reco4-eps-converted-to.pdf, id=547, 578.16pt x 433.62pt>
+File: ../paper/FIG/tc1_reco4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../paper/FIG/tc1_reco4-eps-converted-to.pdf>
+Package pdftex.def Info: ../paper/FIG/tc1_reco4-eps-converted-to.pdf used on in
+put line 312.
+(pdftex.def)             Requested size: 123.31233pt x 46.37369pt.
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 304.
+(textpos)                Alignment may work out wrongly. on input line 312.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 304.
+Package pdftex.def Info: cm_logo.png used on input line 312.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 304.
+Package pdftex.def Info: ece.png used on input line 312.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 304--304
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 312--312
 [][]  
  []
 
 [16
 
-]
+ <../paper/FIG/tc1_reco1-eps-converted-to.pdf> <../paper/FIG/tc1_reco2-eps-conv
+erted-to.pdf> <../paper/FIG/tc1_reco3-eps-converted-to.pdf> <../paper/FIG/tc1_r
+eco4-eps-converted-to.pdf>]
+Missing character: There is no ^^L in font fourier-mex!
+
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 333.
+(textpos)                Alignment may work out wrongly. on input line 341.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 333.
+Package pdftex.def Info: cm_logo.png used on input line 341.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 333.
+Package pdftex.def Info: ece.png used on input line 341.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 333--333
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 341--341
 [][]  
  []
 
@@ -3133,18 +3175,18 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 333--333
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 349.
+(textpos)                Alignment may work out wrongly. on input line 357.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 349.
+Package pdftex.def Info: cm_logo.png used on input line 357.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 349.
+Package pdftex.def Info: ece.png used on input line 357.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 349--349
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 357--357
 [][]  
  []
 
@@ -3155,18 +3197,18 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 349--349
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 370.
+(textpos)                Alignment may work out wrongly. on input line 378.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 370.
+Package pdftex.def Info: cm_logo.png used on input line 378.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 370.
+Package pdftex.def Info: ece.png used on input line 378.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 370--370
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 378--378
 [][]  
  []
 
@@ -3175,29 +3217,29 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 370--370
 ]
 Missing character: There is no ^^L in font fourier-mex!
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 381.
+(Font)              scaled to size 8.27998pt on input line 389.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 381.
+(Font)              scaled to size 8.27998pt on input line 389.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 381.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 389.
 Missing character: There is no ^^L in font fourier-mex!
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 381.
+(textpos)                Alignment may work out wrongly. on input line 389.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 381.
+Package pdftex.def Info: cm_logo.png used on input line 389.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 381.
+Package pdftex.def Info: ece.png used on input line 389.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 381--381
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 389--389
 [][]  
  []
 
@@ -3213,15 +3255,15 @@ pdf>
 (epstopdf)                    size: 42537 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_1_figure-e
 ps-converted-to.pdf ../paper/FIG/tc_1_figure.eps>
-(epstopdf)             \includegraphics on input line 397.
+(epstopdf)             \includegraphics on input line 405.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc_1_figure-eps-converted-to.pdf, id=678, 578.16pt x 433.62pt>
+<../paper/FIG/tc_1_figure-eps-converted-to.pdf, id=754, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc_1_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc_1_figure-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_1_figure-eps-converted-to.pdf used on 
-input line 397.
+input line 405.
 (pdftex.def)             Requested size: 153.64394pt x 153.64174pt.
 Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
@@ -3234,15 +3276,15 @@ pdf>
 (epstopdf)                    size: 40324 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_2_figure-e
 ps-converted-to.pdf ../paper/FIG/tc_2_figure.eps>
-(epstopdf)             \includegraphics on input line 397.
+(epstopdf)             \includegraphics on input line 405.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc_2_figure-eps-converted-to.pdf, id=679, 578.16pt x 433.62pt>
+<../paper/FIG/tc_2_figure-eps-converted-to.pdf, id=755, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc_2_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc_2_figure-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_2_figure-eps-converted-to.pdf used on 
-input line 397.
+input line 405.
 (pdftex.def)             Requested size: 153.64394pt x 153.64174pt.
 Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
@@ -3251,18 +3293,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 397.
+(textpos)                Alignment may work out wrongly. on input line 405.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 397.
+Package pdftex.def Info: cm_logo.png used on input line 405.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 397.
+Package pdftex.def Info: ece.png used on input line 405.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 397--397
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 405--405
 [][]  
  []
 
@@ -3279,15 +3321,15 @@ pdf>
 (epstopdf)                    size: 47413 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_3_figure-e
 ps-converted-to.pdf ../paper/FIG/tc_3_figure.eps>
-(epstopdf)             \includegraphics on input line 413.
+(epstopdf)             \includegraphics on input line 421.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc_3_figure-eps-converted-to.pdf, id=775, 578.16pt x 433.62pt>
+<../paper/FIG/tc_3_figure-eps-converted-to.pdf, id=851, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc_3_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc_3_figure-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_3_figure-eps-converted-to.pdf used on 
-input line 413.
+input line 421.
 (pdftex.def)             Requested size: 153.64394pt x 153.64174pt.
 Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
@@ -3300,15 +3342,15 @@ pdf>
 (epstopdf)                    size: 27033 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc_4_figure-e
 ps-converted-to.pdf ../paper/FIG/tc_4_figure.eps>
-(epstopdf)             \includegraphics on input line 413.
+(epstopdf)             \includegraphics on input line 421.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc_4_figure-eps-converted-to.pdf, id=776, 578.16pt x 433.62pt>
+<../paper/FIG/tc_4_figure-eps-converted-to.pdf, id=852, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc_4_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc_4_figure-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc_4_figure-eps-converted-to.pdf used on 
-input line 413.
+input line 421.
 (pdftex.def)             Requested size: 153.64394pt x 153.64174pt.
 Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
@@ -3317,18 +3359,18 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 413.
+(textpos)                Alignment may work out wrongly. on input line 421.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 413.
+Package pdftex.def Info: cm_logo.png used on input line 421.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 413.
+Package pdftex.def Info: ece.png used on input line 421.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 413--413
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 421--421
 [][]  
  []
 
@@ -3344,15 +3386,15 @@ Package epstopdf Info: Source file: <../paper/FIG/tc1_mf.eps>
 (epstopdf)                    size: 22520 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc1_mf-eps-co
 nverted-to.pdf ../paper/FIG/tc1_mf.eps>
-(epstopdf)             \includegraphics on input line 420.
+(epstopdf)             \includegraphics on input line 428.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc1_mf-eps-converted-to.pdf, id=873, 578.16pt x 433.62pt>
+<../paper/FIG/tc1_mf-eps-converted-to.pdf, id=950, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc1_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc1_mf-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc1_mf-eps-converted-to.pdf used on input
- line 420.
+ line 428.
 (pdftex.def)             Requested size: 150.57372pt x 112.93042pt.
 Package epstopdf Info: Source file: <../paper/FIG/tc2_mf.eps>
 (epstopdf)                    date: 2015-03-19 10:55:03
@@ -3362,33 +3404,33 @@ Package epstopdf Info: Source file: <../paper/FIG/tc2_mf.eps>
 (epstopdf)                    size: 22489 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc2_mf-eps-co
 nverted-to.pdf ../paper/FIG/tc2_mf.eps>
-(epstopdf)             \includegraphics on input line 420.
+(epstopdf)             \includegraphics on input line 428.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc2_mf-eps-converted-to.pdf, id=874, 578.16pt x 433.62pt>
+<../paper/FIG/tc2_mf-eps-converted-to.pdf, id=951, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc2_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc2_mf-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc2_mf-eps-converted-to.pdf used on input
- line 420.
+ line 428.
 (pdftex.def)             Requested size: 150.57372pt x 112.93042pt.
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 420.
+(textpos)                Alignment may work out wrongly. on input line 428.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 420.
+Package pdftex.def Info: cm_logo.png used on input line 428.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 420.
+Package pdftex.def Info: ece.png used on input line 428.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 420--420
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 428--428
 [][]  
  []
 
@@ -3404,15 +3446,15 @@ Package epstopdf Info: Source file: <../paper/FIG/tc3_mf.eps>
 (epstopdf)                    size: 21762 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc3_mf-eps-co
 nverted-to.pdf ../paper/FIG/tc3_mf.eps>
-(epstopdf)             \includegraphics on input line 427.
+(epstopdf)             \includegraphics on input line 435.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc3_mf-eps-converted-to.pdf, id=921, 578.16pt x 433.62pt>
+<../paper/FIG/tc3_mf-eps-converted-to.pdf, id=997, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc3_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc3_mf-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc3_mf-eps-converted-to.pdf used on input
- line 427.
+ line 435.
 (pdftex.def)             Requested size: 150.57372pt x 112.93042pt.
 Package epstopdf Info: Source file: <../paper/FIG/tc4_mf.eps>
 (epstopdf)                    date: 2015-03-19 10:55:49
@@ -3422,33 +3464,33 @@ Package epstopdf Info: Source file: <../paper/FIG/tc4_mf.eps>
 (epstopdf)                    size: 22387 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc4_mf-eps-co
 nverted-to.pdf ../paper/FIG/tc4_mf.eps>
-(epstopdf)             \includegraphics on input line 427.
+(epstopdf)             \includegraphics on input line 435.
 Package epstopdf Info: Output file is already uptodate.
 
-<../paper/FIG/tc4_mf-eps-converted-to.pdf, id=922, 578.16pt x 433.62pt>
+<../paper/FIG/tc4_mf-eps-converted-to.pdf, id=998, 578.16pt x 433.62pt>
 File: ../paper/FIG/tc4_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/tc4_mf-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/tc4_mf-eps-converted-to.pdf used on input
- line 427.
+ line 435.
 (pdftex.def)             Requested size: 150.57372pt x 112.93042pt.
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 427.
+(textpos)                Alignment may work out wrongly. on input line 435.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 427.
+Package pdftex.def Info: cm_logo.png used on input line 435.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 427.
+Package pdftex.def Info: ece.png used on input line 435.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 427--427
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 435--435
 [][]  
  []
 
@@ -3457,30 +3499,6 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 427--427
  <../paper/FIG/tc3_mf-eps-converted-to.pdf> <../paper/FIG/tc4_mf-eps-converted-
 to.pdf>]
 Missing character: There is no ^^L in font fourier-mex!
-Missing character: There is no ^^L in font fourier-mex!
-
-
-Package textpos Warning: environment textblock* not in vertical mode. 
-(textpos)                Environment textblock* should not have any text
-(textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 446.
-
-File: cm_logo.png Graphic file (type png)
-<use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 446.
-(pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
-File: ece.png Graphic file (type png)
- <use ece.png>
-Package pdftex.def Info: ece.png used on input line 446.
-(pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
-
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 446--446
-[][]  
- []
-
-[25
-
-]
 Missing character: There is no ^^L in font fourier-mex!
 
 
@@ -3502,6 +3520,30 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 454--454
 [][]  
  []
 
+[25
+
+]
+Missing character: There is no ^^L in font fourier-mex!
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 462.
+
+File: cm_logo.png Graphic file (type png)
+<use cm_logo.png>
+Package pdftex.def Info: cm_logo.png used on input line 462.
+(pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
+File: ece.png Graphic file (type png)
+ <use ece.png>
+Package pdftex.def Info: ece.png used on input line 462.
+(pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
+
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 462--462
+[][]  
+ []
+
 [26
 
 ]
@@ -3514,21 +3556,21 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 454--454
 \tf@snm=\write9
 \openout9 = `final_eap.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 464.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 464.
  (./final_eap.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 464.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 464.
 Package rerunfilecheck Info: File `final_eap.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 464.
  )
-(\end occurred when \unless\ifcsname on line 64 was incomplete) 
+(\end occurred when \unless\ifcsname on line 67 was incomplete) 
 Here is how much of TeX's memory you used:
- 36368 strings out of 495028
- 723972 string characters out of 6181498
- 816254 words of memory out of 5000000
- 38647 multiletter control sequences out of 15000+600000
+ 36600 strings out of 495028
+ 727743 string characters out of 6181498
+ 819063 words of memory out of 5000000
+ 38871 multiletter control sequences out of 15000+600000
  112063 words of font info for 140 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  53i,19n,92p,10421b,781s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3546,10 +3588,10 @@ public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmsso8.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8
 a.pfb>
-Output written on final_eap.pdf (26 pages, 576130 bytes).
+Output written on final_eap.pdf (26 pages, 613340 bytes).
 PDF statistics:
- 1080 PDF objects out of 1200 (max. 8388607)
- 781 compressed objects within 8 object streams
+ 1156 PDF objects out of 1200 (max. 8388607)
+ 797 compressed objects within 8 object streams
  64 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
