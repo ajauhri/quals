@@ -1,140 +1,174 @@
 \documentclass{beamer}
 \usepackage{textpos}
+\setlength{\TPHorizModule}{1cm} % Horizontale Einheit
+\setlength{\TPVertModule}{1cm} % Vertikale Einheit
 \usepackage{lmodern}
-\usepackage{algorithm}
+\usepackage{xcolor}
 \usepackage{algpseudocode}
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{tikz}
+\usepackage{soul}
+\usepackage{adjustbox}
+\usepackage{setspace}
+\usepackage[font={scriptsize}, justification=centering]{caption}
+\usepackage[font={color=black}]{subcaption}
+\usepackage{ellipsis}
+\usetikzlibrary{decorations.pathmorphing,calc}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{positioning}
+\usepackage{chemarrow}
+\usepackage{slashbox}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{3dplot}
+\usepackage{threeparttable}
+\usetikzlibrary{fit}
+\usepackage[utf8]{inputenc}
+\usepackage[upright]{fourier}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usepackage{xparse}
+\usepackage[nomessages]{fp}% http://ctan.org/pkg/fp
+\usetikzlibrary{calc}
 \usepackage{breqn} %for dmath
 \usepackage{hyperref} 
-\usetikzlibrary{arrows,matrix,positioning}
+\usepackage{arydshln}
+\usetikzlibrary{shapes,fit}
 \definecolor{univred}{rgb}{0.7, 0.0, 0.0}
-\newcommand{\norm}[1]{\ensuremath{\lVert{#1}\rVert}}
+\definecolor{drkgreen}{rgb}{0,0.26,0.15}
+\definecolor{aureolin}{rgb}{0.99,0.93,0.0}
 \DeclareMathOperator*{\argmax}{argmax}
+%
+%
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \setbeamertemplate{background canvas}{%
     {\color{univred}\noindent\makebox[\paperwidth]{\rule{\paperwidth}{2.5ex}}
 }}
 \setbeamertemplate{frametitle}{\color{black}\bfseries\vskip2ex\insertframetitle\par\vskip-6pt\hrulefill}
-
 \addtobeamertemplate{frametitle}{}{%
 %CMU logo in header
-\begin{textblock*}{100mm}(0.87\textwidth,-1.425cm)
-\includegraphics[height=1.5cm,width=1.9cm,keepaspectratio]{cm_logo}
-\end{textblock*}
+    \begin{textblock*}{100mm}(0.87\textwidth,-1.425cm)
+        \includegraphics[height=1.5cm,width=1.9cm,keepaspectratio]{cm_logo}
+    \end{textblock*}
 %ECE logo in footer
-\begin{textblock*}{10mm}(-.8cm,7.5cm)
-\includegraphics[height=2cm,width=2.5cm,keepaspectratio]{ece}
-\end{textblock*}
+    \begin{textblock*}{10mm}(-.8cm,7.5cm)
+        \includegraphics[height=2cm,width=2.5cm,keepaspectratio]{ece}
+    \end{textblock*}
 }
-
 \addtobeamertemplate{footnote}{}{\vspace{2ex}}
 \setbeamercolor*{item}{fg=black}
 \setbeamertemplate{footline}[page number]{}
 \setbeamercolor{page number in head/foot}{fg=univred}
-\title{\color{univred} Recommendations Using Coupled Matrix Factorization}
-\author{Abhinav Jauhri}
-\date{\today \\\vspace{2.5cm} \color{univred} Backup Slides}
-%\mode<presentation>{}
-\begin{document}
 
+\makeatletter
+\newcommand{\defhighlighter}[3][]{%
+    \tikzset{every highlighter/.style={color=#2, fill opacity=#3, #1}}%
+}
+
+\defhighlighter{yellow}{.5}
+\newcommand{\highlight@DoHighlight}{
+    \fill [ decoration = {segment length=13pt}
+        , outer sep = -15pt, inner sep = 0pt, decorate
+    , every highlighter, this highlighter ]
+    ($(begin highlight)+(0,8pt)$) rectangle ($(end highlight)+(0,-1pt)$) ;
+}
+
+\newcommand{\highlight@BeginHighlight}{
+    \coordinate (begin highlight) at (0,0) ;
+}
+
+\newcommand{\highlight@EndHighlight}{
+    \coordinate (end highlight) at (0,0) ;
+}
+
+\newdimen\highlight@previous
+\newdimen\highlight@current
+
+\DeclareRobustCommand*\highlight[1][]{%
+    \tikzset{this highlighter/.style={#1}}%
+    \SOUL@setup
+  %
+    \def\SOUL@preamble{%
+        \begin{tikzpicture}[overlay, remember picture]
+            \highlight@BeginHighlight
+            \highlight@EndHighlight
+        \end{tikzpicture}%
+    }%
+  %
+    \def\SOUL@postamble{%
+        \begin{tikzpicture}[overlay, remember picture]
+            \highlight@EndHighlight
+            \highlight@DoHighlight
+        \end{tikzpicture}%
+    }%
+  %
+    \def\SOUL@everyhyphen{%
+        \discretionary{%
+            \SOUL@setkern\SOUL@hyphkern
+            \SOUL@sethyphenchar
+            \tikz[overlay, remember picture] \highlight@EndHighlight ;%
+        }{%
+        }{%
+            \SOUL@setkern\SOUL@charkern
+        }%
+    }%
+  %
+    \def\SOUL@everyexhyphen##1{%
+        \SOUL@setkern\SOUL@hyphkern
+        \hbox{##1}%
+        \discretionary{%
+            \tikz[overlay, remember picture] \highlight@EndHighlight ;%
+        }{%
+        }{%
+            \SOUL@setkern\SOUL@charkern
+        }%
+    }%
+  %
+    \def\SOUL@everysyllable{%
+        \begin{tikzpicture}[overlay, remember picture]
+            \path let \p0 = (begin highlight), \p1 = (0,0) in \pgfextra
+            \global\highlight@previous=\y0
+            \global\highlight@current =\y1
+        \endpgfextra (0,0) ;
+        \ifdim\highlight@current < \highlight@previous
+        \highlight@DoHighlight
+        \highlight@BeginHighlight
+        \fi
+    \end{tikzpicture}%
+    \the\SOUL@syllable
+    \tikz[overlay, remember picture] \highlight@EndHighlight ;%
+}%
+\SOUL@
+}
+\makeatother
+
+\title{\color{univred} A Comparison of Antenna Placement Algorithms}
+\author{Abhinav Jauhri}
+\date{\today}
+\begin{document}
 \begin{frame}
     \color{univred}
-\titlepage
+    \titlepage
 \end{frame}
 
-\begin{frame}{NNMF - Forbenius norm minimization}
-    \begin{theorem}
-        The Euclidean distance $\norm{V - WH}_F$ is nonincreasing under the update rules:
-        \begin{equation} 
-            H_{au} \leftarrow H_{au} \sum_i W_{ia}\frac{V_{iu}}{(WH)_{iu}}
-        \end{equation}
-        \begin{equation} 
-            W_{i a} \leftarrow W_{i a} \sum_u \frac{V_{iu}}{(WH)_{iu}} H_{au}
-        \end{equation}
-    \end{theorem}
-    Idea: \begin{itemize}
-        \item if ratio $> 1$, then we need to increase denominator
-        \item if ratio $< 1$, then decrease the denominator
-        \item if ratio $= 1$, do nothing
-    \end{itemize}
-\end{frame}
-\begin{frame}{NNMF - KL Divergence minimization}
-    \begin{theorem}
-        Let $D(A\|B) = \sum_{ij} (A_{ij} \log{\frac{A_{ij}}{B_{ij}}} - A_{ij} + B_{ij})$.\\
-        The divergence $D(V\|WH)$ is nonincreasing under similar update rules.
-    \end{theorem}
-\end{frame}
-\begin{frame}{Ridge Regression is biased}
-    \begin{itemize}
-        \item Let $R = A^T A$
-        \item \begin{equation}
-                \begin{split}
-                    \beta_{\lambda}^{ridge} &= (A^TA + \lambda I_k)^{-1} A^Ty \\
-                    &= (R + \lambda I_k)^{-1}R(R^{-1}A^Ty) \\
-                    &= [R(I_k + \lambda R^{-1})]^{-1} R [(A^TA)^{-1} A^T y] \\
-                    &= (I_k + \lambda R^{-1})^{-1} R^{-1} R \beta^{ls} \\
-                    &= (I_k + \lambda R^{-1}) \beta^{ls}
-                \end{split}
-            \end{equation}
-        \item Therefore, 
-            \begin{equation}
-                \begin{split}
-                    \mathbb E(\beta_{\lambda}^{ridge}) &= \mathbb E((I_k + \lambda R^{-1})\beta^{ls}) \\
-                    &\neq \beta^{ls} ~ \text{if} \lambda \neq 0
-                \end{split}
-            \end{equation}
-
-
-    \end{itemize}
+\begin{frame}{Equivalence of fitness to efficiency}
+    \small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).
+    \begin{table}
+        \centering
+        \begin{threeparttable}
+            \begin{tabular}{|C{1cm}|C{2.5cm}|C{2.5cm}|} \hline
+                ID& $\mathbb E_g$ & $\Delta_{c}$ (dB) \\ \hline
+                tc1 & 872.277 & 0.5474 \\ \hline
+                tc2 & 862.082 & 1.3034 \\ \hline
+                tc3 & 861.845 & 1.5180 \\ \hline
+                tc4 & 871.049 & 0.5693 \\
+                \hline\end{tabular}
+        \end{threeparttable}
+    \end{table}
+    \tiny
+    $\mathbb E_g = \frac{1}{N \cdot m} \sum_{i}^m F_{RP}(A_i),$
+    where $N = \;\mid \theta \mid \cdot \mid \phi \mid$
 \end{frame}
 
-\begin{frame}{Computational Complexities}
-    \begin{itemize}
-        \item For $k$ features and $n$ training examples, CMF - $O(k^2 n)$ 
-            \begin{itemize}
-                \item $X^T X $ - $O(k^2 n)$ 
-                \item $X^T y $ - $O(kn)$
-                \item $(X^TX)^{-1} X^T y$ + factorization - $O(k^3)$
-            \end{itemize}
-            Assume $n>k$, otherwise $X^T X$ would be singular (and hence non-invertible). Therefore $O(k^2 n)$
-        \item Singular Value Decomposition - $O(min(mn^2, m^2n))$, for a $m \times n$ matrix
-        \item NNMF - Computational complexity for each iteration is $O(knm)$
-    \end{itemize}
-\end{frame}
-\begin{frame}{Forbenius is equivalent to spectral - SVD}
-    We have that $\| A - A_k\|_F = \|U_{k+1:r}\Sigma_{k+1:r} V_{k+1:r}^T\|_F = \sqrt{\sum_{i=k+1}^r \sigma_i^2}$. Now let $A-C$ have svd $\widetilde{U}\widetilde{\Sigma}\widetilde{V}^T$. Then $\| A - C\|_F^2 = \sum_{i=1}^n \widetilde{\sigma_i}^2$. Thus, we can write:
-    {\tiny \begin{equation} \begin{split} \| A - C \|_F^2 &= \widetilde{\sigma_1^2} + \dots + \widetilde{\sigma}_n^2 \\
-            &= \| A - C\|_2^2 + \| (A - C) - \widetilde{\sigma_1} \widetilde{u_1}\widetilde{v_1^T} \|_2^2 + \dots + \| (A - C) - \sum_{i=1}^{n-1}\widetilde{\sigma_i} \widetilde{u_i}\widetilde{v_i^T} \|_2^2 \end{split} \end{equation}
-    But $C + \sum_{i=1}^l \widetilde{\sigma_i} \widetilde{u_i}\widetilde{v_i^T}$ has rank at most $k+l$
-    \begin{equation}
-        \left \| A - (C + \sum_{i=1}^l \sigma_i u_i v_i^T ) \right \|_2 \geq \| A - A_{k+l} \|_2 = \sigma_{k+l+1} 
-    \end{equation}
-    Applying $(6)$ to $(5)$:
-    \begin{equation}
-        \| A - C \|_F^2 \geq \sum_{i=k}^{k+n+1} \sigma_{i+1}^2 = \sum_{j=k+1}^{r} \sigma_j^2 = \|A - A_k\|_F^2 
-    \end{equation}}
-\end{frame}
-            
-\begin{frame}{Flip Results}
-	\includegraphics[width=0.5\textwidth]{flip-netimdb1-rmse-miss01.eps}
-	\includegraphics[width=0.5\textwidth]{flip-stackex-rmse-miss01.eps}
-\end{frame}
-
-\begin{frame}{Completion RMSE for 10\% missing values}
-    \begin{center}
-	\includegraphics[width=0.5\textwidth]{synthetic.eps} 
-\end{center}
-\end{frame}
-
-
-\begin{frame}{Future Work - Canonical Correlation Analysis}
-    \begin{itemize}
-        \item Attempts to answer - \textit{which direction accounts for much of the covariance between two data sets}\footnote{Source: 36-462, Data Mining by Ryan Tibshirani}
-        \item Given $X \in \mathbb R^{n \times p}, Y \in \mathbb R^{n \times q}$, we get two directions $\alpha_1 \in \mathbb R^p, \beta_1 \in \mathbb R^q$ that maximizes sample covariance:
-            \begin{equation}
-                \alpha_1, \beta_1 = \argmax\limits_{\|X\alpha\|_2=1,\|Y\beta\|_2=1} cov(X\alpha, Y\beta)
-            \end{equation}
-    \end{itemize}
-\end{frame}
 \end{document}
