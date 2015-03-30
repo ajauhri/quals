@@ -152,6 +152,45 @@
     \titlepage
 \end{frame}
 
+\begin{frame}{Minimize Difference in Radiation Pattern}
+    Pattern defines the ratio of energy radiated and input energy in a particular direction. For each antenna $A_i$:
+    \begin{tcolorbox}[colback=green!5]
+        \begin{equation} \label{eq:rp}
+            F_{RP} = \sum_{i=1}^n\sum_{\theta=0}^\pi\sum_{\phi=0}^{2\pi}
+            \left( FSG_i(\theta,\phi) - ISG_i(\theta,\phi) \right) ^2,
+        \end{equation}
+    \end{tcolorbox}
+    where
+    \begin{itemize}
+            \small
+        \item $\theta, \phi$ spherical coordinates
+        \item $FSG(\cdot)$ returns free-space gain pattern  
+        \item $ISG(\cdot)$ returns in-situ gain pattern
+    \end{itemize}
+
+    \tdplotsetmaincoords{60}{110}
+    \pgfmathsetmacro{\rvec}{.8}
+    \pgfmathsetmacro{\thetavec}{30}
+    \pgfmathsetmacro{\phivec}{60}
+    \hspace{.6\textwidth}
+    \begin{tikzpicture}[scale=1.8,tdplot_main_coords]
+        \tikzstyle{every node}=[font=\tiny]
+        \coordinate (O) at (0,0,0);
+        \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+        \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+        \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+        \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+        \draw[-stealth,color=red] (O) -- (P);
+        \draw[dashed, color=red] (O) -- (Pxy);
+        \draw[dashed, color=red] (P) -- (Pxy);
+        \tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north}{$\phi$}
+        \tdplotsetthetaplanecoords{\phivec}
+        \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
+        \draw[dashed,tdplot_rotated_coords] (\rvec,0,0) arc (0:90:\rvec);
+        \draw[dashed] (\rvec,0,0) arc (0:90:\rvec);
+    \end{tikzpicture}
+\end{frame}
+
 \begin{frame}{Equivalence of fitness to efficiency}
     \small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).
     \begin{table}

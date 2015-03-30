@@ -34,6 +34,12 @@
 \usepackage{breqn} %for dmath
 \usepackage{hyperref} 
 \usepackage{arydshln}
+% for: large cdots:http://tex.stackexchange.com/questions/235118/making-a-thicker-cdot-for-dot-product-that-is-thinner-than-bullet 
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+% endfor
 \usetikzlibrary{shapes,fit}
 \definecolor{univred}{rgb}{0.7, 0.0, 0.0}
 \definecolor{drkgreen}{rgb}{0,0.26,0.15}
@@ -167,7 +173,7 @@
         \setlength\itemsep{2em}
         \item Part 1: Introduction to the antenna placement problem
         \item Part 2: Description of stochastic algorithms, and formulation of an instance of antenna placment problem
-        \item Part 3: Results of our experiments
+        \item Part 3: Results of real world experiments
     \end{itemize}
 \end{frame}
 
@@ -190,10 +196,10 @@
                 \end{figure}\end{textblock}
         }
         \only<2->{
-            \begin{textblock}{3}(-1,1)\textbf{Problem:} find best antenna placements \end{textblock}
-            \begin{textblock}{3}(2.5,-0.1)
+            \begin{textblock}{7}(-1,1)\textbf{Problem:} find best antenna placements \end{textblock}
+            \begin{textblock}{3}(2.5,1.2)
                 \begin{figure}
-                    \includegraphics[trim=170 165 70 15, clip, scale=0.4]{../paper/FIG/tc11_intro}
+                    \includegraphics[trim=170 165 70 145, clip, scale=0.4]{../paper/FIG/tc11_intro}
                 \end{figure}\end{textblock}
         }
         \column{0.33\linewidth}
@@ -270,7 +276,7 @@
     Pattern defines the ratio of energy radiated and input energy in a particular direction. For each antenna $A_i$:
     \begin{tcolorbox}[colback=green!5]
         \begin{equation} \label{eq:rp}
-            F_{RP} = \sum_i^n\sum_{\theta}\sum_{\phi} 
+            F_{RP} = \sum_{i=1}^n\sum_{\theta=0}^\pi\sum_{\phi=0}^{2\pi}
             \left( FSG_i(\theta,\phi) - ISG_i(\theta,\phi) \right) ^2,
         \end{equation}
     \end{tcolorbox}
@@ -282,27 +288,6 @@
         \item $ISG(\cdot)$ returns in-situ gain pattern
     \end{itemize}
 
-    \tdplotsetmaincoords{60}{110}
-    \pgfmathsetmacro{\rvec}{.8}
-    \pgfmathsetmacro{\thetavec}{30}
-    \pgfmathsetmacro{\phivec}{60}
-    \hspace{.6\textwidth}
-    \begin{tikzpicture}[scale=1.8,tdplot_main_coords]
-        \tikzstyle{every node}=[font=\tiny]
-        \coordinate (O) at (0,0,0);
-        \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
-        \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
-        \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
-        \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
-        \draw[-stealth,color=red] (O) -- (P);
-        \draw[dashed, color=red] (O) -- (Pxy);
-        \draw[dashed, color=red] (P) -- (Pxy);
-        \tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north}{$\phi$}
-        \tdplotsetthetaplanecoords{\phivec}
-        \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
-        \draw[dashed,tdplot_rotated_coords] (\rvec,0,0) arc (0:90:\rvec);
-        \draw[dashed] (\rvec,0,0) arc (0:90:\rvec);
-    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Objective Function}
@@ -321,6 +306,7 @@
         Part 2: Stochastic Algorithms
     \end{tcolorbox}
 \end{frame}
+
 \begin{frame}[t]{Stochastic Algorithms}
     We will consider algorithms which rely on \textit{randomization} principle.
     \vspace{10px}
@@ -332,6 +318,22 @@
     \end{itemize}
     \vspace{5mm}
     Each algorithm maintains a candidate solution or pool of candidate solutions called population
+\end{frame}
+
+\begin{frame}[t]{Candidate Solution}
+    Also referred as an \textbf{individual}
+\begin{itemize} \itemsep1.5em
+        \item Pool of individuals
+            \adjustbox{valign=t}{%
+                \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
+                $\bigcdot~\bigcdot~\bigcdot$
+                \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
+            }
+        \item Single individual\\
+            \adjustbox{valign=t}{%
+                \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
+            }
+    \end{itemize}
 \end{frame}
 
 \begin{frame}[t]{Stochastic Algorithms: Mutation Operator}
@@ -392,7 +394,20 @@
     \end{enumerate}
 \end{frame}
 
+\begin{frame}{\null}
+    \begin{tcolorbox}[colback=green!5]
+        \centering
+        Question: Why use stochastic algorithms?
+    \end{tcolorbox}
+\end{frame}
 
+\begin{frame}[t]{Multi-Modal Search Space}
+    \begin{figure}
+        \vspace*{-0.35cm}
+        \centering
+        \includegraphics[scale=0.48]{../paper/FIG/tc1_ss}
+    \end{figure}
+\end{frame}
 
 \begin{frame}{Genetic Algorithm}
     \begin{columns}
@@ -552,14 +567,14 @@
 \begin{frame}{\null}
     \begin{tcolorbox}[colback=green!5]
         \centering\Huge
-        Part 3: Results of our experiments
+        Part 3: Results of real world experiments
     \end{tcolorbox}
 \end{frame}
 
 \begin{frame}[t]{Experimental Setup}
     \begin{enumerate}
         \item All test cases describe platforms which are replicas of real-world use cases like mobile devices, tanks, and cars
-        \item Run all individuals through \textit{NEC} simulator \footnote{http://www.nec2.org} to get fitness parameters 
+        \item We use a popular \textit{NEC2} simulator \footnote{http://www.nec2.org} to get fitness parameters 
         \item Evaluate the entire search space using an exhaustive algorithm to find the optimal antenna locations
     \end{enumerate}
     \vspace{10mm}
@@ -630,7 +645,15 @@
 \end{frame}
 
 
-\begin{frame}{Success Rates}
+\begin{frame}{Results - Mean Best Fitness With Std. Dev.}
+    \begin{figure}
+        \vspace*{-0.35cm}
+        \centering
+        \includegraphics[scale=0.48]{../paper/FIG/tc_mfwerr}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Results - Success Rates}
     \begin{figure}
         \vspace*{-0.35cm}
         \centering
