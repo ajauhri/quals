@@ -271,9 +271,36 @@
     \small\textit{Example:} If $n=3$, then $F_{MC} = CP(A_1, A_2) + CP(A_1, A_3) + CP(A_2, A_3)$
 \end{frame}
 
+\begin{frame}{Radiation Pattern}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \vspace*{-0.5cm}
+                \caption*{Free-space pattern without platform or other antennas}
+                \centering
+                \includegraphics[width=4cm]{../paper/FIG/free_space.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \vspace*{-1cm}
+                \begin{subfigure}{.5\columnwidth}
+                        \caption*{\tiny {\color{red}Pattern with platform and antennas (in-situ) similar}}%
+                        \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/rand.png}
+                \end{subfigure}\\\vfill
+                \only<2>{
+                \begin{subfigure}{.5\columnwidth}
+                    \caption*{\tiny {\color{blue}Pattern with platform and antennas (in-situ) similar to free-space pattern}}%
+                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/best.png}%
+                \end{subfigure}\hfill\\}%
+            \end{figure}
+
+        \end{column}
+    \end{columns}
+\end{frame}
+
 
 \begin{frame}{Minimize Difference in Radiation Pattern}
-    Pattern defines the ratio of energy radiated and input energy in a particular direction. For each antenna $A_i$:
     \begin{tcolorbox}[colback=green!5]
         \begin{equation} \label{eq:rp}
             F_{RP} = \sum_{i=1}^n\sum_{\theta=0}^\pi\sum_{\phi=0}^{2\pi}
@@ -287,7 +314,6 @@
         \item $FSG(\cdot)$ returns free-space gain pattern  
         \item $ISG(\cdot)$ returns in-situ gain pattern
     \end{itemize}
-
 \end{frame}
 
 \begin{frame}{Objective Function}
@@ -297,7 +323,7 @@
             F = \alpha F_{MC} + \beta F_{RP},
         \end{equation}
     \end{tcolorbox}
-    where $\alpha, \beta$ are weights for each of the objectives 
+    where $\alpha, \beta$ are adjustable weights for each of the objectives 
 \end{frame}
 
 \begin{frame}{\null}
@@ -662,7 +688,7 @@
 \end{frame}
 
 \begin{frame}{Conclusion}
-    \begin{itemize}
+    \begin{itemize} \itemsep1.5em
         \item Formulation of the antenna placement problem
         \item Generic problem formulation to accommodate multiple antennas and platforms
         \item Optimal placements found using stochastic algorithms
