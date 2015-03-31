@@ -9,6 +9,7 @@
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage{soul}
+\usepackage[normalem]{ulem} %for underline
 \usepackage{adjustbox}
 \usepackage{setspace}
 \usepackage[font={scriptsize}, justification=centering]{caption}
@@ -40,6 +41,8 @@
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
 % endfor
+\newcommand\reduline{\bgroup\markoverwith
+{\textcolor{red}{\rule[-0.5ex]{2pt}{0.4pt}}}\ULon}
 \usetikzlibrary{shapes,fit}
 \definecolor{univred}{rgb}{0.7, 0.0, 0.0}
 \definecolor{drkgreen}{rgb}{0,0.26,0.15}
@@ -67,88 +70,6 @@
 \setbeamertemplate{footline}[page number]{}
 \setbeamercolor{page number in head/foot}{fg=univred}
 
-\makeatletter
-\newcommand{\defhighlighter}[3][]{%
-    \tikzset{every highlighter/.style={color=#2, fill opacity=#3, #1}}%
-}
-
-\defhighlighter{yellow}{.5}
-\newcommand{\highlight@DoHighlight}{
-    \fill [ decoration = {segment length=13pt}
-        , outer sep = -15pt, inner sep = 0pt, decorate
-    , every highlighter, this highlighter ]
-    ($(begin highlight)+(0,8pt)$) rectangle ($(end highlight)+(0,-1pt)$) ;
-}
-
-\newcommand{\highlight@BeginHighlight}{
-    \coordinate (begin highlight) at (0,0) ;
-}
-
-\newcommand{\highlight@EndHighlight}{
-    \coordinate (end highlight) at (0,0) ;
-}
-
-\newdimen\highlight@previous
-\newdimen\highlight@current
-
-\DeclareRobustCommand*\highlight[1][]{%
-    \tikzset{this highlighter/.style={#1}}%
-    \SOUL@setup
-  %
-    \def\SOUL@preamble{%
-        \begin{tikzpicture}[overlay, remember picture]
-            \highlight@BeginHighlight
-            \highlight@EndHighlight
-        \end{tikzpicture}%
-    }%
-  %
-    \def\SOUL@postamble{%
-        \begin{tikzpicture}[overlay, remember picture]
-            \highlight@EndHighlight
-            \highlight@DoHighlight
-        \end{tikzpicture}%
-    }%
-  %
-    \def\SOUL@everyhyphen{%
-        \discretionary{%
-            \SOUL@setkern\SOUL@hyphkern
-            \SOUL@sethyphenchar
-            \tikz[overlay, remember picture] \highlight@EndHighlight ;%
-        }{%
-        }{%
-            \SOUL@setkern\SOUL@charkern
-        }%
-    }%
-  %
-    \def\SOUL@everyexhyphen##1{%
-        \SOUL@setkern\SOUL@hyphkern
-        \hbox{##1}%
-        \discretionary{%
-            \tikz[overlay, remember picture] \highlight@EndHighlight ;%
-        }{%
-        }{%
-            \SOUL@setkern\SOUL@charkern
-        }%
-    }%
-  %
-    \def\SOUL@everysyllable{%
-        \begin{tikzpicture}[overlay, remember picture]
-            \path let \p0 = (begin highlight), \p1 = (0,0) in \pgfextra
-            \global\highlight@previous=\y0
-            \global\highlight@current =\y1
-        \endpgfextra (0,0) ;
-        \ifdim\highlight@current < \highlight@previous
-        \highlight@DoHighlight
-        \highlight@BeginHighlight
-        \fi
-    \end{tikzpicture}%
-    \the\SOUL@syllable
-    \tikz[overlay, remember picture] \highlight@EndHighlight ;%
-}%
-\SOUL@
-}
-\makeatother
-
 \title{\color{univred} A Comparison of Antenna Placement Algorithms}
 \author{Abhinav Jauhri}
 \date{\today}
@@ -158,8 +79,8 @@
     \titlepage
 \end{frame}
 
-\begin{frame}[t]{Contributions}
-    \begin{itemize}
+\begin{frame}{Contributions}
+\begin{itemize} \itemsep1.5em
         \item Formulation of the antenna placement problem
         \item Evaluation of standard stochastic algorithms on a real-world problem
         \item Able to achieve global optimum with as low as \textbf{25\% evaluations} of search space
@@ -172,8 +93,8 @@
     \begin{itemize}
         \setlength\itemsep{2em}
         \item Part 1: Introduction to the antenna placement problem
-        \item Part 2: Description of stochastic algorithms, and formulation of an instance of antenna placment problem
-        \item Part 3: Results of real world experiments
+        \item Part 2: Description of stochastic algorithms, their properties and operators
+        \item Part 3: Evaluation of test cases
     \end{itemize}
 \end{frame}
 
@@ -275,26 +196,29 @@
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
-                \vspace*{-0.5cm}
+                \vspace*{-2cm}
                 \caption*{Free-space pattern without platform or other antennas}
                 \centering
                 \includegraphics[width=4cm]{../paper/FIG/free_space.png}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
+\begin{overlayarea}{\textwidth}{\textheight}
             \begin{figure}
-                \vspace*{-1cm}
-                \begin{subfigure}{.5\columnwidth}
-                        \caption*{\tiny {\color{red}Pattern with platform and antennas (in-situ) similar}}%
-                        \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/rand.png}
+                \vspace*{-0.7cm}
+                \begin{subfigure}{\columnwidth}
+                    \centering
+                        \caption*{\tiny {\color{red}Pattern with platform and antennas (in-situ)}}%
+                        \includegraphics[width=0.5\columnwidth,height=0.5\columnwidth]{../paper/FIG/rand.png}
                 \end{subfigure}\\\vfill
                 \only<2>{
-                \begin{subfigure}{.5\columnwidth}
+                \begin{subfigure}{\columnwidth}
+                    \centering
                     \caption*{\tiny {\color{blue}Pattern with platform and antennas (in-situ) similar to free-space pattern}}%
-                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/best.png}%
+                    \includegraphics[width=0.5\columnwidth, height=0.5\columnwidth]{../paper/FIG/best.png}%
                 \end{subfigure}\hfill\\}%
             \end{figure}
-
+        \end{overlayarea}
         \end{column}
     \end{columns}
 \end{frame}
@@ -346,17 +270,17 @@
     Each algorithm maintains a candidate solution or pool of candidate solutions called population
 \end{frame}
 
-\begin{frame}[t]{Candidate Solution}
-    Also referred as an \textbf{individual}
+\begin{frame}[t]{Stochastic Algorithms: Operand}
+    \textbf{Candidate solution} or an \textbf{individual} is a member of a set of possible olutions.
 \begin{itemize} \itemsep1.5em
-        \item Pool of individuals
+               \item Simulated Annealing and Hill Climbing maintain single individual\\
+            \adjustbox{valign=t}{%
+                \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
+            }
+    \item Genetic algorithm and Evolutionary Strategy maintain a population of individuals
             \adjustbox{valign=t}{%
                 \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
                 $\bigcdot~\bigcdot~\bigcdot$
-                \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
-            }
-        \item Single individual\\
-            \adjustbox{valign=t}{%
                 \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
             }
     \end{itemize}
@@ -371,7 +295,7 @@
                     \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
                 }
             \end{minipage}
-        \item For antenna 1, select any other placement:\par
+        \item For antenna 1, select any other allowable placement:\par
             \begin{minipage}[t]{\linewidth}
                 \centering
                 \adjustbox{valign=t}{%
@@ -431,7 +355,8 @@
     \begin{figure}
         \vspace*{-0.35cm}
         \centering
-        \includegraphics[scale=0.48]{../paper/FIG/tc1_ss}
+        \includegraphics[scale=0.4]{../paper/FIG/tc1_ss}
+        \caption*{Search space for one of the test cases evaluated. There are multiple local minimas which makes convergence difficult. z-axis is the combined fitness $F$ (refer Eq. \ref{eq:optimal})}
     \end{figure}
 \end{frame}
 
@@ -443,24 +368,24 @@
                 \setlength{\interspacetitleruled}{0pt}%
                 \setlength{\algotitleheightrule}{0pt}%
                 \begin{algorithm}[H]
-                    \only<1>{\highlight{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(ind_i), i \in [1,p]$}\;}
+                    \only<1>{\reduline{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(ind_i), i \in [1,p]$}\;}
                     \only<2>{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(ind_i), i \in [1,p]$\;}
                     $i=0$ \;
                     \While{$i<gen_{max}$} {
-                        \only<1>{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'}} \;
-                        \only<2>{\highlight{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'}} \;}
+                        \only<1>{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'} \;}
+                        \only<2>{\reduline{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'}} \;}
                         \For{$(p - n_e)/2$ times} {
                             \tcc{select returns pair of individuals}
                             $\textbf{M} \leftarrow select(\textbf{P}, 2)$  \;
                             \eIf {$rand(0,1)<p_c$} {
                                 \only<1>{Apply $crossover(M)$ to get two offsprings \textbf{O} \;}
-                                \only<2>{\highlight{Apply $crossover(M)$ to get two offsprings \textbf{O}} \;}
+                                \only<2>{\reduline{Apply $crossover(M)$ to get two offsprings \textbf{O}} \;}
                                 Add $O$ to $P'$ \;
                             }
                             { Add $M$ to $P'$ \; }
                         }
                         \only<1>{Uniformly select $p_{m} \cdot (p - n_e)$ individuals from $P$, and apply $mutation$ operator to each \;}
-                        \only<2>{\highlight{Uniformly select $p_{m} \cdot (p - n_e)$ individuals from $P$, and apply $mutation$ operator to each} \;}
+                        \only<2>{\reduline{Uniformly select $p_{m} \cdot (p - n_e)$ individuals from $P$, and apply $mutation$ operator to each} \;}
                         Update $P\leftarrow P'$ \;
                         Compute $fitness(ind_i); i \in [1, p]$\;
                         Update $i \leftarrow i + 1$ \;
@@ -473,7 +398,7 @@
             {
                 \begin{figure}
                     \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_ga}}
-                    \caption*{\highlight{Plateaus suggesting stagnation of search}}
+                    \caption*{Plateaus suggesting stagnation of search}
                 \end{figure}
             }
         \end{column}
@@ -488,15 +413,15 @@
             \setlength{\interspacetitleruled}{0pt}%
             \setlength{\algotitleheightrule}{0pt}%
             \begin{algorithm}[H]
-                \only<1>{\highlight{\textbf{P}$\leftarrow$ generate $\mu$ random individuals} \;}
+                \only<1>{\reduline{\textbf{P}$\leftarrow$ generate $\mu$ random individuals} \;}
                 \only<2>{\textbf{P}$\leftarrow$ generate $\mu$ random individuals \;}
                 $i=0$ \;
                 \While{$i<gen_{max}$} {
                     \only<1>{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator, and add all offsprings to \textbf{P}\;}
-                    \only<2>{\highlight{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator, and add all offsprings to \textbf{P}} \;}
+                    \only<2>{\reduline{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator, and add all offsprings to \textbf{P}} \;}
                     Compute $fitness(ind_i), i \in [1,\lambda]$ \;
                     \only<1>{Keep $\mu$ best individuals in \textbf{P}, and discard remaining $\lambda - \mu$ individuals \;}
-                    \only<2>{\highlight{Keep $\mu$ best individuals in \textbf{P}, and discard remaining $\lambda - \mu$ individuals} \;}
+                    \only<2>{\reduline{Keep $\mu$ best individuals in \textbf{P}, and discard remaining $\lambda - \mu$ individuals} \;}
                     Update $i \leftarrow i+1$
                 }
             \end{algorithm}
@@ -506,7 +431,7 @@
             {
                 \begin{figure}
                     \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
-                    \caption*{\highlight{No stagnation in exploration of search space}}
+                    \caption*{Less likely to stagnate search space exploration}
                 \end{figure}
             }
         \end{column}
@@ -521,7 +446,7 @@
             \fontsize{8}{8}\selectfont
             \begin{algorithm}[H]
 %\scriptsize
-                \only<1>{\highlight{\textbf{c} $\leftarrow$ generate a random individual} \;}
+                \only<1>{\reduline{\textbf{c} $\leftarrow$ generate a random individual} \;}
                 \only<2>{\textbf{c} $\leftarrow$ generate a random individual \;}
                 $i=0$ \;
                 \While{$i<i_max$} 
@@ -529,14 +454,14 @@
                     \textbf{n} $\leftarrow mutate(\textbf{c})$ \; 
                     \eIf{$fitness(\textbf{c}) < fitness(\textbf{n})$} 
                     {
-                        \If{\only<1>{$rand(0,1) < e^{-\delta f / T}$} \only<2>{\highlight{$rand(0,1) < e^{-\delta f / T}$}}} 
+                        \If{\only<1>{$rand(0,1) < e^{-\delta f / T}$} \only<2>{\reduline{$rand(0,1) < e^{-\delta f / T}$}}} 
                         {
                             \only<1>{\textbf{c} $ \leftarrow $ \textbf{n}}
-                            \only<2>{\highlight{\textbf{c} $ \leftarrow $ \textbf{n}}}
+                            \only<2>{\reduline{\textbf{c} $ \leftarrow $ \textbf{n}}}
                         }
                     }  {$\textbf{c} \leftarrow \textbf{n}$ \; }
                     \only<1>{$T \leftarrow T \cdot f_{cooling}$ \;}
-                    \only<2>{\highlight{$T \leftarrow T \cdot f_{cooling}$} \;}
+                    \only<2>{\reduline{$T \leftarrow T \cdot f_{cooling}$} \;}
                     $i \leftarrow i + 1$ \;
                 } 
                 \label{alg:ap-sa}
@@ -547,7 +472,7 @@
             {
                 \begin{figure}
                     \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_sa}}
-                    \caption*{\highlight{Fluctuation in fitness gradually reduces due to cooling}}
+                    \caption*{Fluctuation in fitness gradually reduces due to cooling}
                 \end{figure}
             }
         \end{column}
@@ -561,17 +486,17 @@
             \setlength{\algotitleheightrule}{0pt}%
             \fontsize{8}{8}\selectfont
             \begin{algorithm}[H]
-                \only<1>{\highlight{Initialize \textbf{c} $\leftarrow$ generate a random inidividual} \;}
+                \only<1>{\reduline{Initialize \textbf{c} $\leftarrow$ generate a random inidividual} \;}
                 \only<2>{Initialize \textbf{c} $\leftarrow$ generate a random inidividual \;}
                 Compute $fitness(\textbf{c})$  \;
                 $i=0$ \;
                 \While{$i<i_{max}$} 
                 {
                     \textbf{n} $\leftarrow mutate(\textbf{c})$ \; 
-                    \If{\only<1>{$fitness(\textbf{n}) < fitness(\textbf{c})$} \only<2>{\highlight{$fitness(n) < fitness(c)$}}} 
+                    \If{\only<1>{$fitness(\textbf{n}) < fitness(\textbf{c})$} \only<2>{\reduline{$fitness(n) < fitness(c)$}}} 
                     {
                         \only<1>{$c \leftarrow n$} 
-                        \only<2>{\highlight{$c \leftarrow n$}}
+                        \only<2>{\reduline{$c \leftarrow n$}}
                     }
                     $i \leftarrow i + 1$
                 }
@@ -583,7 +508,7 @@
             {
                 \begin{figure}
                     \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_hc}}
-                    \caption*{\highlight{Only accepts fitter individual}}
+                    \caption*{Greedy approach to accept only fitter(low fitness) individuals}
                 \end{figure}
             }
         \end{column}
@@ -593,11 +518,11 @@
 \begin{frame}{\null}
     \begin{tcolorbox}[colback=green!5]
         \centering\Huge
-        Part 3: Results of real world experiments
+        Part 3: Evaluation of test cases
     \end{tcolorbox}
 \end{frame}
 
-\begin{frame}[t]{Experimental Setup}
+\begin{frame}{Experimental Setup}
     \begin{enumerate}\itemsep1.5em
         \item All test cases describe platforms which are replicas of real-world use cases like mobile devices, tanks, and cars
         \item We use a popular \textit{NEC2} simulator \footnote{http://www.nec2.org} to get fitness parameters 
@@ -691,7 +616,7 @@
     \begin{itemize} \itemsep1.5em
         \item Formulation of the antenna placement problem
         \item Generic problem formulation to accommodate multiple antennas and platforms
-        \item Optimal placements found using stochastic algorithms
+        \item Optimal placements found using Evolutionary Strategy with at most $25\%$ evaluations of search space
     \end{itemize}
 \end{frame}
 
