@@ -42,7 +42,7 @@
 \makeatother
 % endfor
 \newcommand\reduline{\bgroup\markoverwith
-{\textcolor{red}{\rule[-0.5ex]{2pt}{0.4pt}}}\ULon}
+{\textcolor{red}{\rule[-0.5ex]{2pt}{0.8pt}}}\ULon}
 \usetikzlibrary{shapes,fit}
 \definecolor{univred}{rgb}{0.7, 0.0, 0.0}
 \definecolor{drkgreen}{rgb}{0,0.26,0.15}
@@ -196,29 +196,29 @@
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
-                \vspace*{-2cm}
-                \caption*{Free-space pattern without platform or other antennas}
+                \vspace*{-1.5cm}
+                \caption*{\tiny{Free-space pattern without platform or other antennas}}
                 \centering
                 \includegraphics[width=4cm]{../paper/FIG/free_space.png}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
-\begin{overlayarea}{\textwidth}{\textheight}
+            \only<1>{
             \begin{figure}
-                \vspace*{-0.7cm}
-                \begin{subfigure}{\columnwidth}
-                    \centering
-                        \caption*{\tiny {\color{red}Pattern with platform and antennas (in-situ)}}%
-                        \includegraphics[width=0.5\columnwidth,height=0.5\columnwidth]{../paper/FIG/rand.png}
-                \end{subfigure}\\\vfill
-                \only<2>{
-                \begin{subfigure}{\columnwidth}
-                    \centering
-                    \caption*{\tiny {\color{blue}Pattern with platform and antennas (in-situ) similar to free-space pattern}}%
-                    \includegraphics[width=0.5\columnwidth, height=0.5\columnwidth]{../paper/FIG/best.png}%
-                \end{subfigure}\hfill\\}%
+                \vspace*{-1.5cm}
+                \caption*{\tiny {In-situ pattern with platform and random antenna placements}}%
+                \centering
+                \includegraphics[width=4cm]{../paper/FIG/rand.png}
             \end{figure}
-        \end{overlayarea}
+        }
+        \only<2>{
+            \begin{figure}
+                \vspace*{-1.5cm}
+                 \caption*{\tiny {In-situ pattern with platform and best antenna placements chosen by the algorithm}}%
+                \centering
+                \includegraphics[width=4cm]{../paper/FIG/best.png}
+            \end{figure}
+        }
         \end{column}
     \end{columns}
 \end{frame}
@@ -235,8 +235,8 @@
     \begin{itemize}
             \small
         \item $\theta, \phi$ spherical coordinates
-        \item $FSG(\cdot)$ returns free-space gain pattern  
-        \item $ISG(\cdot)$ returns in-situ gain pattern
+        \item $FSG(\cdot,\cdot) \in \mathbb R$ is the free-space gain pattern computed by the simulator
+        \item $ISG(\cdot,\cdot) \in \mathbb R$ is the in-situ gain pattern computed by the simulator
     \end{itemize}
 \end{frame}
 
@@ -271,13 +271,13 @@
 \end{frame}
 
 \begin{frame}[t]{Stochastic Algorithms: Operand}
-    \textbf{Candidate solution} or an \textbf{individual} is a member of a set of possible olutions.
+    \textbf{Candidate solution} or an \textbf{individual} is a member of a set of possible solutions.
 \begin{itemize} \itemsep1.5em
                \item Simulated Annealing and Hill Climbing maintain single individual\\
             \adjustbox{valign=t}{%
                 \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
             }
-    \item Genetic algorithm and Evolutionary Strategy maintain a population of individuals
+    \item Genetic Algorithm and Evolutionary Strategy maintain a population of individuals
             \adjustbox{valign=t}{%
                 \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
                 $\bigcdot~\bigcdot~\bigcdot$
@@ -368,18 +368,18 @@
                 \setlength{\interspacetitleruled}{0pt}%
                 \setlength{\algotitleheightrule}{0pt}%
                 \begin{algorithm}[H]
-                    \only<1>{\reduline{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(ind_i), i \in [1,p]$}\;}
-                    \only<2>{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(ind_i), i \in [1,p]$\;}
+                    \only<1>{\reduline{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(\textbf{ind}_i), i \in [1,p]$}\;}
+                    \only<2>{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(\textbf{ind}_i), i \in [1,p]$\;}
                     $i=0$ \;
                     \While{$i<gen_{max}$} {
                         \only<1>{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'} \;}
                         \only<2>{\reduline{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'}} \;}
                         \For{$(p - n_e)/2$ times} {
-                            \tcc{select returns pair of individuals}
+                            {\tiny \tcc{'select' returns a pair of individuals}}
                             $\textbf{M} \leftarrow select(\textbf{P}, 2)$  \;
                             \eIf {$rand(0,1)<p_c$} {
-                                \only<1>{Apply $crossover(M)$ to get two offsprings \textbf{O} \;}
-                                \only<2>{\reduline{Apply $crossover(M)$ to get two offsprings \textbf{O}} \;}
+                                \only<1>{\textbf{O} $\leftarrow crossover(\textbf{M})$ \;}
+                                \only<2>{\reduline{\textbf{O} $\leftarrow crossover(\textbf{M})$} \;}
                                 Add $O$ to $P'$ \;
                             }
                             { Add $M$ to $P'$ \; }
@@ -387,7 +387,7 @@
                         \only<1>{Uniformly select $p_{m} \cdot (p - n_e)$ individuals from $P$, and apply $mutation$ operator to each \;}
                         \only<2>{\reduline{Uniformly select $p_{m} \cdot (p - n_e)$ individuals from $P$, and apply $mutation$ operator to each} \;}
                         Update $P\leftarrow P'$ \;
-                        Compute $fitness(ind_i); i \in [1, p]$\;
+                        Compute $fitness(\textbf{ind}_i); i \in [1, p]$\;
                         Update $i \leftarrow i + 1$ \;
                     }
                 \end{algorithm}
@@ -417,9 +417,10 @@
                 \only<2>{\textbf{P}$\leftarrow$ generate $\mu$ random individuals \;}
                 $i=0$ \;
                 \While{$i<gen_{max}$} {
-                    \only<1>{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator, and add all offsprings to \textbf{P}\;}
-                    \only<2>{\reduline{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator, and add all offsprings to \textbf{P}} \;}
-                    Compute $fitness(ind_i), i \in [1,\lambda]$ \;
+                    \only<1>{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator\;}
+                    Add all offsprings to \textbf{P} \;
+                    \only<2>{\reduline{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator} \;}
+                    Compute $fitness(\textbf{ind}_i), i \in [1,\lambda + \mu]$ \;
                     \only<1>{Keep $\mu$ best individuals in \textbf{P}, and discard remaining $\lambda - \mu$ individuals \;}
                     \only<2>{\reduline{Keep $\mu$ best individuals in \textbf{P}, and discard remaining $\lambda - \mu$ individuals} \;}
                     Update $i \leftarrow i+1$
@@ -456,6 +457,7 @@
                     {
                         \If{\only<1>{$rand(0,1) < e^{-\delta f / T}$} \only<2>{\reduline{$rand(0,1) < e^{-\delta f / T}$}}} 
                         {
+                            {\tiny \tcc{replace current individual by a higher fitness (less fitter) individual}}
                             \only<1>{\textbf{c} $ \leftarrow $ \textbf{n}}
                             \only<2>{\reduline{\textbf{c} $ \leftarrow $ \textbf{n}}}
                         }
@@ -495,8 +497,8 @@
                     \textbf{n} $\leftarrow mutate(\textbf{c})$ \; 
                     \If{\only<1>{$fitness(\textbf{n}) < fitness(\textbf{c})$} \only<2>{\reduline{$fitness(n) < fitness(c)$}}} 
                     {
-                        \only<1>{$c \leftarrow n$} 
-                        \only<2>{\reduline{$c \leftarrow n$}}
+                        \only<1>{$\textbf{c} \leftarrow \textbf{n}$} 
+                        \only<2>{\reduline{$\textbf{c} \leftarrow \textbf{n}$}}
                     }
                     $i \leftarrow i + 1$
                 }
@@ -537,11 +539,11 @@
         \centering
         \begin{subfigure}{.5\columnwidth}
             \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc1_figure}%
-            \caption*{\tiny Test Case \#1 with $7056 (84x84)$ allowable placements}%
+            \caption*{\tiny Test Case \#1 with $7056~(84x84)$ allowable placements}%
         \end{subfigure}\hfill%
         \begin{subfigure}{.5\columnwidth}
             \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc2_figure}%
-            \caption*{\tiny Test Case \#2 with $50625 (45x45x45)$ allowable placements}%
+            \caption*{\tiny Test Case \#2 with $50625~(45x45x45)$ allowable placements}%
         \end{subfigure}\hfill\\%
     \end{figure}
 \end{frame}
@@ -552,11 +554,11 @@
         \centering
         \begin{subfigure}{.5\columnwidth}
             \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc3_figure}%
-            \caption*{\tiny Test Case \#3 with $126025 (71x71x25)$ allowable placements}%
+            \caption*{\tiny Test Case \#3 with $126025~(71x71x25)$ allowable placements}%
         \end{subfigure}\hfill%
         \begin{subfigure}{.5\columnwidth}
             \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc4_figure}%
-            \caption*{\tiny Test Case \#4 with $20736 (12x12x12x12)$ allowable placements}%
+            \caption*{\tiny Test Case \#4 with $20736~(12x12x12x12)$ allowable placements}%
         \end{subfigure}\hfill\\%
     \end{figure}
 \end{frame}

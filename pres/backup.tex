@@ -191,6 +191,38 @@
     \end{tikzpicture}
 \end{frame}
 
+\begin{frame}{Radiation Pattern}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \vspace*{-2cm}
+                \caption*{Free-space pattern without platform or other antennas}
+                \centering
+                \includegraphics[width=4cm]{../paper/FIG/free_space.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+\begin{overlayarea}{\textwidth}{\textheight}
+            \begin{figure}
+                \vspace*{-0.7cm}
+                \begin{subfigure}{\columnwidth}
+                    \centering
+                        \caption*{\tiny {Random in-situ pattern with platform and antennas}}%
+                        \includegraphics[width=0.5\columnwidth,height=0.5\columnwidth]{../paper/FIG/rand.png}
+                \end{subfigure}\\\vfill
+                \only<2>{
+                \begin{subfigure}{\columnwidth}
+                    \centering
+                    \caption*{\tiny {Best in-situ pattern with platform and antennas similar to free-space pattern}}%
+                    \includegraphics[width=0.5\columnwidth, height=0.5\columnwidth]{../paper/FIG/best.png}%
+                \end{subfigure}\hfill\\}%
+            \end{figure}
+        \end{overlayarea}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
 \begin{frame}{Equivalence of fitness to efficiency}
     \small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).
     \begin{table}
