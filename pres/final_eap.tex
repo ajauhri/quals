@@ -79,15 +79,14 @@
     \titlepage
 \end{frame}
 
-\begin{frame}{Contributions}
+\begin{frame}{Motivation}
 \begin{itemize} \itemsep1.5em
-        \item Formulation of the antenna placement problem
-        \item Evaluation of standard stochastic algorithms on a real-world problem
-        \item Able to achieve global optimum with as low as \textbf{25\% evaluations} of search space
+        \item Systems with multiple antennas offer interference, and thereby reduce each antenna's efficiency
+        \item Parasitic effects due to the plaform 
+        \item Frequency bands change over time requiring new antennas, and therefore need to find new placements
     \end{itemize}
     \vspace{5mm}
 \end{frame}
-
 
 \begin{frame}{Outline of this talk}
     \begin{itemize}
@@ -117,8 +116,8 @@
                 \end{figure}\end{textblock}
         }
         \only<2->{
-            \begin{textblock}{7}(-1,1)\textbf{Problem:} find best antenna placements \end{textblock}
-            \begin{textblock}{3}(2.5,1.2)
+            \begin{textblock}{9}(-1,1)\textbf{Problem:} Find best antenna placements to maximize gain and minimize coupling \end{textblock}
+            \begin{textblock}{3}(2.5,1.5)
                 \begin{figure}
                     \includegraphics[trim=170 165 70 145, clip, scale=0.4]{../paper/FIG/tc11_intro}
                 \end{figure}\end{textblock}
@@ -143,7 +142,7 @@
         \item for each $A_i$, $L_i$ denote the set of allowable placements $\in \mathbb R^3$ such that $\mid L_i \mid = n_i$ and $\forall i, n_i > 1$; $L_i = \{(x_{1}, y_{1}, z_{1}) \dots (x_{n_i}, y_{n_i}, z_{n_i})\}$
     \end{itemize}
     \vspace{10px}
-    \centering\only{\textbf{Problem}: Find a set of $n$ optimal antenna placements on $P$}
+    \centering\only{\textbf{Problem}: Find a set of $n$ optimal antenna placements on $P$ to maximize gain and minimize coupling}
 \end{frame}
 
 \begin{frame}{\null}
@@ -196,27 +195,27 @@
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
-                \vspace*{-1.5cm}
-                \caption*{\tiny{Free-space pattern without platform or other antennas}}
+                \vspace*{-1cm}
                 \centering
-                \includegraphics[width=4cm]{../paper/FIG/free_space.png}
+                \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
+                \caption*{\tiny{Free-space pattern without platform or other antennas}}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
             \only<1>{
             \begin{figure}
-                \vspace*{-1.5cm}
-                \caption*{\tiny {In-situ pattern with platform and random antenna placements}}%
+                \vspace*{-1cm}
                 \centering
-                \includegraphics[width=4cm]{../paper/FIG/rand.png}
+                \includegraphics[width=4cm,height=5cm]{../paper/FIG/rand.png}
+                \caption*{\tiny {In-situ pattern with platform and random antenna placements}}%
             \end{figure}
         }
         \only<2>{
             \begin{figure}
                 \vspace*{-1.5cm}
-                 \caption*{\tiny {In-situ pattern with platform and best antenna placements chosen by the algorithm}}%
                 \centering
                 \includegraphics[width=4cm]{../paper/FIG/best.png}
+                 \caption*{\tiny {In-situ pattern with platform and best antenna placements chosen by the algorithm}}%
             \end{figure}
         }
         \end{column}
@@ -227,13 +226,14 @@
 \begin{frame}{Minimize Difference in Radiation Pattern}
     \begin{tcolorbox}[colback=green!5]
         \begin{equation} \label{eq:rp}
-            F_{RP} = \sum_{i=1}^n\sum_{\theta=0}^\pi\sum_{\phi=0}^{2\pi}
-            \left( FSG_i(\theta,\phi) - ISG_i(\theta,\phi) \right) ^2,
+            F_{RP} = \sum_{i=1}^n~\sum_{\theta=0}^{\pi/S}~\sum_{\phi=0}^{2\pi/S}
+            \left( FSG_i(S\theta,S\phi) - ISG_i(S\theta,S\phi) \right) ^2,
         \end{equation}
     \end{tcolorbox}
     where
     \begin{itemize}
             \small
+        \item $S$ is the step size
         \item $\theta, \phi$ spherical coordinates
         \item $FSG(\cdot,\cdot) \in \mathbb R$ is the free-space gain pattern computed by the simulator
         \item $ISG(\cdot,\cdot) \in \mathbb R$ is the in-situ gain pattern computed by the simulator
@@ -563,40 +563,54 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Results - Test Case 1}
+\begin{frame}{Results - test case 1}
     \begin{figure}
-        \vspace*{-0.35cm}
         \centering
-        \includegraphics[scale=0.48]{../paper/FIG/tc1_mf}
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc1_contour}%
+        \end{subfigure}\hfill%
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc1_mf}%
+        \end{subfigure}\hfill\\%
     \end{figure}
 \end{frame}
 
 \begin{frame}{Results - Test Case 2}
     \begin{figure}
-        \vspace*{-0.35cm}
         \centering
-        \includegraphics[scale=0.48]{../paper/FIG/tc2_mf}
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc2_contour}%
+        \end{subfigure}\hfill%
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc2_mf}%
+        \end{subfigure}\hfill\\%
     \end{figure}
 \end{frame}
 
-
 \begin{frame}{Results - Test Case 3}
     \begin{figure}
-        \vspace*{-0.35cm}
         \centering
-        \includegraphics[scale=0.48]{../paper/FIG/tc3_mf}
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc3_contour}%
+        \end{subfigure}\hfill%
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc3_mf}%
+        \end{subfigure}\hfill\\%
     \end{figure}
 \end{frame}
 
 
 \begin{frame}{Results - Test Case 4}
     \begin{figure}
-        \vspace*{-0.35cm}
         \centering
-        \includegraphics[scale=0.48]{../paper/FIG/tc4_mf}
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc4_contour}%
+        \end{subfigure}\hfill%
+        \begin{subfigure}{.5\columnwidth}
+            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc4_mf}%
+        \end{subfigure}\hfill\\%
     \end{figure}
 \end{frame}
-
 
 \begin{frame}{Results - Mean Best Fitness With Std. Dev.}
     \begin{figure}
