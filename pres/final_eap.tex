@@ -12,8 +12,8 @@
 \usepackage[normalem]{ulem} %for underline
 \usepackage{adjustbox}
 \usepackage{setspace}
-\usepackage[font={scriptsize}, justification=centering]{caption}
-\usepackage[font={color=black}]{subcaption}
+\usepackage[font={scriptsize}, justification=centering, skip=0pt]{caption}
+\usepackage[font={color=black},aboveskip=0pt]{subcaption}
 \usepackage{ellipsis}
 \usetikzlibrary{decorations.pathmorphing,calc}
 \usetikzlibrary{decorations.pathreplacing}
@@ -535,35 +535,39 @@
 
 
 \begin{frame}{Experiments: Test Cases}
-    \begin{figure}
-        \centering
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc1_figure}%
-            \caption*{\tiny Test Case \#1 with $7056~(84x84)$ allowable placements}%
-        \end{subfigure}\hfill%
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc2_figure}%
-            \caption*{\tiny Test Case \#2 with $50625~(45x45x45)$ allowable placements}%
-        \end{subfigure}\hfill\\%
-    \end{figure}
+    \begin{columns}
+        \begin{column}{.5\columnwidth}
+            \begin{figure}
+        \vspace*{-0.5cm}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[trim=0 30 0 50, clip,scale=0.25]{../paper/FIG/tc1_figure}%
+                    \caption*{\tiny Test Case \#1 with $7056~(84x84)$ allowable placements}%
+                \end{subfigure}\hfill\\
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc3_figure}%
+                    \caption*{\tiny Test Case \#3 with $126025~(71x71x25)$ allowable placements}%
+                \end{subfigure}\hfill%
+            \end{figure}
+        \end{column}
+        \begin{column}{.5\columnwidth}
+            \begin{figure}
+                \vspace{-0.5cm}
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc2_figure}%
+                    \caption*{\tiny Test Case \#2 with $50625~(45x45x45)$ allowable placements}%
+                \end{subfigure}\hfill\\%
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc4_figure}%
+                    \caption*{\tiny Test Case \#4 with $20736~(12x12x12x12)$ allowable placements}%
+                \end{subfigure}\hfill%
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
-\begin{frame}{Experiments: Test Cases}
-    \begin{figure}
-        \centering
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc3_figure}%
-            \caption*{\tiny Test Case \#3 with $126025~(71x71x25)$ allowable placements}%
-        \end{subfigure}\hfill%
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc4_figure}%
-            \caption*{\tiny Test Case \#4 with $20736~(12x12x12x12)$ allowable placements}%
-        \end{subfigure}\hfill\\%
-    \end{figure}
-\end{frame}
-
-\begin{frame}{Results - test case 1}
+\begin{frame}{Results - Test Case 1}
     \begin{figure}
         \centering
         \begin{subfigure}{.5\columnwidth}
