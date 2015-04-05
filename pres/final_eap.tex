@@ -195,27 +195,24 @@
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
-                \vspace*{-1cm}
                 \centering
                 \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
                 \caption*{\tiny{Free-space pattern without platform or other antennas}}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
-            \only<1>{
+            \only<2>{
             \begin{figure}
-                \vspace*{-1cm}
+                \begin{subfigure}{\columnwidth}
                 \centering
-                \includegraphics[width=4cm,height=5cm]{../paper/FIG/rand.png}
-                \caption*{\tiny {In-situ pattern with platform and random antenna placements}}%
-            \end{figure}
-        }
-        \only<2>{
-            \begin{figure}
-                \vspace*{-1.5cm}
+                \includegraphics[scale=0.25]{../paper/FIG/free_cross.png}
+                \caption*{\tiny {2D view of the free space gain pattern}}%
+            \end{subfigure}\vspace*{2mm}
+            \begin{subfigure}{\columnwidth}
                 \centering
-                \includegraphics[width=4cm]{../paper/FIG/best.png}
-                 \caption*{\tiny {In-situ pattern with platform and best antenna placements chosen by the algorithm}}%
+                \includegraphics[scale=0.25]{../paper/FIG/comp_cross.png}
+                \caption*{\tiny {In-situ pattern (in red) for random antenna placements}}%
+            \end{subfigure}
             \end{figure}
         }
         \end{column}
@@ -240,7 +237,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Objective Function}
+\begin{frame}{Fitness Evaluation}
     Find a placement such that $F$ is minimal:
     \begin{tcolorbox}[colback=green!5]
         \begin{equation} \label{eq:optimal}
