@@ -9,6 +9,7 @@
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage{soul}
+\usepackage[update,prepend]{epstopdf}
 \usepackage{adjustbox}
 \usepackage{setspace}
 \usepackage[font={scriptsize}, justification=centering]{caption}
@@ -231,7 +232,11 @@
         \end{column}
     \end{columns}
 \end{frame}
-
+\begin{frame}{GA with different mutation rates}
+    \begin{figure}
+        \includegraphics[scale=0.45]{../paper/FIG/ga_mut.eps}
+    \end{figure}
+\end{frame}
 
 \begin{frame}{Equivalence of fitness to efficiency}
     \small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).
