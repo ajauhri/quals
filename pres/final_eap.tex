@@ -9,6 +9,7 @@
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage{soul}
+\usepackage{gensymb}
 \usepackage[normalem]{ulem} %for underline
 \usepackage{adjustbox}
 \usepackage{setspace}
@@ -81,8 +82,9 @@
 
 \begin{frame}{Motivation}
 \begin{itemize} \itemsep1.5em
+        \item Placing new antennas requires a long, manual effort to complete an antenna placement study
         \item Systems with multiple antennas offer interference, and thereby reduce each antenna's efficiency
-        \item Parasitic effects due to the plaform 
+        \item Parasitic effects due to fixed or mobile plaform 
         \item Frequency bands change over time requiring new antennas, and therefore need to find new placements
     \end{itemize}
     \vspace{5mm}
@@ -128,7 +130,7 @@
             \begin{textblock}{6}(-0.7,-2.8) allowable placements of antennas \end{textblock}
             \begin{textblock}{3}(-0.2,-2)
                 \begin{figure}
-                    \includegraphics[trim=170 165 70 145, clip, scale=0.4]{../paper/FIG/tc1_intro}
+                    \includegraphics[trim=170 165 65 145, clip, scale=0.4]{../paper/FIG/tc1_intro}
                 \end{figure}\end{textblock}
         }
     \end{columns}
@@ -195,26 +197,29 @@
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
+                \vspace{-2.5cm}
                 \centering
                 \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
                 \caption*{\tiny{Free-space pattern without platform or other antennas}}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
-            \only<2>{
+            \begin{overlayarea}{\textwidth}{\textheight}
             \begin{figure}
                 \begin{subfigure}{\columnwidth}
                 \centering
-                \includegraphics[scale=0.25]{../paper/FIG/free_cross.png}
-                \caption*{\tiny {2D view of the free space gain pattern}}%
+                \includegraphics[scale=0.3]{../paper/FIG/free_cross.png}
+                \caption*{\tiny {2D view of the free-space gain pattern}}%
             \end{subfigure}\vspace*{2mm}
+        \only<2->{
             \begin{subfigure}{\columnwidth}
                 \centering
-                \includegraphics[scale=0.25]{../paper/FIG/comp_cross.png}
+                \includegraphics[scale=0.3]{../paper/FIG/comp_cross.png}
                 \caption*{\tiny {In-situ pattern (in red) for random antenna placements}}%
             \end{subfigure}
-            \end{figure}
         }
+            \end{figure}
+    \end{overlayarea}
         \end{column}
     \end{columns}
 \end{frame}
@@ -223,7 +228,7 @@
 \begin{frame}{Minimize Difference in Radiation Pattern}
     \begin{tcolorbox}[colback=green!5]
         \begin{equation} \label{eq:rp}
-            F_{RP} = \sum_{i=1}^n~\sum_{\theta=0}^{\pi/S}~\sum_{\phi=0}^{2\pi/S}
+            F_{RP} = \sum_{i=1}^n~\sum_{\theta=0}^{\frac{180\degree}{S}}~\sum_{\phi=0}^{\frac{360\degree}{S}}
             \left( FSG_i(S\theta,S\phi) - ISG_i(S\theta,S\phi) \right) ^2,
         \end{equation}
     \end{tcolorbox}
@@ -231,7 +236,7 @@
     \begin{itemize}
             \small
         \item $S$ is the step size
-        \item $\theta, \phi$ spherical coordinates
+        \item $\theta, \phi$ spherical coordinates in degrees
         \item $FSG(\cdot,\cdot) \in \mathbb R$ is the free-space gain pattern computed by the simulator
         \item $ISG(\cdot,\cdot) \in \mathbb R$ is the in-situ gain pattern computed by the simulator
     \end{itemize}
@@ -255,7 +260,7 @@
 \end{frame}
 
 \begin{frame}[t]{Stochastic Algorithms}
-    We will consider algorithms which model \textit{evolution} and \textit{natural selection}.
+    We will consider algorithms which are based on randomization principle.
     \vspace{10px}
 \begin{itemize} \itemsep1.5em
         \item Genetic Algorithm
@@ -353,7 +358,7 @@
         \vspace*{-0.35cm}
         \centering
         \includegraphics[scale=0.4]{../paper/FIG/tc1_ss}
-        \caption*{Search space for one of the test cases evaluated. There are multiple local minimas which makes convergence difficult. z-axis is the combined fitness $F$ (refer Eq. \ref{eq:optimal})}
+        \caption*{Search space for one of the test cases evaluated. There are multiple local minimas which makes convergence difficult. z-axis is the combined fitness $F$}
     \end{figure}
 \end{frame}
 
@@ -429,7 +434,7 @@
             {
                 \begin{figure}
                     \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
-                    \caption*{Less likely to stagnate search space exploration}
+                    \caption*{More mutations allow in-depth exploration of search space, and also makes rapid progress}
                 \end{figure}
             }
         \end{column}
@@ -610,14 +615,6 @@
         \begin{subfigure}{.5\columnwidth}
             \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc4_mf}%
         \end{subfigure}\hfill\\%
-    \end{figure}
-\end{frame}
-
-\begin{frame}{Results - Mean Best Fitness With Std. Dev.}
-    \begin{figure}
-        \vspace*{-0.35cm}
-        \centering
-        \includegraphics[scale=0.48]{../paper/FIG/tc_mfwerr}
     \end{figure}
 \end{frame}
 
