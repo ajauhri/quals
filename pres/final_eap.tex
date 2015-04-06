@@ -138,8 +138,8 @@
     Given:
 \begin{itemize} \itemsep1.5em
         \item platform $P$ with its surface gridded such that end points represent possible antenna placements
-        \item set of  $m$ antennas $A = {A_1, A_2, \dots, A_m}$ such that $m > 1$
-        \item for each $A_i$, $L_i$ denote the set of allowable placements $\in \mathbb R^3$ such that $\mid L_i \mid = n_i$ and $\forall i, n_i > 1$; $L_i = \{(x_{1}, y_{1}, z_{1}) \dots (x_{n_i}, y_{n_i}, z_{n_i})\}$
+        \item set of  $n$ antennas $A = {A_1, A_2, \dots, A_n}$ such that $n > 1$
+        \item for each $A_i$, $L_i$ denote the set of allowable placements $\in \mathbb R^3$ such that $\mid L_i \mid = m_i$ and $\forall i, m_i > 1$; $L_i = \{(x_{1}, y_{1}, z_{1}) \dots (x_{m_i}, y_{m_i}, z_{m_i})\}$
     \end{itemize}
     \vspace{10px}
     \centering\only{\textbf{Problem}: Find a set of $n$ optimal antenna placements on $P$ to maximize gain and minimize coupling}
@@ -255,7 +255,7 @@
 \end{frame}
 
 \begin{frame}[t]{Stochastic Algorithms}
-    We will consider algorithms which rely on \textit{randomization} principle.
+    We will consider algorithms which model \textit{evolution} and \textit{natural selection}.
     \vspace{10px}
 \begin{itemize} \itemsep1.5em
         \item Genetic Algorithm
@@ -552,7 +552,7 @@
                 \vspace{-0.5cm}
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc2_figure}%
-                    \caption*{\tiny Test Case \#2 with $50625~(45x45x45)$ allowable placements}%
+                    \caption*{\tiny Test Case \#2 with $50625~(45x45x25)$ allowable placements}%
                 \end{subfigure}\hfill\\%
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc4_figure}%
