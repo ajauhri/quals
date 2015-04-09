@@ -68,22 +68,39 @@
 }
 \addtobeamertemplate{footnote}{}{\vspace{2ex}}
 \setbeamercolor*{item}{fg=black}
-\setbeamertemplate{footline}[page number]{}
-\setbeamercolor{page number in head/foot}{fg=univred}
+% The line below doesn't hide the total frame number, so using 
+% http://tex.stackexchange.com/a/32815/32460 
+%\setbeamertemplate{footline}[page number]{}
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+%\setbeamercolor{page number in head/foot}{fg=univred}
+  \begin{beamercolorbox}[wd=.98\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \insertframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\let\otp\titlepage
+\renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
 
 \title{\color{univred} A Comparison of Antenna Placement Algorithms}
 \author{Abhinav Jauhri}
 \date{\today}
 \begin{document}
-\begin{frame}
+\begin{frame}[plain]
     \color{univred}
     \titlepage
 \end{frame}
 
 \begin{frame}{Motivation}
 \begin{itemize} \itemsep1.5em
-        \item Placing new antennas requires a long, manual effort to complete an antenna placement study
-        \item Systems with multiple antennas offer interference, and thereby reduce each antenna's efficiency
+        \item Antenna placement study is generally ignored 
+        \item Placing new antennas requires a long, manual effort to complete an antenna placement study, if at all
+        \item With multiple antennas systems offer interference, and thereby reduce each antenna's efficiency
         \item Parasitic effects due to fixed or mobile plaform 
         \item Frequency bands change over time requiring new antennas, and therefore need to find new placements
     \end{itemize}
@@ -141,10 +158,11 @@
 \begin{itemize} \itemsep1.5em
         \item platform $P$ with its surface gridded such that end points represent possible antenna placements
         \item set of  $n$ antennas $A = {A_1, A_2, \dots, A_n}$ such that $n > 1$
-        \item for each $A_i$, $L_i$ denote the set of allowable placements $\in \mathbb R^3$ such that $\mid L_i \mid = m_i$ and $\forall i, m_i > 1$; $L_i = \{(x_{1}, y_{1}, z_{1}) \dots (x_{m_i}, y_{m_i}, z_{m_i})\}$
+        \item for each $A_i$, $L_i$ denote the set of allowable placements $\in \mathbb R^3$ such that $\mid L_i \mid = m_i$ and $\forall i, m_i > 1$\[ L_i = \{(x_{1}, y_{1}, z_{1}) \dots (x_{m_i}, y_{m_i}, z_{m_i})\} \]
     \end{itemize}
-    \vspace{10px}
-    \centering\only{\textbf{Problem}: Find a set of $n$ optimal antenna placements on $P$ to maximize gain and minimize coupling}
+    \textbf{Problem}: Find a set of $n$ optimal antenna placements on $P$ to maximize gain and minimize coupling. \\
+    \vspace*{2mm}
+    \textbf{Size of search space} $= \mathbf{m^n}$, if $m_i = m, \forall i \in [1,n]$
 \end{frame}
 
 \begin{frame}{\null}
@@ -174,7 +192,7 @@
             \draw [-stealth,decorate,decoration=snake] ([yshift=.1cm] a1.north) -- (-1,4) node[above] {\scriptsize $A_{out}$};
             \draw [-stealth,decorate,decoration=snake] ([yshift=.1cm, xshift=.1cm] a2.north) -- (6,4) node[above] {\scriptsize $B_{out}$};
             \draw [-stealth,decorate,decoration=snake] ([yshift=.1cm] a2.north) -- (4,4) node[above] {\scriptsize $B_{out}$};
-            \node[draw, text width=3.5cm] at (8,3) {\tiny $B_{in}~$:  Energy from generator\\$B_{out}$: Energy radiated in space\\{\color{red}$B_c~~$: Coupled energy (not good)}\\$A_{out}$: Re-radiated energy\\}; 
+            \node[draw, text width=3.8cm] at (8,3) {\tiny $B_{in}~$:  Energy from generator\\$B_{out}$: Energy radiated in space\\{\color{red}$B_c~~$: Coupled energy (undesirable)}\\$A_{out}$: Re-radiated energy\\}; 
         \end{tikzpicture}
     \end{figure}
 \end{frame}
@@ -188,9 +206,38 @@
     where
     \begin{itemize}
         \item $CP(\cdot, \cdot) \in \mathbb R$ is the coupling between two antennas, and computed using a simulator
+        \item There will be $n \choose 2$ coupling terms 
     \end{itemize}
     \vspace{2mm}
     \small\textit{Example:} If $n=3$, then $F_{MC} = CP(A_1, A_2) + CP(A_1, A_3) + CP(A_2, A_3)$
+\end{frame}
+
+\begin{frame}{Free Space Radiation Pattern}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \vspace{-2.5cm}
+                \centering
+                \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
+                \caption*{\tiny Free-space patten without platform or other antennas}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{overlayarea}{\textwidth}{\textheight}
+            \begin{figure}
+                \begin{subfigure}{\columnwidth}
+                \centering
+                \includegraphics[scale=0.3]{../paper/FIG/free_cross.png}
+                \caption*{\tiny 2D view of the \textcolor{blue}{free-space gain pattern}}%
+            \end{subfigure}\vspace*{2mm}
+    \begin{tcolorbox}[colback=green!5]
+        \centering
+        This is ideal pattern since there is no interference
+    \end{tcolorbox}
+            \end{figure}
+    \end{overlayarea}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Radiation Pattern}
@@ -200,7 +247,7 @@
                 \vspace{-2.5cm}
                 \centering
                 \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
-                \caption*{\tiny{Free-space pattern without platform or other antennas}}
+                \caption*{\tiny{Ideal gain pattern since there is no intereference}}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
@@ -209,20 +256,19 @@
                 \begin{subfigure}{\columnwidth}
                 \centering
                 \includegraphics[scale=0.3]{../paper/FIG/free_cross.png}
-                \caption*{\tiny {2D view of the free-space gain pattern}}%
+                \caption*{\tiny {2D view of the \textcolor{blue}{free-space gain pattern}}}%
             \end{subfigure}\vspace*{2mm}
-        \only<2->{
             \begin{subfigure}{\columnwidth}
                 \centering
                 \includegraphics[scale=0.3]{../paper/FIG/comp_cross.png}
-                \caption*{\tiny {In-situ pattern (in red) for random antenna placements}}%
+                \caption*{\tiny {\textcolor{red}{In-situ gain pattern} for random antenna placements different from \textcolor{blue}{free-space gain pattern}}}%
             \end{subfigure}
-        }
             \end{figure}
     \end{overlayarea}
         \end{column}
     \end{columns}
 \end{frame}
+
 
 
 \begin{frame}{Minimize Difference in Radiation Pattern}
@@ -258,6 +304,22 @@
         Part 2: Stochastic Algorithms
     \end{tcolorbox}
 \end{frame}
+\begin{frame}{\null}
+    \begin{tcolorbox}[colback=green!5]
+        \centering
+        Question: Why use stochastic algorithms?
+    \end{tcolorbox}
+\end{frame}
+
+\begin{frame}[t]{Multi-Modal Search Space}
+    \begin{figure}
+        \vspace*{-0.35cm}
+        \centering
+        \includegraphics[scale=0.4]{../paper/FIG/tc1_ss}
+        \caption*{Search space for one of the test cases evaluated. There are multiple local minimas which makes convergence difficult. z-axis is the combined fitness $F$}
+    \end{figure}
+\end{frame}
+
 
 \begin{frame}[t]{Stochastic Algorithms}
     We will consider algorithms which are based on randomization principle.
@@ -344,22 +406,6 @@
                 }
             \end{minipage}
     \end{enumerate}
-\end{frame}
-
-\begin{frame}{\null}
-    \begin{tcolorbox}[colback=green!5]
-        \centering
-        Question: Why use stochastic algorithms?
-    \end{tcolorbox}
-\end{frame}
-
-\begin{frame}[t]{Multi-Modal Search Space}
-    \begin{figure}
-        \vspace*{-0.35cm}
-        \centering
-        \includegraphics[scale=0.4]{../paper/FIG/tc1_ss}
-        \caption*{Search space for one of the test cases evaluated. There are multiple local minimas which makes convergence difficult. z-axis is the combined fitness $F$}
-    \end{figure}
 \end{frame}
 
 \begin{frame}{Genetic Algorithm}
@@ -527,10 +573,12 @@
 \end{frame}
 
 \begin{frame}{Experimental Setup}
-    \begin{enumerate}\itemsep1.5em
-        \item All test cases describe platforms which are replicas of real-world use cases like mobile devices, tanks, and cars
-        \item We use a popular \textit{NEC2} simulator \footnote{http://www.nec2.org} to get fitness parameters 
-        \item Evaluate the entire search space using an exhaustive algorithm to find the optimal antenna locations
+    \begin{enumerate}\itemsep1.2em
+        \item All test cases describe platforms which are representative of real-world use cases like mobile devices, trucks, and cars. If one were to scale up we will expect same behaviour to hold
+        \item We use a popular \textit{NEC2} simulator to get fitness parameters 
+        \item Evaluated the entire search space using an exhaustive algorithm to find the optimal antenna locations which is not ordinarily possible
+        \item Termination criteria was set to be at most $50\%$ evaluations of the search spcae
+        \item $10$ independent runs of each test case against each algorithm with $\alpha = \beta = 1/2$
     \end{enumerate}
     \vspace{10mm}
 \end{frame}
@@ -544,11 +592,11 @@
                 \centering
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[trim=0 30 0 50, clip,scale=0.25]{../paper/FIG/tc1_figure}%
-                    \caption*{\tiny Test Case \#1 with $7056~(84x84)$ allowable placements}%
+                    \caption*{\tiny Test Case \#1: search space size of $7056~(84x84)$ allowable placements}%
                 \end{subfigure}\hfill\\
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc3_figure}%
-                    \caption*{\tiny Test Case \#3 with $126025~(71x71x25)$ allowable placements}%
+                    \caption*{\tiny Test Case \#3: search space size of $126025~(71x71x25)$ allowable placements}%
                 \end{subfigure}\hfill%
             \end{figure}
         \end{column}
@@ -557,11 +605,11 @@
                 \vspace{-0.5cm}
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc2_figure}%
-                    \caption*{\tiny Test Case \#2 with $50625~(45x45x25)$ allowable placements}%
+                    \caption*{\tiny Test Case \#2: search space size of $50625~(45x45x25)$ allowable placements}%
                 \end{subfigure}\hfill\\%
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[trim=0 30 0 50, clip, scale=0.25]{../paper/FIG/tc4_figure}%
-                    \caption*{\tiny Test Case \#4 with $20736~(12x12x12x12)$ allowable placements}%
+                    \caption*{\tiny Test Case \#4: search space size of $20736~(12x12x12x12)$ allowable placements}%
                 \end{subfigure}\hfill%
             \end{figure}
         \end{column}
@@ -619,18 +667,21 @@
 \end{frame}
 
 \begin{frame}{Results - Success Rates}
+    \textit{Success rate} report the percentage of runs in which the algorithm is able to find the optimum
     \begin{figure}
         \vspace*{-0.35cm}
         \centering
-        \includegraphics[scale=0.48]{../paper/FIG/tc_sp}
+        \includegraphics[scale=0.4]{../paper/FIG/tc_sp}
     \end{figure}
 \end{frame}
 
 \begin{frame}{Conclusion}
     \begin{itemize} \itemsep1.5em
-        \item Formulation of the antenna placement problem
+        \item Formalized the antenna placement problem
         \item Generic problem formulation to accommodate multiple antennas and platforms
         \item Optimal placements found using Evolutionary Strategy with at most $25\%$ evaluations of search space
+        % too weak, more numbers needed here
+        \item Future work - Consider other techniques like \textit{Differential Evolution} and \textit{ALPS}
     \end{itemize}
 \end{frame}
 
