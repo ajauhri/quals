@@ -8,7 +8,11 @@
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{tikz}
+\usepackage{tabularx, booktabs}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usepackage{soul}
+\usepackage{tabu}
+\usepackage{multirow}
 \usepackage{gensymb}
 \usepackage[normalem]{ulem} %for underline
 \usepackage{adjustbox}
@@ -90,8 +94,16 @@
 \title{\color{univred} A Comparison of Antenna Placement Algorithms}
 \author{Abhinav Jauhri}
 \date{\today}
+
 \begin{document}
 \begin{frame}[plain]
+%CMU logo in header
+    \begin{textblock*}{100mm}(0.87\textwidth,-1.15cm)
+        \includegraphics[height=1.5cm,width=1.9cm,keepaspectratio]{cm_logo}
+    \end{textblock*}
+    \begin{textblock*}{10mm}(-.8cm,7.78cm)
+        \includegraphics[height=2cm,width=2.5cm,keepaspectratio]{ece}
+    \end{textblock*}
     \color{univred}
     \titlepage
 \end{frame}
@@ -138,7 +150,7 @@
             \begin{textblock}{9}(-1,1)\textbf{Problem:} Find best antenna placements to maximize gain and minimize coupling \end{textblock}
             \begin{textblock}{3}(2.5,1.5)
                 \begin{figure}
-                    \includegraphics[trim=170 165 70 145, clip, scale=0.4]{../paper/FIG/tc11_intro}
+                    \includegraphics[trim=170 165 65 145, clip, scale=0.4]{../paper/FIG/tc11_intro}
                 \end{figure}\end{textblock}
         }
         \column{0.33\linewidth}
@@ -618,53 +630,156 @@
 
 
 \begin{frame}{Results - Test Case 1}
-    \begin{figure}
-        \centering
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc1_contour}%
-        \end{subfigure}\hfill%
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc1_mf}%
-        \end{subfigure}\hfill\\%
-    \end{figure}
+    \begin{columns}
+        \begin{column}{.4\columnwidth}
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc1_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
+
+            \adjustbox{max width=\columnwidth}{\tiny
+                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                    \toprule
+                    Algo.
+                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{Best fitness}\\
+                    \cmidrule(lr){2-3} \cmidrule(l){4-5}
+                    & Mean & Error &  Mean & Error \\
+                    \midrule
+                    ES & 6.80 & 6.08 & 0.49864 & 0.00000 \\
+                    GA & 14.17 & 13.81 & 0.50031 & 0.00315 \\
+                    SA & 8.58 & 4.07 & 0.49949 & 0.00161 \\
+                    HC & 2.11 & 1.11 & 0.50159 & 0.00418 \\
+                    \bottomrule
+                \end{tabularx}
+            }
+        \end{column}
+        \begin{column}{.6\columnwidth}
+            \begin{figure}
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc1_mf}%
+                \end{subfigure}\hfill\\%
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Results - Test Case 2}
-    \begin{figure}
-        \centering
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc2_contour}%
-        \end{subfigure}\hfill%
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc2_mf}%
-        \end{subfigure}\hfill\\%
-    \end{figure}
+    \begin{columns}
+        \begin{column}{.4\columnwidth}
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc2_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
+
+            \adjustbox{max width=\columnwidth}{\tiny
+                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                    \toprule
+                    Algo.
+                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{Best fitness}\\
+                    \cmidrule(lr){2-3} \cmidrule(l){4-5}
+                    & Mean & Error &  Mean & Error \\
+                    \midrule
+ES & 14.45 & 9.28 & 0.49688 & 0.00000 \\
+GA & 23.47 & 15.60 & 0.50288 & 0.00277 \\
+SA & 3.27 & 2.80 & 0.50427 & 0.02218 \\
+HC & 0.34 & 0.20 & 0.51380 & 0.01386 \\
+                    \bottomrule
+                \end{tabularx}
+            }
+        \end{column}
+        \begin{column}{.6\columnwidth}
+            \begin{figure}
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc2_mf}%
+                \end{subfigure}\hfill\\%
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
+
 \begin{frame}{Results - Test Case 3}
-    \begin{figure}
-        \centering
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc3_contour}%
-        \end{subfigure}\hfill%
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc3_mf}%
-        \end{subfigure}\hfill\\%
-    \end{figure}
+    \begin{columns}
+        \begin{column}{.4\columnwidth}
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc3_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
+
+            \adjustbox{max width=\columnwidth}{\tiny
+                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                    \toprule
+                    Algo.
+                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{Best fitness}\\
+                    \cmidrule(lr){2-3} \cmidrule(l){4-5}
+                    & Mean & Error &  Mean & Error \\
+                    \midrule
+ES & 14.66 & 4.00 & 0.49747 & 0.00000 \\
+GA & 24.28 & 16.02 & 0.49773 & 0.00040 \\
+SA & 3.87 & 1.82 & 0.49766 & 0.00038 \\
+HC & 0.18 & 0.09 & 0.49873 & 0.00146 \\
+                    \bottomrule
+                \end{tabularx}
+            }
+        \end{column}
+        \begin{column}{.6\columnwidth}
+            \begin{figure}
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc3_mf}%
+                \end{subfigure}\hfill\\%
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
 \begin{frame}{Results - Test Case 4}
-    \begin{figure}
-        \centering
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc4_contour}%
-        \end{subfigure}\hfill%
-        \begin{subfigure}{.5\columnwidth}
-            \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc4_mf}%
-        \end{subfigure}\hfill\\%
-    \end{figure}
+    \begin{columns}
+        \begin{column}{.4\columnwidth}
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc4_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
+
+            \adjustbox{max width=\columnwidth}{\tiny
+                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                    \toprule
+                    Algo.
+                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{Best fitness}\\
+                    \cmidrule(lr){2-3} \cmidrule(l){4-5}
+                    & Mean & Error & Mean & Error \\
+                    \midrule
+ES & 14.11 & 6.17 & 0.49926 & 0.00000 \\
+GA & 22.42 & 9.94 & 0.49926 & 0.00000 \\
+SA & 2.19 & 0.78 & 0.49926 & 0.00000 \\
+HC & 0.43 & 0.40 & 0.49926 & 0.00000 \\
+
+                    \bottomrule
+                \end{tabularx}
+            }
+        \end{column}
+        \begin{column}{.6\columnwidth}
+            \begin{figure}
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc4_mf}%
+                \end{subfigure}\hfill\\%
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
+
 
 \begin{frame}{Results - Success Rates}
     \textit{Success rate} report the percentage of runs in which the algorithm is able to find the optimum
