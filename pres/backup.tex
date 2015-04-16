@@ -9,6 +9,8 @@
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage{soul}
+\usepackage{tabularx, booktabs}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usepackage[update,prepend]{epstopdf}
 \usepackage{adjustbox}
 \usepackage{setspace}
@@ -151,92 +153,103 @@
 \begin{frame}
     \color{univred}
     \titlepage
+    \begin{center}
+        {\tiny Backup Slides}
+\end{center}
 \end{frame}
 
-\begin{frame}{Contributions}
-\begin{itemize} \itemsep1.5em
-        \item Formulation of the antenna placement problem
-        \item Evaluation of standard stochastic algorithms on a real-world problem
-        \item Able to achieve global optimum with as low as \textbf{25\% evaluations} of search space
-    \end{itemize}
-    \vspace{5mm}
+\begin{frame}{Differential Evolution}
+    \begin{enumerate}
+        \item [Step 1:] Randomly initialize a population 
+        \item [Step 2:] Mutation: For each target $x_i^g, i \in \{1, 2, 3 \ldots, NP\}$, a mutant vector is formed for the subsequent generation using:
+            \[v_i^{g} = x_{r_1}^g + F \cdot (x_{r_2}^g - x_{r_3}^g), \]
+            where $F \in [0,2]$ and $r_1, r_2, r_3$ are mutually different and also $ \neq i$
+        \item [Step 3:] Recombination: Formulate a trial vector as:
+    \[u_i^{g+1} = 
+        \begin{cases}
+            v_{ij}^g, & \text{if rand()} \leq CR \text{ or }j = \textit{rnbr(i)} \\
+            x_{ij}^g, & \text{if rand()} > CR \text{ and }j \neq \textit{rnbr(i)} \\
+    \end{cases}\]
+        \item [Step 4:] Selection: Compare trial vector $u_i^{g+1}$ and target vector $x_i^g$, and select the vector which yields a smaller cost function.\\
+        \item [Step 5:] Termination check
+    \end{enumerate}
 \end{frame}
 
 
-\begin{frame}{Minimize Difference in Radiation Pattern}
-    Pattern defines the ratio of energy radiated and input energy in a particular direction. For each antenna $A_i$:
-    \begin{tcolorbox}[colback=green!5]
-        \begin{equation} \label{eq:rp}
-            F_{RP} = \sum_{i=1}^n\sum_{\theta=0}^\pi\sum_{\phi=0}^{2\pi}
-            \left( FSG_i(\theta,\phi) - ISG_i(\theta,\phi) \right) ^2,
-        \end{equation}
-    \end{tcolorbox}
-    where
-    \begin{itemize}
-            \small
-        \item $\theta, \phi$ spherical coordinates
-        \item $FSG(\cdot)$ returns free-space gain pattern  
-        \item $ISG(\cdot)$ returns in-situ gain pattern
-    \end{itemize}
-
-    \tdplotsetmaincoords{60}{110}
-    \pgfmathsetmacro{\rvec}{.8}
-    \pgfmathsetmacro{\thetavec}{30}
-    \pgfmathsetmacro{\phivec}{60}
-    \hspace{.6\textwidth}
-    \begin{tikzpicture}[scale=1.8,tdplot_main_coords]
-        \tikzstyle{every node}=[font=\tiny]
-        \coordinate (O) at (0,0,0);
-        \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
-        \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
-        \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
-        \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
-        \draw[-stealth,color=red] (O) -- (P);
-        \draw[dashed, color=red] (O) -- (Pxy);
-        \draw[dashed, color=red] (P) -- (Pxy);
-        \tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north}{$\phi$}
-        \tdplotsetthetaplanecoords{\phivec}
-        \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
-        \draw[dashed,tdplot_rotated_coords] (\rvec,0,0) arc (0:90:\rvec);
-        \draw[dashed] (\rvec,0,0) arc (0:90:\rvec);
-    \end{tikzpicture}
+\begin{frame}{Particle Swarm Optimization}
+    \begin{enumerate}
+        \item [Step 1:] Randomly initialize velocity and position of all particles
+        \item [Step 2:] At each iteration, updated velocity as follows:
+            \[ v_i = wv_i + c_1 R_1 (p_{i,best} - p_i) + c_2 R_2 (g_{best} - p_i) ,\]
+            where $p_{i,best}, g_{best}$ are positions with best objective value found so far by particle and entire population respectively, $c_1,c_2$ are weighting factors, $R_1,R_2 \thicksim \mathbb U(0,1)$, $w$ is parameter cooling
+        \item [Step 3:] Position updating
+            \[ p_i = p_i + v_i \]
+        \item [Step 4:] Memory updating: Update $p_{i,best}$ and $g_{best}$
+        \item [Step 5:] Termination check
+    \end{enumerate}
 \end{frame}
 
-\begin{frame}{Radiation Pattern}
-    \begin{columns}
-        \begin{column}{0.5\linewidth}
-            \begin{figure}
-                \vspace*{-2cm}
-                \caption*{Free-space pattern without platform or other antennas}
-                \centering
-                \includegraphics[width=4cm]{../paper/FIG/free_space.png}
-            \end{figure}
-        \end{column}
-        \begin{column}{0.5\linewidth}
-\begin{overlayarea}{\textwidth}{\textheight}
-            \begin{figure}
-                \vspace*{-0.7cm}
-                \begin{subfigure}{\columnwidth}
-                    \centering
-                        \caption*{\tiny {Random in-situ pattern with platform and antennas}}%
-                        \includegraphics[width=0.5\columnwidth,height=0.5\columnwidth]{../paper/FIG/rand.png}
-                \end{subfigure}\\\vfill
-                \only<2>{
-                \begin{subfigure}{\columnwidth}
-                    \centering
-                    \caption*{\tiny {Best in-situ pattern with platform and antennas similar to free-space pattern}}%
-                    \includegraphics[width=0.5\columnwidth, height=0.5\columnwidth]{../paper/FIG/best.png}%
-                \end{subfigure}\hfill\\}%
-            \end{figure}
-        \end{overlayarea}
-        \end{column}
-    \end{columns}
+
+\begin{frame}{Parameters - GA and ES}
+        Genetic Algorithm
+    \adjustbox{max width=\columnwidth}{\tiny
+        \begin{tabularx}{\columnwidth}{c *{6}{Y}}
+            \toprule
+            Test Case & Population & Generations & Mutation Prob. & Crossover Prob. & Elitism & Tournament Size \\
+            \midrule
+            tc1 & 500 & 10 & 0.1 & 0.6 & 50 & 50 \\
+            tc2 & 3600 & 10 & 0.1 & 0.6 & 360 & 360 \\
+            tc3 & 8500 & 10 & 0.1 & 0.6 & 850 & 850 \\
+            tc4 & 1500 & 10 & 0.1 & 0.6 & 150 & 150 \\
+            \bottomrule
+        \end{tabularx}
+    }\\
+    \vspace*{1cm}
+Evolutionary Strategy
+ \adjustbox{max width=\columnwidth}{\tiny
+        \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+            \toprule
+            Test Case & $\mu$ & $\lambda$ & Generations\\
+            \midrule
+            tc1 & 70 & 490 & 10  \\
+            tc2 & 550 & 3850 & 10  \\
+            tc3 & 1200 & 8400 & 10 \\
+            tc4 & 220 & 1540 & 10 \\
+            \bottomrule
+        \end{tabularx}
+    }
 \end{frame}
-\begin{frame}{GA with different mutation rates}
-    \begin{figure}
-        \includegraphics[scale=0.45]{../paper/FIG/ga_mut.eps}
-    \end{figure}
+
+\begin{frame}[t]{Parameters - SA}
+    \begin{enumerate}
+        \item Initial Temperature $\in [0.23, 0.27]$ 
+        \item Cooling Schedule: Geometric cooling $T_{i+1} = \tau T_{i}~ (\alpha < 1)$ where $\tau \in [0.99, 1)$ such that $T_i <= 10^{-4}$ at $50\%$ iterations
+    \end{enumerate}
 \end{frame}
+
+\begin{frame}{Parameter Selection - GA}
+ \begin{figure}
+\centering
+\vspace*{-0.4cm}
+    \includegraphics[scale=0.48]{../paper/FIG/ga_mut}%
+\end{figure}
+\end{frame}
+
+\begin{frame}{Parameter Selection - SA (todo)}
+\end{frame}
+
+
+\begin{frame}{Search space for larger problem}
+ \begin{figure}
+     \vspace*{-.2cm}
+\centering
+    \includegraphics[scale=0.5]{../paper/FIG/tc5_contour}%
+    \vspace*{-.1cm}
+     \caption*{\tiny Search space for problem with $10$ antennas resembles contours as seen for experiment test cases}
+\end{figure}
+\end{frame}
+
+
 
 \begin{frame}{Equivalence of fitness to efficiency}
     \small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).

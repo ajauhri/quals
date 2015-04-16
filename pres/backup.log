@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  5 APR 2015 00:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  15 APR 2015 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -839,6 +839,45 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen203
 \SOUL@ulht=\dimen204
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen205
+\extrarowheight=\dimen206
+\NC@list=\toks50
+\extratabsurround=\skip61
+\backup@length=\skip62
+)
+\TX@col@width=\dimen207
+\TX@old@table=\dimen208
+\TX@old@col=\dimen209
+\TX@target=\dimen210
+\TX@delta=\dimen211
+\TX@cols=\count173
+\TX@ftn=\toks51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen212
+\lightrulewidth=\dimen213
+\cmidrulewidth=\dimen214
+\belowrulesep=\dimen215
+\belowbottomsep=\dimen216
+\aboverulesep=\dimen217
+\abovetopsep=\dimen218
+\cmidrulesep=\dimen219
+\cmidrulekern=\dimen220
+\defaultaddspace=\dimen221
+\@cmidla=\count174
+\@cmidlb=\count175
+\@aboverulesep=\dimen222
+\@belowrulesep=\dimen223
+\@thisruleclass=\count176
+\@lastruleclass=\count177
+\@thisrulewidth=\dimen224
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
@@ -869,9 +908,9 @@ Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks50
-\XKV@tempa@toks=\toks51
-\XKV@depth=\count173
+\XKV@toks=\toks52
+\XKV@tempa@toks=\toks53
+\XKV@depth=\count178
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -885,30 +924,31 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box65
 )
-\tc@llx=\dimen205
-\tc@lly=\dimen206
-\tc@urx=\dimen207
-\tc@ury=\dimen208
+\tc@llx=\dimen225
+\tc@lly=\dimen226
+\tc@urx=\dimen227
+\tc@ury=\dimen228
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen209
-\adjbox@Height=\dimen210
-\adjbox@Depth=\dimen211
-\adjbox@Totalheight=\dimen212
+\adjbox@Width=\dimen229
+\adjbox@Height=\dimen230
+\adjbox@Depth=\dimen231
+\adjbox@Totalheight=\dimen232
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count174
+\c@checkoddpage=\count179
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box66
-\sift@deathcycles=\count175
-\@vwid@loff=\dimen213
-\@vwid@roff=\dimen214
+\sift@deathcycles=\count180
+\@vwid@loff=\dimen233
+Normal \dimen register pool exhausted, switching to extended pool.
+\@vwid@roff=\dimen256
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -919,15 +959,15 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen215
-\captionmargin@=\dimen216
-\captionwidth=\dimen217
-\caption@tempdima=\dimen218
-\caption@indent=\dimen219
-\caption@parindent=\dimen220
-\caption@hangindent=\dimen221
+\captionmargin=\dimen257
+\captionmargin@=\dimen258
+\captionwidth=\dimen259
+\caption@tempdima=\dimen260
+\caption@indent=\dimen261
+\caption@parindent=\dimen262
+\caption@hangindent=\dimen263
 )
-\c@ContinuedFloat=\count176
+\c@ContinuedFloat=\count181
 Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
@@ -935,8 +975,8 @@ Package caption Info: Hyperref support is turned off
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
-\c@subfigure=\count177
-\c@subtable=\count178
+\c@subfigure=\count182
+\c@subtable=\count183
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ellipsis/ellipsis.sty
 Package: ellipsis 2004/9/28 v1.6 ellipsis: fixes spacing around \protect \globa
@@ -951,14 +991,14 @@ ations.pathmorphing.code.tex
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
 ations.code.tex
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen222
-\pgfdecoratedremainingdistance=\dimen223
-\pgfdecoratedinputsegmentcompleteddistance=\dimen224
-\pgfdecoratedinputsegmentremainingdistance=\dimen225
-\pgf@decorate@distancetomove=\dimen226
-\pgf@decorate@repeatstate=\count179
-\pgfdecorationsegmentamplitude=\dimen227
-\pgfdecorationsegmentlength=\dimen228
+\pgfdecoratedcompleteddistance=\dimen264
+\pgfdecoratedremainingdistance=\dimen265
+\pgfdecoratedinputsegmentcompleteddistance=\dimen266
+\pgfdecoratedinputsegmentremainingdistance=\dimen267
+\pgf@decorate@distancetomove=\dimen268
+\pgf@decorate@repeatstate=\count184
+\pgfdecorationsegmentamplitude=\dimen269
+\pgfdecorationsegmentlength=\dimen270
 )
 \tikz@lib@dec@box=\box67
 )
@@ -977,25 +1017,24 @@ ioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/chemarrow/chemarrow.sty
-\z@=\dimen229
-\z@skip=\skip61
-\autotop=\dimen230
-\autobottom=\dimen231
-\autosize=\dimen232
+\z@=\dimen271
+\z@skip=\skip63
+\autotop=\dimen272
+\autobottom=\dimen273
+\autosize=\dimen274
 )
 (./slashbox.sty
 slashbox style by K.Yasuoka, May 1993.
 \@slashboxa=\box68
 \@slashboxb=\box69
 \@slashboxc=\box70
-\@slashboxwd=\count180
-\@slashboxht=\count181
-\@slashsepl=\dimen233
-Normal \dimen register pool exhausted, switching to extended pool.
-\@slashsepr=\dimen256
+\@slashboxwd=\count185
+\@slashboxht=\count186
+\@slashsepl=\dimen275
+\@slashsepr=\dimen276
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count182
+\c@AlgoLine=\count187
 
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -1007,37 +1046,37 @@ Package `algorithm2e' Release 5.0 -- january 06 2013 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (cfiorio@um2.fr)
 ********************************************************
-\skiptotal=\skip62
-\skiplinenumber=\skip63
-\skiprule=\skip64
-\skiphlne=\skip65
-\skiptext=\skip66
-\skiplength=\skip67
-\algomargin=\skip68
-\skipalgocfslide=\skip69
-\algowidth=\dimen257
-\inoutsize=\dimen258
-\inoutindent=\dimen259
-\interspacetitleruled=\dimen260
-\interspacealgoruled=\dimen261
-\interspacetitleboxruled=\dimen262
+\skiptotal=\skip64
+\skiplinenumber=\skip65
+\skiprule=\skip66
+\skiphlne=\skip67
+\skiptext=\skip68
+\skiplength=\skip69
+\algomargin=\skip70
+\skipalgocfslide=\skip71
+\algowidth=\dimen277
+\inoutsize=\dimen278
+\inoutindent=\dimen279
+\interspacetitleruled=\dimen280
+\interspacealgoruled=\dimen281
+\interspacetitleboxruled=\dimen282
 \algocf@inoutbox=\box71
 \algocf@inputbox=\box72
-\AlCapSkip=\skip70
-\AlCapHSkip=\skip71
-\algoskipindent=\skip72
+\AlCapSkip=\skip72
+\AlCapHSkip=\skip73
+\algoskipindent=\skip74
 \algocf@nlbox=\box73
 \algocf@hangingbox=\box74
 \algocf@untilbox=\box75
-\algocf@skipuntil=\skip73
+\algocf@skipuntil=\skip75
 \algocf@capbox=\box76
-\algoheightruledefault=\skip74
-\algoheightrule=\skip75
-\algotitleheightruledefault=\skip76
-\algotitleheightrule=\skip77
-\c@algocfline=\count183
-\c@algocfproc=\count184
-\c@algocf=\count185
+\algoheightruledefault=\skip76
+\algoheightrule=\skip77
+\algotitleheightruledefault=\skip78
+\algotitleheightrule=\skip79
+\c@algocfline=\count188
+\c@algocfproc=\count189
+\c@algocf=\count190
 \algocf@algoframe=\box77
 \algocf@algobox=\box78
 ) (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
@@ -1064,18 +1103,18 @@ Package: l3seq 2013/12/14 v4623 L3 Sequences and stacks
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3int.sty
 Package: l3int 2013/08/02 v4583 L3 Integers
-\c_max_int=\count186
-\l_tmpa_int=\count187
-\l_tmpb_int=\count188
-\g_tmpa_int=\count189
-\g_tmpb_int=\count190
+\c_max_int=\count191
+\l_tmpa_int=\count192
+\l_tmpb_int=\count193
+\g_tmpa_int=\count194
+\g_tmpb_int=\count195
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3quark.sty
 Package: l3quark 2013/12/14 v4623 L3 Quarks
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3prg.sty
 Package: l3prg 2014/01/04 v4642 L3 Control structures
-\g__prg_map_int=\count191
+\g__prg_map_int=\count196
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3clist.sty
 Package: l3clist 2013/07/28 v4581 L3 Comma separated lists
@@ -1091,26 +1130,26 @@ Package: l3msg 2013/07/28 v4581 L3 Messages
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3file.sty
 Package: l3file 2013/10/13 v4596 L3 File and I/O operations
-\l_iow_line_count_int=\count192
-\l__iow_target_count_int=\count193
-\l__iow_current_line_int=\count194
-\l__iow_current_word_int=\count195
-\l__iow_current_indentation_int=\count196
+\l_iow_line_count_int=\count197
+\l__iow_target_count_int=\count198
+\l__iow_current_line_int=\count199
+\l__iow_current_word_int=\count200
+\l__iow_current_indentation_int=\count201
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3skip.sty
 Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
-\c_zero_dim=\dimen263
-\c_max_dim=\dimen264
-\l_tmpa_dim=\dimen265
-\l_tmpb_dim=\dimen266
-\g_tmpa_dim=\dimen267
-\g_tmpb_dim=\dimen268
-\c_zero_skip=\skip78
-\c_max_skip=\skip79
-\l_tmpa_skip=\skip80
-\l_tmpb_skip=\skip81
-\g_tmpa_skip=\skip82
-\g_tmpb_skip=\skip83
+\c_zero_dim=\dimen283
+\c_max_dim=\dimen284
+\l_tmpa_dim=\dimen285
+\l_tmpb_dim=\dimen286
+\g_tmpa_dim=\dimen287
+\g_tmpb_dim=\dimen288
+\c_zero_skip=\skip80
+\c_max_skip=\skip81
+\l_tmpa_skip=\skip82
+\l_tmpb_skip=\skip83
+\g_tmpa_skip=\skip84
+\g_tmpb_skip=\skip85
 \c_zero_muskip=\muskip12
 \c_max_muskip=\muskip13
 \l_tmpa_muskip=\muskip14
@@ -1120,21 +1159,21 @@ Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3keys.sty
 Package: l3keys 2013/12/08 v4614 L3 Experimental key-value interfaces
-\g__keyval_level_int=\count197
-\l_keys_choice_int=\count198
+Normal \count register pool exhausted, switching to extended pool.
+\g__keyval_level_int=\count277
+\l_keys_choice_int=\count278
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3fp.sty
 Package: l3fp 2014/01/04 v4642 L3 Floating points
-\c__fp_leading_shift_int=\count199
-\c__fp_middle_shift_int=\count200
-\c__fp_trailing_shift_int=\count201
-Normal \count register pool exhausted, switching to extended pool.
-\c__fp_big_leading_shift_int=\count277
-\c__fp_big_middle_shift_int=\count278
-\c__fp_big_trailing_shift_int=\count279
-\c__fp_Bigg_leading_shift_int=\count280
-\c__fp_Bigg_middle_shift_int=\count281
-\c__fp_Bigg_trailing_shift_int=\count282
+\c__fp_leading_shift_int=\count279
+\c__fp_middle_shift_int=\count280
+\c__fp_trailing_shift_int=\count281
+\c__fp_big_leading_shift_int=\count282
+\c__fp_big_middle_shift_int=\count283
+\c__fp_big_trailing_shift_int=\count284
+\c__fp_Bigg_leading_shift_int=\count285
+\c__fp_Bigg_middle_shift_int=\count286
+\c__fp_Bigg_trailing_shift_int=\count287
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3box.sty
 Package: l3box 2013/07/28 v4581 L3 Experimental boxes
@@ -1147,13 +1186,13 @@ Package: l3box 2013/07/28 v4581 L3 Experimental boxes
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3coffins.sty
 Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
 \l__coffin_internal_box=\box84
-\l__coffin_internal_dim=\dimen269
-\l__coffin_offset_x_dim=\dimen270
-\l__coffin_offset_y_dim=\dimen271
-\l__coffin_x_dim=\dimen272
-\l__coffin_y_dim=\dimen273
-\l__coffin_x_prime_dim=\dimen274
-\l__coffin_y_prime_dim=\dimen275
+\l__coffin_internal_dim=\dimen289
+\l__coffin_offset_x_dim=\dimen290
+\l__coffin_offset_y_dim=\dimen291
+\l__coffin_x_dim=\dimen292
+\l__coffin_y_dim=\dimen293
+\l__coffin_x_prime_dim=\dimen294
+\l__coffin_y_prime_dim=\dimen295
 \c_empty_coffin=\box85
 \l__coffin_aligned_coffin=\box86
 \l__coffin_aligned_internal_coffin=\box87
@@ -1162,96 +1201,88 @@ Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
 \l__coffin_display_coffin=\box90
 \l__coffin_display_coord_coffin=\box91
 \l__coffin_display_pole_coffin=\box92
-\l__coffin_display_offset_dim=\dimen276
-\l__coffin_display_x_dim=\dimen277
-\l__coffin_display_y_dim=\dimen278
+\l__coffin_display_offset_dim=\dimen296
+\l__coffin_display_x_dim=\dimen297
+\l__coffin_display_y_dim=\dimen298
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3color.sty
 Package: l3color 2012/08/29 v4156 L3 Experimental color support
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3luatex.sty
 Package: l3luatex 2013/07/28 v4581 L3 Experimental LuaTeX-specific functions
-\g__cctab_allocate_int=\count283
-\g__cctab_stack_int=\count284
+\g__cctab_allocate_int=\count288
+\g__cctab_stack_int=\count289
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3candidates.sty
 Package: l3candidates 2014/01/06 v4643 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen279
-\l__box_bottom_dim=\dimen280
-\l__box_left_dim=\dimen281
-\l__box_right_dim=\dimen282
-\l__box_top_new_dim=\dimen283
-\l__box_bottom_new_dim=\dimen284
-\l__box_left_new_dim=\dimen285
-\l__box_right_new_dim=\dimen286
+\l__box_top_dim=\dimen299
+\l__box_bottom_dim=\dimen300
+\l__box_left_dim=\dimen301
+\l__box_right_dim=\dimen302
+\l__box_top_new_dim=\dimen303
+\l__box_bottom_new_dim=\dimen304
+\l__box_left_new_dim=\dimen305
+\l__box_right_new_dim=\dimen306
 \l__box_internal_box=\box93
-\l__coffin_bounding_shift_dim=\dimen287
-\l__coffin_left_corner_dim=\dimen288
-\l__coffin_right_corner_dim=\dimen289
-\l__coffin_bottom_corner_dim=\dimen290
-\l__coffin_top_corner_dim=\dimen291
-\l__coffin_scaled_total_height_dim=\dimen292
-\l__coffin_scaled_width_dim=\dimen293
+\l__coffin_bounding_shift_dim=\dimen307
+\l__coffin_left_corner_dim=\dimen308
+\l__coffin_right_corner_dim=\dimen309
+\l__coffin_bottom_corner_dim=\dimen310
+\l__coffin_top_corner_dim=\dimen311
+\l__coffin_scaled_total_height_dim=\dimen312
+\l__coffin_scaled_width_dim=\dimen313
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2013/12/31 v4634 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count285
-\l__xparse_m_args_int=\count286
-\l__xparse_mandatory_args_int=\count287
-\l__xparse_processor_int=\count288
-\l__xparse_v_nesting_int=\count289
+\l__xparse_current_arg_int=\count290
+\l__xparse_m_args_int=\count291
+\l__xparse_mandatory_args_int=\count292
+\l__xparse_processor_int=\count293
+\l__xparse_v_nesting_int=\count294
 )
 Package: siunitx 2013/07/31 v2.5s A comprehensive (SI) units package
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen294
-\extrarowheight=\dimen295
-\NC@list=\toks52
-\extratabsurround=\skip84
-\backup@length=\skip85
-)
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2013/12/31 v4634 LaTeX2e option processing using LaTeX3 keys
 )
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
 \l__siunitx_tmp_box=\box94
-\l__siunitx_tmp_dim=\dimen296
-\l__siunitx_tmp_int=\count290
+\l__siunitx_tmp_dim=\dimen314
+\l__siunitx_tmp_int=\count295
 Variant \prop_get:NVNT already defined; not changing it on line 371
 Variant \prop_get:NVNF already defined; not changing it on line 372
 Variant \prop_get:NVNTF already defined; not changing it on line 373
-\l__siunitx_number_mantissa_length_int=\count291
-\l__siunitx_number_uncert_length_int=\count292
-\l__siunitx_round_int=\count293
-\l__siunitx_process_decimal_int=\count294
-\l__siunitx_process_uncertainty_int=\count295
-\l__siunitx_process_fixed_int=\count296
-\l__siunitx_process_integer_min_int=\count297
-\l__siunitx_process_precision_int=\count298
-\l__siunitx_group_min_int=\count299
+\l__siunitx_number_mantissa_length_int=\count296
+\l__siunitx_number_uncert_length_int=\count297
+\l__siunitx_round_int=\count298
+\l__siunitx_process_decimal_int=\count299
+\l__siunitx_process_uncertainty_int=\count300
+\l__siunitx_process_fixed_int=\count301
+\l__siunitx_process_integer_min_int=\count302
+\l__siunitx_process_precision_int=\count303
+\l__siunitx_group_min_int=\count304
 \l__siunitx_angle_marker_box=\box95
 \l__siunitx_angle_unit_box=\box96
-\l__siunitx_angle_marker_dim=\dimen297
-\l__siunitx_angle_unit_dim=\dimen298
-\l__siunitx_unit_int=\count300
-\l__siunitx_unit_denominator_int=\count301
-\l__siunitx_unit_numerator_int=\count302
-\l__siunitx_unit_prefix_int=\count303
-\l__siunitx_unit_prefix_base_int=\count304
-\l__siunitx_unit_prefix_gram_int=\count305
-\l__siunitx_number_product_int=\count306
+\l__siunitx_angle_marker_dim=\dimen315
+\l__siunitx_angle_unit_dim=\dimen316
+\l__siunitx_unit_int=\count305
+\l__siunitx_unit_denominator_int=\count306
+\l__siunitx_unit_numerator_int=\count307
+\l__siunitx_unit_prefix_int=\count308
+\l__siunitx_unit_prefix_base_int=\count309
+\l__siunitx_unit_prefix_gram_int=\count310
+\l__siunitx_number_product_int=\count311
 \c__siunitx_one_fill_skip=\skip86
 \l__siunitx_table_unit_align_skip=\skip87
-\l__siunitx_table_exponent_dim=\dimen299
-\l__siunitx_table_integer_dim=\dimen300
-\l__siunitx_table_mantissa_dim=\dimen301
-\l__siunitx_table_marker_dim=\dimen302
-\l__siunitx_table_result_dim=\dimen303
-\l__siunitx_table_uncert_dim=\dimen304
-\l__siunitx_table_fill_pre_dim=\dimen305
-\l__siunitx_table_fill_post_dim=\dimen306
-\l__siunitx_table_fill_mid_dim=\dimen307
+\l__siunitx_table_exponent_dim=\dimen317
+\l__siunitx_table_integer_dim=\dimen318
+\l__siunitx_table_mantissa_dim=\dimen319
+\l__siunitx_table_marker_dim=\dimen320
+\l__siunitx_table_result_dim=\dimen321
+\l__siunitx_table_uncert_dim=\dimen322
+\l__siunitx_table_fill_pre_dim=\dimen323
+\l__siunitx_table_fill_post_dim=\dimen324
+\l__siunitx_table_fill_mid_dim=\dimen325
 \l__siunitx_table_pre_box=\box97
 \l__siunitx_table_post_box=\box98
 \l__siunitx_table_mantissa_box=\box99
@@ -1405,8 +1436,8 @@ ode.tex
 File: tikzlibraryfit.code.tex 2008/06/21 v2.10 (rcs-revision 1.3)
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks53
-\inpenc@posthook=\toks54
+\inpenc@prehook=\toks54
+\inpenc@posthook=\toks55
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -1933,7 +1964,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen308
+\arrowsize=\dimen326
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
 Package: fp 1995/04/02
@@ -1941,19 +1972,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count307
+\actioncount=\count312
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count308
-\FP@xia=\count309
-\FP@xib=\count310
-\FP@xfa=\count311
-\FP@xfb=\count312
-\FP@rega=\count313
-\FP@regb=\count314
-\FP@regs=\count315
-\FP@times=\count316
+\FP@xs=\count313
+\FP@xia=\count314
+\FP@xib=\count315
+\FP@xfa=\count316
+\FP@xfb=\count317
+\FP@rega=\count318
+\FP@regb=\count319
+\FP@regs=\count320
+\FP@times=\count321
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -1972,7 +2003,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count317
+\FPseed=\count322
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -2027,35 +2058,35 @@ LaTeX Info: Redefining \genfrac on input line 121.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count318
-\calc@Bcount=\count319
-\calc@Adimen=\dimen309
-\calc@Bdimen=\dimen310
+\calc@Acount=\count323
+\calc@Bcount=\count324
+\calc@Adimen=\dimen327
+\calc@Bdimen=\dimen328
 \calc@Askip=\skip90
 \calc@Bskip=\skip91
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count320
+\calc@Ccount=\count325
 \calc@Cskip=\skip92
 )
-\inf@bad=\count321
-\maxint=\count322
-\listwidth=\dimen311
-\eqnumsep=\dimen312
-\eqmargin=\dimen313
+\inf@bad=\count326
+\maxint=\count327
+\listwidth=\dimen329
+\eqnumsep=\dimen330
+\eqmargin=\dimen331
 \eqlinespacing=\skip93
 \eqlineskip=\skip94
-\eqlineskiplimit=\dimen314
+\eqlineskiplimit=\dimen332
 \eqbinoffset=\muskip18
 \eqdelimoffset=\muskip19
-\eqindentstep=\dimen315
-\eqstyle=\toks55
-\eqbreakdepth=\count323
-\eqinterlinepenalty=\count324
-\intereqpenalty=\count325
+\eqindentstep=\dimen333
+\eqstyle=\toks56
+\eqbreakdepth=\count328
+\eqinterlinepenalty=\count329
+\intereqpenalty=\count330
 \intereqskip=\skip95
-\prerelpenalty=\count326
-\prebinoppenalty=\count327
+\prerelpenalty=\count331
+\prebinoppenalty=\count332
 \Dmedmuskip=\muskip20
 \Dthickmuskip=\muskip21
 \eqleftskip=\skip96
@@ -2065,63 +2096,63 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \EQ@box=\box102
 \EQ@copy=\box103
 \EQ@numbox=\box104
-\eq@wdNum=\dimen316
+\eq@wdNum=\dimen334
 \GRP@numbox=\box105
-\grp@wdNum=\dimen317
-\eq@lines=\count328
-\eq@curline=\count329
-\eq@badness=\count330
-\EQ@vims=\count331
-\eq@dp=\dimen318
-\eq@wdL=\dimen319
-\eq@wdT=\dimen320
-\eq@wdMin=\dimen321
-\grp@wdL=\dimen322
-\grp@wdR=\dimen323
-\grp@wdT=\dimen324
-\eq@wdRmax=\dimen325
-\eq@firstht=\dimen326
-\eq@wdCond=\dimen327
-\eq@indentstep=\dimen328
-\eq@linewidth=\dimen329
-\grp@linewidth=\dimen330
-\eq@hshift=\dimen331
-\eq@given@sidespace=\dimen332
-\mathindent=\dimen333
-\eq@final@linecount=\count332
-\eq@wdR=\dimen334
-\EQ@continue=\toks56
-\lr@level=\count333
-\GRP@queue=\toks57
+\grp@wdNum=\dimen335
+\eq@lines=\count333
+\eq@curline=\count334
+\eq@badness=\count335
+\EQ@vims=\count336
+\eq@dp=\dimen336
+\eq@wdL=\dimen337
+\eq@wdT=\dimen338
+\eq@wdMin=\dimen339
+\grp@wdL=\dimen340
+\grp@wdR=\dimen341
+\grp@wdT=\dimen342
+\eq@wdRmax=\dimen343
+\eq@firstht=\dimen344
+\eq@wdCond=\dimen345
+\eq@indentstep=\dimen346
+\eq@linewidth=\dimen347
+\grp@linewidth=\dimen348
+\eq@hshift=\dimen349
+\eq@given@sidespace=\dimen350
+\mathindent=\dimen351
+\eq@final@linecount=\count337
+\eq@wdR=\dimen352
+\EQ@continue=\toks57
+\lr@level=\count338
+\GRP@queue=\toks58
 \GRP@box=\box106
 \GRP@wholebox=\box107
 \darraycolsep=\skip99
-\cur@row=\count334
-\cur@col=\count335
+\cur@row=\count339
+\cur@col=\count340
 \conditionsep=\skip100
 )
 (/usr/share/texlive/texmf-dist/tex/latex/arydshln/arydshln.sty
 Package: arydshln 2004/08/31 v1.71 
-\dashlinedash=\dimen335
-\dashlinegap=\dimen336
+\dashlinedash=\dimen353
+\dashlinegap=\dimen354
 \adl@box=\box108
-\adl@height=\dimen337
-\adl@heightsave=\dimen338
-\adl@depth=\dimen339
-\adl@depthsave=\dimen340
-\adl@finaldepth=\dimen341
-\adl@columns=\count336
-\adl@ncol=\count337
-\adl@currentcolumn=\count338
-\adl@currentcolumnsave=\count339
-\adl@totalheight=\count340
-\adl@totalheightsave=\count341
-\adl@dash=\count342
-\adl@gap=\count343
-\adl@cla=\count344
-\adl@clb=\count345
-\adl@everyvbox=\toks58
-\adl@LTpagetotal=\dimen342
+\adl@height=\dimen355
+\adl@heightsave=\dimen356
+\adl@depth=\dimen357
+\adl@depthsave=\dimen358
+\adl@finaldepth=\dimen359
+\adl@columns=\count341
+\adl@ncol=\count342
+\adl@currentcolumn=\count343
+\adl@currentcolumnsave=\count344
+\adl@totalheight=\count345
+\adl@totalheightsave=\count346
+\adl@dash=\count347
+\adl@gap=\count348
+\adl@cla=\count349
+\adl@clb=\count350
+\adl@everyvbox=\toks59
+\adl@LTpagetotal=\dimen360
 )
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
 s.code.tex
@@ -2191,118 +2222,118 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v2.10 (rcs-revision 1.2)
 \pgfnodepartsixbox=\box127
 \pgfnodepartfivebox=\box128
 )))
-\highlight@previous=\dimen343
-\highlight@current=\dimen344
+\highlight@previous=\dimen361
+\highlight@current=\dimen362
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 150.
+(hyperref)                removing `\<def>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\reserved@a' on input line 150.
+(hyperref)                removing `\reserved@a' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 150.
+(hyperref)                removing `\<def>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\reserved@b' on input line 150.
+(hyperref)                removing `\reserved@b' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 150.
+(hyperref)                removing `\<let>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 150.
+(hyperref)                removing `\<let>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\reserved@c' on input line 150.
+(hyperref)                removing `\reserved@c' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 150.
+(hyperref)                removing `\<def>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\insertdate' on input line 150.
+(hyperref)                removing `\insertdate' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 150.
+(hyperref)                removing `\<def>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@shortdate' on input line 150.
+(hyperref)                removing `\beamer@shortdate' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 150.
+(hyperref)                removing `\<def>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\insertdate' on input line 150.
+(hyperref)                removing `\insertdate' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 150.
+(hyperref)                removing `\<def>-command' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@shortdate' on input line 150.
+(hyperref)                removing `\beamer@shortdate' on input line 152.
 
 (./backup.aux)
 \openout1 = `backup.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 150.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 150
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 152.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 152
 .
  (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 150.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 150
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 152.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 152
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 150.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 150
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 152.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 152
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 150.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 150.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 152.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 150.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 152.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
@@ -2344,20 +2375,20 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
-\scratchdimen=\dimen345
+\scratchcounter=\count351
+\scratchdimen=\dimen363
 \scratchbox=\box129
-\nofMPsegments=\count347
-\nofMParguments=\count348
-\everyMPshowfont=\toks59
-\MPscratchCnt=\count349
-\MPscratchDim=\dimen346
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
-\everyMPtoPDFconversion=\toks60
+\nofMPsegments=\count352
+\nofMParguments=\count353
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count354
+\MPscratchDim=\dimen364
+\MPnumerator=\count355
+\makeMPintoPDFobject=\count356
+\everyMPtoPDFconversion=\toks61
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box130
-Package hyperref Info: Link coloring OFF on input line 150.
+Package hyperref Info: Link coloring OFF on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2365,63 +2396,63 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count352
+\c@section@level=\count357
 )
-LaTeX Info: Redefining \ref on input line 150.
-LaTeX Info: Redefining \pageref on input line 150.
-LaTeX Info: Redefining \nameref on input line 150.
+LaTeX Info: Redefining \ref on input line 152.
+LaTeX Info: Redefining \pageref on input line 152.
+LaTeX Info: Redefining \nameref on input line 152.
 
 (./backup.out) (./backup.out)
 \@outlinefile=\write6
 \openout6 = `backup.out'.
 
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 150.
+(Font)              `operators' in the math version `normal' on input line 152.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  T1/futs/m/n --> OT1/cmss/m/n on input line 150.
+(Font)                  T1/futs/m/n --> OT1/cmss/m/n on input line 152.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 150.
+(Font)              `operators' in the math version `bold' on input line 152.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/futs/b/n --> OT1/cmss/bx/n on input line 150.
+(Font)                  T1/futs/b/n --> OT1/cmss/bx/n on input line 152.
 \symnumbers=\mathgroup8
 \sympureletters=\mathgroup9
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  T1/futs/m/n --> T1/futs/m/n on input line 150.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 150.
+(Font)                  T1/futs/m/n --> T1/futs/m/n on input line 152.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 150.
+(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 150.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 150.
+(Font)                  T1/futs/bx/n --> T1/lmss/bx/n on input line 152.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 150.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 150.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 150.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 152.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 150.
+(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 150.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 150.
+(Font)                  T1/futs/m/it --> T1/lmss/m/it on input line 152.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 150.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 150.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 152.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 150.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 152.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 150.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 150.
+(Font)                  T1/futs/m/n --> T1/futs/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 150.
+(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 150.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 150.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 150.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 152.
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -2447,53 +2478,53 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 150.
+LaTeX Info: Redefining \includegraphics on input line 152.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \dots on input line 150.
+LaTeX Info: Redefining \dots on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/config/siunitx-abbreviations.c
 fg
 File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
 ) (./backup.nav)
-\c__siunitx_mathsf_int=\count353
+\c__siunitx_mathsf_int=\count358
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 150.
+(Font)              scaled to size 10.07397pt on input line 152.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 150.
+(Font)              scaled to size 7.63599pt on input line 152.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 150.
-LaTeX Font Info:    Try loading font information for U+msa on input line 150.
+(Font)              scaled to size 5.51999pt on input line 152.
+LaTeX Font Info:    Try loading font information for U+msa on input line 152.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 150.
+LaTeX Font Info:    Try loading font information for U+msb on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for FML+futmi on input line 15
-0.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 150.
+(Font)              scaled to size 10.07397pt on input line 152.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 150.
+(Font)              scaled to size 7.63599pt on input line 152.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 150.
+(Font)              scaled to size 5.51999pt on input line 152.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 150.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 152.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8.3> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 150.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 152.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 150.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 152.
 Missing character: There is no ^^L in font fourier-mex!
-\c__siunitx_mathtt_int=\count354
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 150.
+\c__siunitx_mathtt_int=\count359
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 152.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -2501,175 +2532,101 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 163.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 163.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 163.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 163.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 163.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6.8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 163.
-Missing character: There is no ^^L in font fourier-mex!
-
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 163.
+(textpos)                Alignment may work out wrongly. on input line 176.
 
 <cm_logo.png, id=44, 675.52374pt x 102.3825pt>
 File: cm_logo.png Graphic file (type png)
  <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 163.
+Package pdftex.def Info: cm_logo.png used on input line 176.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 
 <ece.png, id=46, 154.176pt x 31.7988pt>
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 163.
+Package pdftex.def Info: ece.png used on input line 176.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 163--163
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 176--176
 [][]  
  []
 
 [2
 
  <./cm_logo.png> <./ece.png>]
-Missing character: There is no ^^L in font fourier-mex!
-Missing character: There is no ^^L in font fourier-mex!
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 203.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 203.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 203.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 203.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 203.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7.6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 203.
-Missing character: There is no ^^L in font fourier-mex!
-Missing character: There is no ^^L in font fourier-mex!
-Missing character: There is no ^^L in font fourier-mex!
-Missing character: There is no ^^L in font fourier-mex!
-Missing character: There is no ^^L in font fourier-mex!
-Missing character: There is no ^^L in font fourier-mex!
-
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 203.
+(textpos)                Alignment may work out wrongly. on input line 190.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 203.
+Package pdftex.def Info: cm_logo.png used on input line 190.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 203.
+Package pdftex.def Info: ece.png used on input line 190.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 203--203
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 190--190
 [][]  
- []
-
-
-Overfull \vbox (14.23547pt too high) detected at line 203
  []
 
 [3
 
-] <../paper/FIG/free_space.png, id=109, 399.74344pt x 458.46281pt>
-File: ../paper/FIG/free_space.png Graphic file (type png)
-
-<use ../paper/FIG/free_space.png>
-Package pdftex.def Info: ../paper/FIG/free_space.png used on input line 234.
-(pdftex.def)             Requested size: 113.81102pt x 130.52335pt.
+]
 Missing character: There is no ^^L in font fourier-mex!
-
-<../paper/FIG/rand.png, id=110, 383.93437pt x 443.40656pt>
-File: ../paper/FIG/rand.png Graphic file (type png)
-
-<use ../paper/FIG/rand.png>
-Package pdftex.def Info: ../paper/FIG/rand.png used on input line 234.
-(pdftex.def)             Requested size: 76.82066pt x 76.81923pt.
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 234.
+(textpos)                Alignment may work out wrongly. on input line 221.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 234.
+Package pdftex.def Info: cm_logo.png used on input line 221.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 234.
+Package pdftex.def Info: ece.png used on input line 221.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 234--234
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 221--221
 [][]  
- []
-
-
-Overfull \vbox (46.93747pt too high) detected at line 234
  []
 
 [4
 
- <../paper/FIG/free_space.png> <../paper/FIG/rand.png>]
-File: ../paper/FIG/free_space.png Graphic file (type png)
-
-<use ../paper/FIG/free_space.png>
-Package pdftex.def Info: ../paper/FIG/free_space.png used on input line 234.
-(pdftex.def)             Requested size: 113.81102pt x 130.52335pt.
-File: ../paper/FIG/rand.png Graphic file (type png)
- <use ../paper/FIG/rand.png>
-Package pdftex.def Info: ../paper/FIG/rand.png used on input line 234.
-(pdftex.def)             Requested size: 76.82066pt x 76.81923pt.
-
-<../paper/FIG/best.png, id=139, 438.8897pt x 424.58624pt>
-File: ../paper/FIG/best.png Graphic file (type png)
-
-<use ../paper/FIG/best.png>
-Package pdftex.def Info: ../paper/FIG/best.png used on input line 234.
-(pdftex.def)             Requested size: 76.82024pt x 76.81741pt.
+]
+Missing character: There is no ^^L in font fourier-mex!
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 234.
+(textpos)                Alignment may work out wrongly. on input line 228.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 234.
+Package pdftex.def Info: cm_logo.png used on input line 228.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 234.
+Package pdftex.def Info: ece.png used on input line 228.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 234--234
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 228--228
 [][]  
- []
-
-
-Overfull \vbox (46.93747pt too high) detected at line 234
  []
 
 [5
 
- <../paper/FIG/best.png>]
+]
 Package epstopdf Info: Source file: <../paper/FIG/ga_mut.eps>
 (epstopdf)                    date: 2015-04-04 19:39:40
 (epstopdf)                    size: 1237478 bytes
@@ -2678,17 +2635,38 @@ Package epstopdf Info: Source file: <../paper/FIG/ga_mut.eps>
 (epstopdf)                    size: 15226 bytes
 (epstopdf)             Command: <repstopdf --outfile=../paper/FIG/ga_mut-eps-co
 nverted-to.pdf ../paper/FIG/ga_mut.eps>
-(epstopdf)             \includegraphics on input line 239.
+(epstopdf)             \includegraphics on input line 236.
 Package epstopdf Info: Output file is already uptodate.
-
-<../paper/FIG/ga_mut-eps-converted-to.pdf, id=166, 578.16pt x 433.62pt>
+ <../paper/FIG/ga_mut-eps-converted-to.pdf, id=160, 578.16pt x 433.62pt>
 File: ../paper/FIG/ga_mut-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../paper/FIG/ga_mut-eps-converted-to.pdf>
 Package pdftex.def Info: ../paper/FIG/ga_mut-eps-converted-to.pdf used on input
- line 239.
-(pdftex.def)             Requested size: 260.16959pt x 195.1272pt.
+ line 236.
+(pdftex.def)             Requested size: 277.51364pt x 208.13524pt.
 
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 236.
+
+File: cm_logo.png Graphic file (type png)
+<use cm_logo.png>
+Package pdftex.def Info: cm_logo.png used on input line 236.
+(pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
+File: ece.png Graphic file (type png)
+ <use ece.png>
+Package pdftex.def Info: ece.png used on input line 236.
+(pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
+
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 236--236
+[][]  
+ []
+
+[6
+
+ <../paper/FIG/ga_mut-eps-converted-to.pdf>]
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
@@ -2708,9 +2686,67 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 239--239
 [][]  
  []
 
-[6
+[7
 
- <../paper/FIG/ga_mut-eps-converted-to.pdf>]
+]
+Package epstopdf Info: Source file: <../paper/FIG/tc5_contour.eps>
+(epstopdf)                    date: 2015-04-14 21:45:38
+(epstopdf)                    size: 121626 bytes
+(epstopdf)             Output file: <../paper/FIG/tc5_contour-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2015-04-14 21:47:49
+(epstopdf)                    size: 41470 bytes
+(epstopdf)             Command: <repstopdf --outfile=../paper/FIG/tc5_contour-e
+ps-converted-to.pdf ../paper/FIG/tc5_contour.eps>
+(epstopdf)             \includegraphics on input line 250.
+Package epstopdf Info: Output file is already uptodate.
+
+<../paper/FIG/tc5_contour-eps-converted-to.pdf, id=218, 478.78876pt x 393.47pt>
+File: ../paper/FIG/tc5_contour-eps-converted-to.pdf Graphic file (type pdf)
+<use ../paper/FIG/tc5_contour-eps-converted-to.pdf>
+Package pdftex.def Info: ../paper/FIG/tc5_contour-eps-converted-to.pdf used on 
+input line 250.
+(pdftex.def)             Requested size: 239.39378pt x 196.73451pt.
+Missing character: There is no ^^L in font fourier-mex!
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 250.
+
+File: cm_logo.png Graphic file (type png)
+<use cm_logo.png>
+Package pdftex.def Info: cm_logo.png used on input line 250.
+(pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
+File: ece.png Graphic file (type png)
+ <use ece.png>
+Package pdftex.def Info: ece.png used on input line 250.
+(pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
+
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 250--250
+[][]  
+ []
+
+
+Overfull \vbox (8.73944pt too high) detected at line 250
+ []
+
+[8
+
+ <../paper/FIG/tc5_contour-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 271.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 271.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 271.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 271.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 271.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7.6> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 271.
 Missing character: There is no ^^L in font fourier-mex!
 Missing character: There is no ^^L in font fourier-mex!
 
@@ -2718,22 +2754,22 @@ Missing character: There is no ^^L in font fourier-mex!
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 258.
+(textpos)                Alignment may work out wrongly. on input line 271.
 
 File: cm_logo.png Graphic file (type png)
 <use cm_logo.png>
-Package pdftex.def Info: cm_logo.png used on input line 258.
+Package pdftex.def Info: cm_logo.png used on input line 271.
 (pdftex.def)             Requested size: 54.0533pt x 8.19232pt.
 File: ece.png Graphic file (type png)
  <use ece.png>
-Package pdftex.def Info: ece.png used on input line 258.
+Package pdftex.def Info: ece.png used on input line 271.
 (pdftex.def)             Requested size: 71.13353pt x 14.67128pt.
 
-Overfull \hbox (42.68079pt too wide) in paragraph at lines 258--258
+Overfull \hbox (42.68079pt too wide) in paragraph at lines 271--271
 [][]  
  []
 
-[7
+[9
 
 ]
 \tf@nav=\write7
@@ -2745,24 +2781,24 @@ Overfull \hbox (42.68079pt too wide) in paragraph at lines 258--258
 \tf@snm=\write9
 \openout9 = `backup.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 260.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 260.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
  (./backup.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 260.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 260.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
 Package rerunfilecheck Info: File `backup.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
  )
-(\end occurred when \unless\ifcsname on line 150 was incomplete) 
+(\end occurred when \unless\ifcsname on line 152 was incomplete) 
 Here is how much of TeX's memory you used:
- 36448 strings out of 495028
- 722580 string characters out of 6181498
- 819509 words of memory out of 5000000
- 38801 multiletter control sequences out of 15000+600000
- 89050 words of font info for 117 fonts, out of 8000000 for 9000
+ 36273 strings out of 495028
+ 718667 string characters out of 6181498
+ 828274 words of memory out of 5000000
+ 38622 multiletter control sequences out of 15000+600000
+ 69378 words of font info for 93 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,15n,92p,10418b,981s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,15n,92p,10418b,712s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/tex
 live/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/l
 m/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss1
@@ -2775,11 +2811,12 @@ type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/adobe/utopia/putr8a.pfb>
-Output written on backup.pdf (7 pages, 684250 bytes).
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/adobe/utopia/putr8a.pfb>
+Output written on backup.pdf (9 pages, 252831 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 16 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

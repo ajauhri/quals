@@ -5,13 +5,12 @@
 \usepackage{lmodern}
 \usepackage{xcolor}
 \usepackage{algpseudocode}
+\usepackage{multimedia}
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage{tabularx, booktabs}
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usepackage{soul}
-\usepackage{tabu}
 \usepackage{multirow}
 \usepackage{gensymb}
 \usepackage[normalem]{ulem} %for underline
@@ -47,7 +46,8 @@
 \makeatother
 % endfor
 \newcommand\reduline{\bgroup\markoverwith
-{\textcolor{red}{\rule[-0.5ex]{2pt}{0.8pt}}}\ULon}
+    {\textcolor{red}{\rule[-0.5ex]{2pt}{0.8pt}}}\ULon
+}
 \usetikzlibrary{shapes,fit}
 \definecolor{univred}{rgb}{0.7, 0.0, 0.0}
 \definecolor{drkgreen}{rgb}{0,0.26,0.15}
@@ -57,8 +57,8 @@
 %
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \setbeamertemplate{background canvas}{%
-    {\color{univred}\noindent\makebox[\paperwidth]{\rule{\paperwidth}{2.5ex}}
-}}
+    {\color{univred}\noindent\makebox[\paperwidth]{\rule{\paperwidth}{2.5ex}}}
+}
 \setbeamertemplate{frametitle}{\color{black}\bfseries\vskip2ex\insertframetitle\par\vskip-6pt\hrulefill}
 \addtobeamertemplate{frametitle}{}{%
 %CMU logo in header
@@ -78,15 +78,21 @@
 \makeatletter
 \setbeamertemplate{footline}
 {
-  \leavevmode%
-  \hbox{%
+    \leavevmode%
+    \hbox{%
 %\setbeamercolor{page number in head/foot}{fg=univred}
-  \begin{beamercolorbox}[wd=.98\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-    \insertframenumber\hspace*{2ex} 
-  \end{beamercolorbox}}%
-  \vskip0pt%
+        \begin{beamercolorbox}[wd=.98\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+            \insertframenumber\hspace*{2ex} 
+        \end{beamercolorbox}
+    }%
+    \vskip0pt%
 }
 \makeatother
+
+\newlength\MyColSep
+\setlength\MyColSep{1cm}
+\newlength\MyColWd
+\setlength\MyColWd{0.3333\textwidth-0.6666666\MyColSep}
 
 \let\otp\titlepage
 \renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
@@ -224,7 +230,7 @@
     \small\textit{Example:} If $n=3$, then $F_{MC} = CP(A_1, A_2) + CP(A_1, A_3) + CP(A_2, A_3)$
 \end{frame}
 
-\begin{frame}{Free Space Radiation Pattern}
+\begin{frame}{Free Space Gain Pattern}
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
@@ -236,47 +242,47 @@
         \end{column}
         \begin{column}{0.5\linewidth}
             \begin{overlayarea}{\textwidth}{\textheight}
-            \begin{figure}
-                \begin{subfigure}{\columnwidth}
-                \centering
-                \includegraphics[scale=0.3]{../paper/FIG/free_cross.png}
-                \caption*{\tiny 2D view of the \textcolor{blue}{free-space gain pattern}}%
-            \end{subfigure}\vspace*{2mm}
-    \begin{tcolorbox}[colback=green!5]
-        \centering
-        This is ideal pattern since there is no interference
-    \end{tcolorbox}
-            \end{figure}
-    \end{overlayarea}
+                \begin{figure}
+                    \begin{subfigure}{\columnwidth}
+                        \centering
+                        \includegraphics[scale=0.3]{../paper/FIG/free_cross.png}
+                        \caption*{\tiny 2D view of the \textcolor{blue}{free-space gain pattern}}%
+                    \end{subfigure}\vspace*{2mm}
+                    \begin{tcolorbox}[colback=green!5]
+                        \centering
+                        This is ideal pattern since there is no interference
+                    \end{tcolorbox}
+                \end{figure}
+            \end{overlayarea}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{Radiation Pattern}
+\begin{frame}{Gain Pattern}
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
                 \vspace{-2.5cm}
                 \centering
                 \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
-                \caption*{\tiny{Ideal gain pattern since there is no intereference}}
+                \caption*{\tiny Free-space patten without platform or other antennas}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
             \begin{overlayarea}{\textwidth}{\textheight}
-            \begin{figure}
-                \begin{subfigure}{\columnwidth}
-                \centering
-                \includegraphics[scale=0.3]{../paper/FIG/free_cross.png}
-                \caption*{\tiny {2D view of the \textcolor{blue}{free-space gain pattern}}}%
-            \end{subfigure}\vspace*{2mm}
-            \begin{subfigure}{\columnwidth}
-                \centering
-                \includegraphics[scale=0.3]{../paper/FIG/comp_cross.png}
-                \caption*{\tiny {\textcolor{red}{In-situ gain pattern} for random antenna placements different from \textcolor{blue}{free-space gain pattern}}}%
-            \end{subfigure}
-            \end{figure}
-    \end{overlayarea}
+                \begin{figure}
+                    \begin{subfigure}{\columnwidth}
+                        \centering
+                        \includegraphics[scale=0.3]{../paper/FIG/free_cross.png}
+                        \caption*{\tiny {2D view of the \textcolor{blue}{free-space gain pattern}}}%
+                    \end{subfigure}\vspace*{2mm}
+                    \begin{subfigure}{\columnwidth}
+                        \centering
+                        \includegraphics[scale=0.3]{../paper/FIG/comp_cross.png}
+                        \caption*{\tiny {\textcolor{red}{In-situ gain pattern} for random antenna placements different from \textcolor{blue}{free-space gain pattern}}}%
+                    \end{subfigure}
+                \end{figure}
+            \end{overlayarea}
         \end{column}
     \end{columns}
 \end{frame}
@@ -349,11 +355,11 @@
 \begin{frame}[t]{Stochastic Algorithms: Operand}
     \textbf{Candidate solution} or an \textbf{individual} is a member of a set of possible solutions.
 \begin{itemize} \itemsep1.5em
-               \item Simulated Annealing and Hill Climbing maintain single individual\\
+        \item Simulated Annealing and Hill Climbing maintain single individual\\
             \adjustbox{valign=t}{%
                 \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
             }
-    \item Genetic Algorithm and Evolutionary Strategy maintain a population of individuals
+        \item Genetic Algorithm and Evolutionary Strategy maintain a population of individuals
             \adjustbox{valign=t}{%
                 \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
                 $\bigcdot~\bigcdot~\bigcdot$
@@ -457,8 +463,9 @@
             \only<2->
             {
                 \begin{figure}
-                    \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_ga}}
-                    \caption*{Plateaus suggesting stagnation of search}
+                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_ga}}
+                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_ga_anim}}
+                    \caption*{\tiny Population for last generation of a run. Search becomes restricted to some local optimums}
                 \end{figure}
             }
         \end{column}
@@ -491,8 +498,9 @@
             \only<2->
             {
                 \begin{figure}
-                    \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
-                    \caption*{More mutations allow in-depth exploration of search space, and also makes rapid progress}
+                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
+                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_es_anim}}
+                    \caption*{\tiny Population for last generation of a run. Notice that search becomes restricted to some local optimums}
                 \end{figure}
             }
         \end{column}
@@ -530,10 +538,15 @@
             \end{algorithm}
         \end{column}
         \begin{column}{0.3\linewidth}
+                    %\only<2>
+                    %{
+                    %    \movie[height=3.9cm,width=3.9cm]{\tiny Population over generations}{./animation/es.avi}
+                    %}
             \only<2->
             {
                 \begin{figure}
-                    \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_sa}}
+                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_sa}}
+                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_sa_anim}}
                     \caption*{Fluctuation in fitness gradually reduces due to cooling}
                 \end{figure}
             }
@@ -569,8 +582,9 @@
             \only<2->
             {
                 \begin{figure}
-                    \centerline{\includegraphics[width=5cm]{../paper/FIG/algo_hc}}
-                    \caption*{Greedy approach to accept only fitter(low fitness) individuals}
+                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_hc}}
+                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_hc_anim}}
+                    \caption*{\tiny Greedy approach to accept only fitter(low fitness) individuals}
                 \end{figure}
             }
         \end{column}
@@ -585,12 +599,12 @@
 \end{frame}
 
 \begin{frame}{Experimental Setup}
-    \begin{enumerate}\itemsep1.2em
+\begin{enumerate}\itemsep1.2em
         \item All test cases describe platforms which are representative of real-world use cases like mobile devices, trucks, and cars. If one were to scale up we will expect same behaviour to hold
         \item We use a popular \textit{NEC2} simulator to get fitness parameters 
         \item Evaluated the entire search space using an exhaustive algorithm to find the optimal antenna locations which is not ordinarily possible
         \item Termination criteria was set to be at most $50\%$ evaluations of the search spcae
-        \item $10$ independent runs of each test case against each algorithm with $\alpha = \beta = 1/2$
+        \item $1000$ independent runs of each test case against each algorithm with $\alpha = \beta = 1/2$
     \end{enumerate}
     \vspace{10mm}
 \end{frame}
@@ -600,7 +614,7 @@
     \begin{columns}
         \begin{column}{.5\columnwidth}
             \begin{figure}
-        \vspace*{-0.5cm}
+                \vspace*{-0.5cm}
                 \centering
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[trim=0 30 0 50, clip,scale=0.25]{../paper/FIG/tc1_figure}%
@@ -631,30 +645,31 @@
 
 \begin{frame}{Results - Test Case 1}
     \begin{columns}
-        \begin{column}{.4\columnwidth}
-            \begin{figure}
-                \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc1_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-
+        \begin{column}{.5\columnwidth}
+            {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
-                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
                     Algo.
-                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
                     & \multicolumn{2}{c}{Best fitness}\\
-                    \cmidrule(lr){2-3} \cmidrule(l){4-5}
-                    & Mean & Error &  Mean & Error \\
+                    \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+                    & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
-                    ES & 6.80 & 6.08 & 0.49864 & 0.00000 \\
-                    GA & 14.17 & 13.81 & 0.50031 & 0.00315 \\
-                    SA & 8.58 & 4.07 & 0.49949 & 0.00161 \\
-                    HC & 2.11 & 1.11 & 0.50159 & 0.00418 \\
+                    ES & 11.88 & 10.48 & \num{0.49865} & \num{0.00009} \\
+                    GA & 17.21 & 15.69 & 0.49949 & 0.00182 \\
+                    SA & 8.28 & 4.47 & 0.49935 & 0.00163 \\
+                    HC & 2.50 & 2.20 & 0.50230 & 0.00501 \\
                     \bottomrule
                 \end{tabularx}
             }
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[scale=.3]{../paper/FIG/tc1_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
+
         \end{column}
         \begin{column}{.6\columnwidth}
             \begin{figure}
@@ -668,30 +683,32 @@
 
 \begin{frame}{Results - Test Case 2}
     \begin{columns}
-        \begin{column}{.4\columnwidth}
-            \begin{figure}
-                \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc2_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-
+        \begin{column}{.5\columnwidth}
+            {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
-                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
                     Algo.
-                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
-                    & Mean & Error &  Mean & Error \\
+                    & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
-ES & 14.45 & 9.28 & 0.49688 & 0.00000 \\
-GA & 23.47 & 15.60 & 0.50288 & 0.00277 \\
-SA & 3.27 & 2.80 & 0.50427 & 0.02218 \\
-HC & 0.34 & 0.20 & 0.51380 & 0.01386 \\
+                    ES & 16.08 & 7.72 & 0.49688 & 0.00000 \\
+                    GA & 25.98 & 15.51 & 0.50034 & 0.00341 \\
+                    SA & 7.96 & 3.33 & 0.49784 & 0.00233 \\
+                    HC & 0.40 & 0.31 & 0.51071 & 0.01305 \\
                     \bottomrule
                 \end{tabularx}
             }
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[scale=.3]{../paper/FIG/tc2_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
+
+
         \end{column}
         \begin{column}{.6\columnwidth}
             \begin{figure}
@@ -706,32 +723,33 @@ HC & 0.34 & 0.20 & 0.51380 & 0.01386 \\
 
 \begin{frame}{Results - Test Case 3}
     \begin{columns}
-        \begin{column}{.4\columnwidth}
-            \begin{figure}
-                \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc3_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-
+        \begin{column}{.5\columnwidth}
+            {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
-                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
                     Algo.
-                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
-                    & Mean & Error &  Mean & Error \\
+                    & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
-ES & 14.66 & 4.00 & 0.49747 & 0.00000 \\
-GA & 24.28 & 16.02 & 0.49773 & 0.00040 \\
-SA & 3.87 & 1.82 & 0.49766 & 0.00038 \\
-HC & 0.18 & 0.09 & 0.49873 & 0.00146 \\
+                    ES & 11.04 & 6.72 & 0.49747 & 0.00000 \\
+                    GA & 23.05 & 16.25 & 0.49770 & 0.00038 \\
+                    SA & 19.61 & 11.16 & 0.49747 & 0.00003 \\
+                    HC & 0.21 & 0.17 & 0.49890 & 0.00182 \\
                     \bottomrule
                 \end{tabularx}
             }
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[scale=0.3]{../paper/FIG/tc3_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
         \end{column}
         \begin{column}{.6\columnwidth}
+            \vspace*{-1cm}
             \begin{figure}
                 \begin{subfigure}{\columnwidth}
                     \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc3_mf}%
@@ -744,36 +762,36 @@ HC & 0.18 & 0.09 & 0.49873 & 0.00146 \\
 
 \begin{frame}{Results - Test Case 4}
     \begin{columns}
-        \begin{column}{.4\columnwidth}
-            \begin{figure}
-                \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc4_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-
+        \begin{column}{.5\columnwidth}
+            {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
-                \begin{tabularx}{\columnwidth}{c *{4}{Y}}
+                \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
                     Algo.
-                    & \multicolumn{2}{c}{\% Evaluations}  
+                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
-                    & Mean & Error & Mean & Error \\
+                    & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
-ES & 14.11 & 6.17 & 0.49926 & 0.00000 \\
-GA & 22.42 & 9.94 & 0.49926 & 0.00000 \\
-SA & 2.19 & 0.78 & 0.49926 & 0.00000 \\
-HC & 0.43 & 0.40 & 0.49926 & 0.00000 \\
+                    ES & 14.11 & 6.17 & 0.49926 & 0.00000 \\
+                    GA & 22.42 & 9.94 & 0.49926 & 0.00000 \\
+                    SA & 2.19 & 0.78 & 0.49926 & 0.00000 \\
+                    HC & 0.43 & 0.40 & 0.49926 & 0.00000 \\
 
                     \bottomrule
                 \end{tabularx}
             }
+            \begin{figure}
+                \centering
+                \begin{subfigure}{\columnwidth}
+                    \includegraphics[scale=.3]{../paper/FIG/tc4_contour}%
+                \end{subfigure}\hfill%
+            \end{figure}
         \end{column}
         \begin{column}{.6\columnwidth}
             \begin{figure}
                 \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc4_mf}%
+                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc4_mf}%
                 \end{subfigure}\hfill\\%
             \end{figure}
         \end{column}
@@ -791,7 +809,7 @@ HC & 0.43 & 0.40 & 0.49926 & 0.00000 \\
 \end{frame}
 
 \begin{frame}{Conclusion}
-    \begin{itemize} \itemsep1.5em
+\begin{itemize} \itemsep1.5em
         \item Formalized the antenna placement problem
         \item Generic problem formulation to accommodate multiple antennas and platforms
         \item Optimal placements found using Evolutionary Strategy with at most $25\%$ evaluations of search space
