@@ -5,7 +5,6 @@
 \usepackage{lmodern}
 \usepackage{xcolor}
 \usepackage{algpseudocode}
-\usepackage{multimedia}
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{tikz}
@@ -118,9 +117,9 @@
 \begin{itemize} \itemsep1.5em
         \item Antenna placement study is generally ignored 
         \item Placing new antennas requires a long, manual effort to complete an antenna placement study, if at all
-        \item With multiple antennas systems offer interference, and thereby reduce each antenna's efficiency
-        \item Parasitic effects due to fixed or mobile plaform 
         \item Frequency bands change over time requiring new antennas, and therefore need to find new placements
+        \item Parasitic effects due to fixed or mobile platform 
+        \item With multiple antennas systems offer interference, and thereby reduce each antenna's efficiency
     \end{itemize}
     \vspace{5mm}
 \end{frame}
@@ -340,7 +339,7 @@
 
 
 \begin{frame}[t]{Stochastic Algorithms}
-    We will consider algorithms which are based on randomization principle.
+    We will consider algorithms which are based on randomization principle:
     \vspace{10px}
 \begin{itemize} \itemsep1.5em
         \item Genetic Algorithm
@@ -348,12 +347,10 @@
         \item Simulated Annealing
         \item Hill Climbing
     \end{itemize}
-    \vspace{5mm}
-    Each algorithm maintains a candidate solution or pool of candidate solutions called population
 \end{frame}
 
 \begin{frame}[t]{Stochastic Algorithms: Operand}
-    \textbf{Candidate solution} or an \textbf{individual} is a member of a set of possible solutions.
+    An \textbf{individual} is a member of a set of feasible solutions.
 \begin{itemize} \itemsep1.5em
         \item Simulated Annealing and Hill Climbing maintain single individual\\
             \adjustbox{valign=t}{%
@@ -370,21 +367,21 @@
 
 \begin{frame}[t]{Stochastic Algorithms: Mutation Operator}
     \begin{enumerate}
-        \item Given an individual, select an antenna uniformly at random, let's say antenna 1:\par
+        \item Given an individual, select an antenna uniformly at random, let's say antenna B:\par
             \begin{minipage}[t]{\linewidth}
                 \centering
                 \adjustbox{valign=t}{%
                     \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
                 }
             \end{minipage}
-        \item For antenna 1, select any other allowable placement:\par
+        \item For antenna B, select any other allowable placement:\par
             \begin{minipage}[t]{\linewidth}
                 \centering
                 \adjustbox{valign=t}{%
                     \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut2}
                 }
             \end{minipage}
-        \item Change position for antenna 1 in individual:\par
+        \item Change position for antenna B in individual (antenna A's position remains same):\par
             \begin{minipage}[t]{\linewidth}
                 \centering
                 \adjustbox{valign=t}{%
@@ -409,9 +406,9 @@
                 \centering
                 \adjustbox{valign=t}{%
                     \begin{tabular}{ll:l}
-                        $\text{ind}_1:$&$\textcolor{red}{A_1}$ & $\textcolor{drkgreen}{A_2}$ \\
+                        $\text{ind}_1:$&$\textcolor{drkgreen}{A}$ & $\textcolor{red}{B}$ \\
                         &\makebox[\widthof{A\_1}][l]{$\downarrow~\uparrow$} &\\
-                        $\text{ind}_2:$&$\textcolor{blue}{A_1}$ & $\textcolor{aureolin}{A_2}$ \\
+                        $\text{ind}_2:$&$\textcolor{aureolin}{A}$ & $\textcolor{blue}{B}$ \\
                     \end{tabular}
                 }
             \end{minipage}
@@ -500,7 +497,7 @@
                 \begin{figure}
                             %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
                     \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_es_anim}}
-                    \caption*{\tiny Population for last generation of a run. Notice that search becomes restricted to some local optimums}
+                    \caption*{\tiny Population with greater diversity in comparison to GA}
                 \end{figure}
             }
         \end{column}
@@ -547,7 +544,7 @@
                 \begin{figure}
                             %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_sa}}
                     \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_sa_anim}}
-                    \caption*{Fluctuation in fitness gradually reduces due to cooling}
+                    \caption*{\tiny Temperature factor allows search distributed weacross the terrain}
                 \end{figure}
             }
         \end{column}
@@ -584,7 +581,7 @@
                 \begin{figure}
                             %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_hc}}
                     \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_hc_anim}}
-                    \caption*{\tiny Greedy approach to accept only fitter(low fitness) individuals}
+                    \caption*{\tiny Restriced search due to greedy approach to accept only fitter (low fitness) individuals}
                 \end{figure}
             }
         \end{column}
@@ -610,7 +607,7 @@
 \end{frame}
 
 
-\begin{frame}{Experiments: Test Cases}
+\begin{frame}{Experiments Test Cases}
     \begin{columns}
         \begin{column}{.5\columnwidth}
             \begin{figure}
@@ -657,8 +654,8 @@
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
                     ES & 11.88 & 10.48 & \num{0.49865} & \num{0.00009} \\
-                    GA & 17.21 & 15.69 & 0.49949 & 0.00182 \\
                     SA & 8.28 & 4.47 & 0.49935 & 0.00163 \\
+                    GA & 17.21 & 15.69 & 0.49949 & 0.00182 \\
                     HC & 2.50 & 2.20 & 0.50230 & 0.00501 \\
                     \bottomrule
                 \end{tabularx}
@@ -695,8 +692,8 @@
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
                     ES & 16.08 & 7.72 & 0.49688 & 0.00000 \\
-                    GA & 25.98 & 15.51 & 0.50034 & 0.00341 \\
                     SA & 7.96 & 3.33 & 0.49784 & 0.00233 \\
+                    GA & 25.98 & 15.51 & 0.50034 & 0.00341 \\
                     HC & 0.40 & 0.31 & 0.51071 & 0.01305 \\
                     \bottomrule
                 \end{tabularx}
@@ -735,8 +732,8 @@
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
                     ES & 11.04 & 6.72 & 0.49747 & 0.00000 \\
-                    GA & 23.05 & 16.25 & 0.49770 & 0.00038 \\
                     SA & 19.61 & 11.16 & 0.49747 & 0.00003 \\
+                    GA & 23.05 & 16.25 & 0.49770 & 0.00038 \\
                     HC & 0.21 & 0.17 & 0.49890 & 0.00182 \\
                     \bottomrule
                 \end{tabularx}
@@ -773,11 +770,10 @@
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
                     \midrule
-                    ES & 14.11 & 6.17 & 0.49926 & 0.00000 \\
-                    GA & 22.42 & 9.94 & 0.49926 & 0.00000 \\
-                    SA & 2.19 & 0.78 & 0.49926 & 0.00000 \\
-                    HC & 0.43 & 0.40 & 0.49926 & 0.00000 \\
-
+                    ES & 12.48 & 5.61 & 0.49926 & 0.00000 \\
+                    SA & 2.76 & 0.83 & 0.49926 & 0.00000 \\
+                    GA & 22.42 & 9.94 & 0.49934 & 0.00072 \\
+                    HC & 0.44 & 0.26 & 0.49926 & 0.00000 \\
                     \bottomrule
                 \end{tabularx}
             }
@@ -800,7 +796,7 @@
 
 
 \begin{frame}{Results - Success Rates}
-    \textit{Success rate} report the percentage of runs in which the algorithm is able to find the optimum
+    \textit{Success rate} report the percentage of runs in which the algorithm is able to find the optimum with $50\%$ evaluations as termination criteria
     \begin{figure}
         \vspace*{-0.35cm}
         \centering
@@ -812,8 +808,7 @@
 \begin{itemize} \itemsep1.5em
         \item Formalized the antenna placement problem
         \item Generic problem formulation to accommodate multiple antennas and platforms
-        \item Optimal placements found using Evolutionary Strategy with at most $25\%$ evaluations of search space
-        % too weak, more numbers needed here
+        \item Optimal placements found using Evolutionary Strategy with at most $25\%$ evaluations of search space with $100\%$ success rate
         \item Future work - Consider other techniques like \textit{Differential Evolution} and \textit{ALPS}
     \end{itemize}
 \end{frame}

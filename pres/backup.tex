@@ -245,29 +245,26 @@ Evolutionary Strategy
 \centering
     \includegraphics[scale=0.5]{../paper/FIG/tc5_contour}%
     \vspace*{-.1cm}
-     \caption*{\tiny Search space for problem with $10$ antennas resembles contours as seen for experiment test cases}
+     \caption*{\tiny Search space for problem with $10$ antennas resembles contours as seen in experiments}
 \end{figure}
 \end{frame}
 
 
 
 \begin{frame}{Equivalence of fitness to efficiency}
-    \small For a particular test case, fitness change of $0.01$ is equivalent to either the corresponding value under expected gain ($\mathbb E_g$) column, or difference in coupling ($\Delta_c$).
+    \small For a particular test case, fitness change of $0.001$ is equivalent to either the corresponding value under expected gain ($\mathbb E_{\Delta g}$) column, or difference in coupling ($\Delta_c$).
     \begin{table}
         \centering
         \begin{threeparttable}
             \begin{tabular}{|C{1cm}|C{2.5cm}|C{2.5cm}|} \hline
-                ID& $\mathbb E_g$ & $\Delta_{c}$ (dB) \\ \hline
-                tc1 & 872.277 & 0.5474 \\ \hline
-                tc2 & 862.082 & 1.3034 \\ \hline
-                tc3 & 861.845 & 1.5180 \\ \hline
-                tc4 & 871.049 & 0.5693 \\
+                ID& $\mathbb E_{\Delta g}$ (dB) & $\Delta_{c}$ (dB) \\ \hline
+                tc1 & 9.34 & 0.055 \\ \hline
+                tc2 & 9.28 & 0.13 \\ \hline
+                tc3 & 9.28 & 0.15 \\ \hline
+                tc4 & 9.33 & 0.057 \\
                 \hline\end{tabular}
         \end{threeparttable}
     \end{table}
-    \tiny
-    $\mathbb E_g = \frac{1}{N \cdot m} \sum_{i}^m F_{RP}(A_i),$
-    where $N = \;\mid \theta \mid \cdot \mid \phi \mid$
 \end{frame}
 
 \end{document}
