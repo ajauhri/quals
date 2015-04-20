@@ -42,7 +42,6 @@
 \definecolor{univred}{rgb}{0.7, 0.0, 0.0}
 \definecolor{drkgreen}{rgb}{0,0.26,0.15}
 \definecolor{aureolin}{rgb}{0.99,0.93,0.0}
-\DeclareMathOperator*{\argmax}{argmax}
 %
 %
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -161,7 +160,7 @@
 
 \begin{frame}[fragile]{Exhaustive Algorithm}
     Pseudo code: 
-    \vspace*{1cm}
+    \vspace*{0.5cm}
     \begin{Verbatim}[fontsize=\tiny]
     def exhaustive_search::initialize: 
         makeConfigurations(new antenna_configuration,0) 
@@ -177,37 +176,6 @@
                 make_configurations(configuration,count+1)
                 configuration.pop_back();
     \end{Verbatim}
-\end{frame}
-
-\begin{frame}{Differential Evolution}
-    \begin{enumerate}
-        \item [Step 1:] Randomly initialize a population 
-        \item [Step 2:] Mutation: For each target $x_i^g, i \in \{1, 2, 3 \ldots, NP\}$, a mutant vector is formed for the subsequent generation using:
-            \[v_i^{g} = x_{r_1}^g + F \cdot (x_{r_2}^g - x_{r_3}^g), \]
-            where $F \in [0,2]$ and $r_1, r_2, r_3$ are mutually different and also $ \neq i$
-        \item [Step 3:] Recombination: Formulate a trial vector as:
-    \[u_i^{g+1} = 
-        \begin{cases}
-            v_{ij}^g, & \text{if rand()} \leq CR \text{ or }j = \textit{rnbr(i)} \\
-            x_{ij}^g, & \text{if rand()} > CR \text{ and }j \neq \textit{rnbr(i)} \\
-    \end{cases}\]
-        \item [Step 4:] Selection: Compare trial vector $u_i^{g+1}$ and target vector $x_i^g$, and select the vector which yields a smaller cost function.\\
-        \item [Step 5:] Termination check
-    \end{enumerate}
-\end{frame}
-
-
-\begin{frame}{Particle Swarm Optimization}
-    \begin{enumerate}
-        \item [Step 1:] Randomly initialize velocity and position of all particles
-        \item [Step 2:] At each iteration, updated velocity as follows:
-            \[ v_i = wv_i + c_1 R_1 (p_{i,best} - p_i) + c_2 R_2 (g_{best} - p_i) ,\]
-            where $p_{i,best}, g_{best}$ are positions with best objective value found so far by particle and entire population respectively, $c_1,c_2$ are weighting factors, $R_1,R_2 \thicksim \mathbb U(0,1)$, $w$ is parameter cooling
-        \item [Step 3:] Position updating
-            \[ p_i = p_i + v_i \]
-        \item [Step 4:] Memory updating: Update $p_{i,best}$ and $g_{best}$
-        \item [Step 5:] Termination check
-    \end{enumerate}
 \end{frame}
 
 
@@ -246,7 +214,9 @@ Evolutionary Strategy
             tc4 & 220 & 1540 & 10 \\
             \bottomrule
         \end{tabularx}
-    }
+    } 
+    {\tiny $1/7$ ratio between and $\mu$ and $\lambda$\footnotemark. Higher ratios led to  higher evaluations per run \break
+    [1] Eiben, A. E., \& Smith, J. E. (2003). Introduction to evolutionary computing.}
 \end{frame}
 
 \begin{frame}[t]{Parameters - SA}
@@ -260,6 +230,47 @@ Evolutionary Strategy
 \end{frame}
 
 
+\begin{frame}{Test Cases - Contour Plots}
+    \begin{columns}
+        \begin{column}{.5\columnwidth}
+            \begin{figure}
+                    \vspace*{-.8cm}
+                \begin{subfigure}{\columnwidth}
+                    \centering
+                    \includegraphics[trim=5 0 10 0, clip,scale=0.23]{../paper/FIG/tc1_contour}%
+                \vspace*{-0.2cm}
+                    \caption*{\tiny Test Case \#1}
+                \end{subfigure}\hfill\\
+                \begin{subfigure}{\columnwidth}
+                    \centering
+                    \includegraphics[trim=5 0 10 0, clip,scale=0.23]{../paper/FIG/tc3_contour}%
+                    \vspace*{-0.2cm}
+                    \caption*{\tiny Test Case \#3}%
+                \end{subfigure}\hfill%
+            \end{figure}
+        \end{column}
+        \begin{column}{.5\columnwidth}
+    \begin{figure}
+                    \vspace*{-.8cm}
+                \begin{subfigure}{\columnwidth}
+                    \centering
+                    \includegraphics[trim=5 0 10 0, clip,scale=0.23]{../paper/FIG/tc2_contour}%
+                \vspace*{-0.2cm}
+                    \caption*{\tiny Test Case \#2}
+                \end{subfigure}\hfill\\
+                \begin{subfigure}{\columnwidth}
+                    \centering
+                    \includegraphics[trim=5 0 10 0, clip,scale=0.23]{../paper/FIG/tc4_contour}%
+                    \vspace*{-0.2cm}
+                    \caption*{\tiny Test Case \#4}%
+                \end{subfigure}\hfill%
+            \end{figure}
+
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
 \begin{frame}{Search space for larger problem}
  \begin{figure}
      \vspace*{-.2cm}
@@ -268,6 +279,34 @@ Evolutionary Strategy
     \vspace*{-.1cm}
      \caption*{\tiny Search space for problem with $10$ antennas resembles contours as seen in experiments}
 \end{figure}
+\end{frame}
+
+\begin{frame}{Results - Test Case 5}
+    \begin{columns}
+        \begin{column}{\columnwidth}
+            {\tiny Sample size = 1000}
+            \adjustbox{max width=\columnwidth}{\tiny
+                \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
+                    \toprule
+                    Algorithm
+                    & \multicolumn{2}{c}{\%Evaluations vs. Exhaustive}  
+                    & \multicolumn{2}{c}{Best fitness}\\
+                    \cmidrule(lr){2-3} \cmidrule(l){4-5}
+                    & Mean & Std. Dev. &  Mean & Std. Dev. \\
+                    \midrule
+ES & 15.11 & 7.10 & 0.49975 & 0.00000 \\
+SA & 11.58 & 3.50 & 0.49975 & 0.00000 \\
+GA & 34.08 & 15.57 & 0.49977 & 0.00012 \\
+HC & 0.13 & 0.08 & 0.50407 & 0.00761 \\
+                    \bottomrule
+                \end{tabularx}
+            } \vspace*{-0.35cm}
+            \begin{figure}
+                \centering
+                    \includegraphics[trim=0 10 0 30,clip,height=5cm,width=8cm]{../paper/FIG/tc5_mf}%
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
@@ -285,6 +324,37 @@ Evolutionary Strategy
                 \hline\end{tabular}
         \end{threeparttable}
     \end{table}
+\end{frame}
+
+\begin{frame}{Differential Evolution}
+    \begin{enumerate}
+        \item [Step 1:] Randomly initialize a population 
+        \item [Step 2:] Mutation: For each target $x_i^g, i \in \{1, 2, 3 \ldots, NP\}$, a mutant vector is formed for the subsequent generation using:
+            \[v_i^{g} = x_{r_1}^g + F \cdot (x_{r_2}^g - x_{r_3}^g), \]
+            where $F \in [0,2]$ and $r_1, r_2, r_3$ are mutually different and also $ \neq i$
+        \item [Step 3:] Recombination: Formulate a trial vector as:
+    \[u_i^{g+1} = 
+        \begin{cases}
+            v_{ij}^g, & \text{if rand()} \leq CR \text{ or }j = \textit{rnbr(i)} \\
+            x_{ij}^g, & \text{if rand()} > CR \text{ and }j \neq \textit{rnbr(i)} \\
+    \end{cases}\]
+        \item [Step 4:] Selection: Compare trial vector $u_i^{g+1}$ and target vector $x_i^g$, and select the vector which yields a smaller cost function.\\
+        \item [Step 5:] Termination check
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Particle Swarm Optimization}
+    \begin{enumerate}
+        \item [Step 1:] Randomly initialize velocity and position of all particles
+        \item [Step 2:] At each iteration, updated velocity as follows:
+            \[ v_i = wv_i + c_1 R_1 (p_{i,best} - p_i) + c_2 R_2 (g_{best} - p_i) ,\]
+            where $p_{i,best}, g_{best}$ are positions with best objective value found so far by particle and entire population respectively, $c_1,c_2$ are weighting factors, $R_1,R_2 \thicksim \mathbb U(0,1)$, $w$ is parameter cooling
+        \item [Step 3:] Position updating
+            \[ p_i = p_i + v_i \]
+        \item [Step 4:] Memory updating: Update $p_{i,best}$ and $g_{best}$
+        \item [Step 5:] Termination check
+    \end{enumerate}
 \end{frame}
 
 \end{document}

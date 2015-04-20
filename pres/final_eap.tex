@@ -234,7 +234,7 @@
                 \vspace{-2.5cm}
                 \centering
                 \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
-                \caption*{\tiny Free-space patten without platform or other antennas}
+                \caption*{\tiny Free-space pattern without platform or other antennas}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
@@ -262,7 +262,7 @@
                 \vspace{-2.5cm}
                 \centering
                 \includegraphics[width=4cm, height=5cm]{../paper/FIG/free_space.png}
-                \caption*{\tiny Free-space patten without platform or other antennas}
+                \caption*{\tiny Free-space pattern without platform or other antennas}
             \end{figure}
         \end{column}
         \begin{column}{0.5\linewidth}
@@ -594,7 +594,7 @@
         \item $1000$ independent runs of each test case against each algorithm with $\alpha = \beta = 1/2$
     \end{enumerate}
     \vspace*{0.5cm}
-    {\tiny [2] Hornby, G., Lohn, J., \& Linden, D. (2011). Computer-automated evolution of an x-band antenna for nasa's space technology 5 mission. Evolutionary computation, 19(1), 1-23. }
+    {\tiny [2] Hornby, G., Lohn, J., \& Linden, D. (2011). Computer-automated evolution of an x-band antenna for Nasa's space technology. Evolutionary computation, 19(1), 1-23. }
      
     
     \vspace{10mm}
@@ -636,13 +636,13 @@
 
 \begin{frame}{Results - Test Case 1}
     \begin{columns}
-        \begin{column}{.5\columnwidth}
+        \begin{column}{\columnwidth}
             {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
                 \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
-                    Algo.
-                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
+                    Algorithm
+                    & \multicolumn{2}{c}{\%Evaluations vs. Exhaustive}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
@@ -653,20 +653,10 @@
                     HC & 2.50 & 2.20 & 0.50230 & 0.00501 \\
                     \bottomrule
                 \end{tabularx}
-            }
+            } \vspace*{-0.35cm}
             \begin{figure}
                 \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[scale=.3]{../paper/FIG/tc1_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-
-        \end{column}
-        \begin{column}{.6\columnwidth}
-            \begin{figure}
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc1_mf}%
-                \end{subfigure}\hfill\\%
+                    \includegraphics[trim=0 10 0 30,clip,height=5cm,width=8cm]{../paper/FIG/tc1_mf}%
             \end{figure}
         \end{column}
     \end{columns}
@@ -674,13 +664,13 @@
 
 \begin{frame}{Results - Test Case 2}
     \begin{columns}
-        \begin{column}{.5\columnwidth}
+        \begin{column}{\columnwidth}
             {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
                 \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
-                    Algo.
-                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
+                    Algorith
+                    & \multicolumn{2}{c}{\%Evaluations vs. Exhaustive}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
@@ -691,21 +681,10 @@
                     HC & 0.40 & 0.31 & 0.51071 & 0.01305 \\
                     \bottomrule
                 \end{tabularx}
-            }
+            } \vspace*{-0.35cm}
             \begin{figure}
                 \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[scale=.3]{../paper/FIG/tc2_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-
-
-        \end{column}
-        \begin{column}{.6\columnwidth}
-            \begin{figure}
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc2_mf}%
-                \end{subfigure}\hfill\\%
+                    \includegraphics[trim=0 10 0 30,clip,height=5cm,width=8cm]{../paper/FIG/tc2_mf}%
             \end{figure}
         \end{column}
     \end{columns}
@@ -714,13 +693,13 @@
 
 \begin{frame}{Results - Test Case 3}
     \begin{columns}
-        \begin{column}{.5\columnwidth}
+        \begin{column}{\columnwidth}
             {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
                 \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
-                    Algo.
-                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
+                    Algorithm
+                    & \multicolumn{2}{c}{\%Evaluations vs. Exhaustive}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
@@ -731,20 +710,10 @@
                     HC & 0.21 & 0.17 & 0.49890 & 0.00182 \\
                     \bottomrule
                 \end{tabularx}
-            }
+            } \vspace*{-0.35cm}
             \begin{figure}
                 \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[scale=0.3]{../paper/FIG/tc3_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-        \end{column}
-        \begin{column}{.6\columnwidth}
-            \vspace*{-1cm}
-            \begin{figure}
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth, height=\columnwidth]{../paper/FIG/tc3_mf}%
-                \end{subfigure}\hfill\\%
+                    \includegraphics[trim=0 10 0 30,clip,height=5cm,width=8cm]{../paper/FIG/tc3_mf}%
             \end{figure}
         \end{column}
     \end{columns}
@@ -753,13 +722,13 @@
 
 \begin{frame}{Results - Test Case 4}
     \begin{columns}
-        \begin{column}{.5\columnwidth}
+        \begin{column}{\columnwidth}
             {\tiny Sample size = 1000}
             \adjustbox{max width=\columnwidth}{\tiny
                 \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
-                    Algo.
-                    & \multicolumn{2}{c}{\%Evals. vs. exhaust.}  
+                    Algorithm
+                    & \multicolumn{2}{c}{\%Evaluations vs. Exhaustive}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
                     & Mean & Std. Dev. &  Mean & Std. Dev. \\
@@ -770,19 +739,10 @@
                     HC & 0.44 & 0.26 & 0.49926 & 0.00000 \\
                     \bottomrule
                 \end{tabularx}
-            }
+            } \vspace*{-0.35cm}
             \begin{figure}
                 \centering
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[scale=.3]{../paper/FIG/tc4_contour}%
-                \end{subfigure}\hfill%
-            \end{figure}
-        \end{column}
-        \begin{column}{.6\columnwidth}
-            \begin{figure}
-                \begin{subfigure}{\columnwidth}
-                    \includegraphics[width=\columnwidth,height=\columnwidth]{../paper/FIG/tc4_mf}%
-                \end{subfigure}\hfill\\%
+                    \includegraphics[trim=0 10 0 30,clip,height=5cm,width=8cm]{../paper/FIG/tc4_mf}%
             \end{figure}
         \end{column}
     \end{columns}
@@ -802,8 +762,8 @@
 \begin{itemize} \itemsep1.2em
         \item Formulated an automated procedure for the antenna placement problem which aims to improve the working of multiple antenas on a platform
         \item Results show Simulated Annealing was less successful but faster to converge 
-        \item Slower but more efficient Evolutionary Strategy had a mean of at most $16\%$ evaluations of search space 
-        \item Algorithms reduce search time to $1/4$ in comparison to an exhaustive algorithm
+        \item Evolutionary Strategy was slower but almost 100\% success rate, and a mean of at most $16\%$ evaluations of search space 
+        \item Algorithms reduce search time to at most $1/4$ in comparison to an exhaustive algorithm
         \item Future work - Consider other techniques like \textit{Differential Evolution}, \textit{Particle Swarm Optimization} and \textit{ALPS}
     \end{itemize}
 \end{frame}
