@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{tikz}
+\usepackage{fancyvrb}
 \usepackage{soul}
 \usepackage{tabularx, booktabs}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
@@ -158,6 +159,26 @@
 \end{center}
 \end{frame}
 
+\begin{frame}[fragile]{Exhaustive Algorithm}
+    Pseudo code: 
+    \vspace*{1cm}
+    \begin{Verbatim}[fontsize=\tiny]
+    def exhaustive_search::initialize: 
+        makeConfigurations(new antenna_configuration,0) 
+
+    def make_configurations(configuration, count): 
+        if configuration.length == selected_antennas.length: 
+            population.push_back(configuration)
+            return 
+
+        for i in range(0,selected_antennas[count].points.size()):
+            if not selected_antennas[count].points.at(i) in configuration: 
+                configuration.push_back(selected_antennas[count].points.at(i))
+                make_configurations(configuration,count+1)
+                configuration.pop_back();
+    \end{Verbatim}
+\end{frame}
+
 \begin{frame}{Differential Evolution}
     \begin{enumerate}
         \item [Step 1:] Randomly initialize a population 
@@ -189,6 +210,14 @@
     \end{enumerate}
 \end{frame}
 
+
+\begin{frame}{Parameter Selection - GA}
+ \begin{figure}
+\centering
+\vspace*{-0.4cm}
+    \includegraphics[scale=0.48]{../paper/FIG/ga_mut}%
+\end{figure}
+\end{frame}
 
 \begin{frame}{Parameters - GA and ES}
         Genetic Algorithm
@@ -227,14 +256,6 @@ Evolutionary Strategy
     \end{enumerate}
 \end{frame}
 
-\begin{frame}{Parameter Selection - GA}
- \begin{figure}
-\centering
-\vspace*{-0.4cm}
-    \includegraphics[scale=0.48]{../paper/FIG/ga_mut}%
-\end{figure}
-\end{frame}
-
 \begin{frame}{Parameter Selection - SA (todo)}
 \end{frame}
 
@@ -248,7 +269,6 @@ Evolutionary Strategy
      \caption*{\tiny Search space for problem with $10$ antennas resembles contours as seen in experiments}
 \end{figure}
 \end{frame}
-
 
 
 \begin{frame}{Equivalence of fitness to efficiency}

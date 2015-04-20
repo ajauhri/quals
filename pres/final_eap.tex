@@ -69,7 +69,7 @@
         \includegraphics[height=2cm,width=2.5cm,keepaspectratio]{ece}
     \end{textblock*}
 }
-\addtobeamertemplate{footnote}{}{\vspace{2ex}}
+%\addtobeamertemplate{footnote}{}{\vspace{2ex}}
 \setbeamercolor*{item}{fg=black}
 % The line below doesn't hide the total frame number, so using 
 % http://tex.stackexchange.com/a/32815/32460 
@@ -99,7 +99,6 @@
 \title{\color{univred} A Comparison of Antenna Placement Algorithms}
 \author{Abhinav Jauhri}
 \date{\today}
-
 \begin{document}
 \begin{frame}[plain]
 %CMU logo in header
@@ -117,7 +116,6 @@
 \begin{itemize} \itemsep1.5em
         \item Antenna placement study is generally ignored 
         \item Placing new antennas requires a long, manual effort to complete an antenna placement study, if at all
-        \item Frequency bands change over time requiring new antennas, and therefore need to find new placements
         \item Parasitic effects due to fixed or mobile platform 
         \item With multiple antennas systems offer interference, and thereby reduce each antenna's efficiency
     \end{itemize}
@@ -214,7 +212,7 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Minimize Mutual Coupling}
+\begin{frame}{Minimize Mutual Coupling (MC)}
     \begin{tcolorbox}[colback=green!5]
         \begin{equation}
             F_{MC} = \sum_{i=1}^{n-1}\sum_{j=i+1}^{n} CP(A_i, A_j),
@@ -229,7 +227,7 @@
     \small\textit{Example:} If $n=3$, then $F_{MC} = CP(A_1, A_2) + CP(A_1, A_3) + CP(A_2, A_3)$
 \end{frame}
 
-\begin{frame}{Free Space Gain Pattern}
+\begin{frame}{Free Space Gain Pattern / Radiation Pattern}
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{figure}
@@ -288,10 +286,10 @@
 
 
 
-\begin{frame}{Minimize Difference in Radiation Pattern}
+\begin{frame}{Minimize Difference in Gain Pattern (GP)}
     \begin{tcolorbox}[colback=green!5]
         \begin{equation} \label{eq:rp}
-            F_{RP} = \sum_{i=1}^n~\sum_{\theta=0}^{\frac{180\degree}{S}}~\sum_{\phi=0}^{\frac{360\degree}{S}}
+            F_{GP} = \sum_{i=1}^n~\sum_{\theta=0}^{\frac{180\degree}{S}}~\sum_{\phi=0}^{\frac{360\degree}{S}}
             \left( FSG_i(S\theta,S\phi) - ISG_i(S\theta,S\phi) \right) ^2,
         \end{equation}
     \end{tcolorbox}
@@ -306,10 +304,11 @@
 \end{frame}
 
 \begin{frame}{Fitness Evaluation}
-    Find a placement such that $F$ is minimal:
+    Find a placement configuration such that \textbf{fitness $F$} is minimal:
+    \vspace*{.5cm}
     \begin{tcolorbox}[colback=green!5]
         \begin{equation} \label{eq:optimal}
-            F = \alpha F_{MC} + \beta F_{RP},
+            F = \alpha F_{MC} + \beta F_{GP},
         \end{equation}
     \end{tcolorbox}
     where $\alpha, \beta$ are adjustable weights for each of the objectives 
@@ -321,42 +320,15 @@
         Part 2: Stochastic Algorithms
     \end{tcolorbox}
 \end{frame}
-\begin{frame}{\null}
-    \begin{tcolorbox}[colback=green!5]
-        \centering
-        Question: Why use stochastic algorithms?
-    \end{tcolorbox}
-\end{frame}
 
-\begin{frame}[t]{Multi-Modal Search Space}
-    \begin{figure}
-        \vspace*{-0.35cm}
-        \centering
-        \includegraphics[scale=0.4]{../paper/FIG/tc1_ss}
-        \caption*{Search space for one of the test cases evaluated. There are multiple local minimas which makes convergence difficult. z-axis is the combined fitness $F$}
-    \end{figure}
-\end{frame}
-
-
-\begin{frame}[t]{Stochastic Algorithms}
-    We will consider algorithms which are based on randomization principle:
-    \vspace{10px}
-\begin{itemize} \itemsep1.5em
-        \item Genetic Algorithm
-        \item Evolutionary Strategy
-        \item Simulated Annealing
-        \item Hill Climbing
-    \end{itemize}
-\end{frame}
-
-\begin{frame}[t]{Stochastic Algorithms: Operand}
+\begin{frame}[t]{Individual(s)}
     An \textbf{individual} is a member of a set of feasible solutions.
 \begin{itemize} \itemsep1.5em
-        \item Simulated Annealing and Hill Climbing maintain single individual\\
+        \item An algorithm operates on an individual:\\
             \adjustbox{valign=t}{%
                 \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
             }
-        \item Genetic Algorithm and Evolutionary Strategy maintain a population of individuals
+        \item Some algorithms operate on a population of individuals:
             \adjustbox{valign=t}{%
                 \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
                 $\bigcdot~\bigcdot~\bigcdot$
@@ -365,33 +337,33 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{Stochastic Algorithms: Mutation Operator}
+\begin{frame}[t]{Mutation Operator}
     \begin{enumerate}
-        \item Given an individual, select an antenna uniformly at random, let's say antenna B:\par
+        \item Given an individual, select an antenna uniformly at random, say antenna B:\par
             \begin{minipage}[t]{\linewidth}
                 \centering
                 \adjustbox{valign=t}{%
-                    \includegraphics[trim=175 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut1}
+                    \includegraphics[trim=175 165 50 145, clip, scale=0.35]{../paper/FIG/tc1_mut1}
                 }
             \end{minipage}
-        \item For antenna B, select any other allowable placement:\par
+        \item Select uniformly at random from other allowable placements of antenna $B$: \par
             \begin{minipage}[t]{\linewidth}
                 \centering
                 \adjustbox{valign=t}{%
-                    \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut2}
+                    \includegraphics[trim=125 165 50 145, clip, scale=0.35]{../paper/FIG/tc1_mut2}
                 }
             \end{minipage}
-        \item Change position for antenna B in individual (antenna A's position remains same):\par
+        \item Change position for antenna B in individual, whereas antenna A's position remains same:\par
             \begin{minipage}[t]{\linewidth}
                 \centering
                 \adjustbox{valign=t}{%
-                    \includegraphics[trim=125 165 50 135, clip, scale=0.35]{../paper/FIG/tc1_mut3}
+                    \includegraphics[trim=125 165 50 145, clip, scale=0.35]{../paper/FIG/tc1_mut3}
                 }
             \end{minipage}
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[t]{Stochastic Algorithms: Crossover Operator}
+\begin{frame}[t]{Crossover Operator}
     \begin{enumerate}
         \item Select two individuals from population:\par
             \begin{minipage}[t]{\linewidth}
@@ -423,48 +395,75 @@
     \end{enumerate}
 \end{frame}
 
+\begin{frame}[t]{Stochastic Algorithms}
+    We will consider algorithms which are based on randomization principle:
+    \vspace{10px}
+\begin{itemize}\itemsep1.5em
+        \item Operate on a population of individuals:
+        \begin{itemize}\itemsep1.5em
+                    \vspace*{1em}
+                \item[1.] \textbf{Genetic Algorithm}
+                \item[2.] \textbf{Evolutionary Strategy}
+            \end{itemize}
+        \item Operate on a single individual:
+        \begin{itemize}\itemsep1.5em
+                    \vspace*{1em}
+                \item[3.] \textbf{Simulated Annealing }
+                \item[4.] \textbf{Hill Climbing }
+    \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{\null}
+    \begin{tcolorbox}[colback=green!5]
+        \centering
+        Question: Why use stochastic algorithms?
+    \end{tcolorbox}
+\end{frame}
+
+\begin{frame}[t]{Fitness Plot}
+    \begin{figure}
+        \vspace*{-0.35cm}
+        \centering
+        \includegraphics[scale=0.4]{../paper/FIG/tc1_ss}
+        \caption*{Search space for one of the test cases evaluated. There are multiple local minimas which makes convergence difficult. z-axis is the combined fitness $F$}
+    \end{figure}
+\end{frame}
+
+
 \begin{frame}{Genetic Algorithm}
     \begin{columns}
         \begin{column}{0.66\linewidth}%added for this algorithm since text wasn't fitting in one slide
-            \begin{spacing}{0.6}
+            \begin{spacing}{1}
                 \fontsize{8}{12}\selectfont
                 \setlength{\interspacetitleruled}{0pt}%
                 \setlength{\algotitleheightrule}{0pt}%
                 \begin{algorithm}[H]
-                    \only<1>{\reduline{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(\textbf{ind}_i), i \in [1,p]$}\;}
-                    \only<2>{\textbf{P} $\leftarrow$ generate $p$ random individuals. Compute $fitness(\textbf{ind}_i), i \in [1,p]$\;}
-                    $i=0$ \;
+                    Generate initial populaiton $P_0$\;
+                    Compute fitness of each individual\;
+                    $i \leftarrow 1$ \;
                     \While{$i<gen_{max}$} {
-                        \only<1>{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'} \;}
-                        \only<2>{\reduline{Elitism: Select $n_e$ fittest individuals to add to \textbf{P'}} \;}
-                        \For{$(p - n_e)/2$ times} {
-                            {\tiny \tcc{'select' returns a pair of individuals}}
-                            $\textbf{M} \leftarrow select(\textbf{P}, 2)$  \;
-                            \eIf {$rand(0,1)<p_c$} {
-                                \only<1>{\textbf{O} $\leftarrow crossover(\textbf{M})$ \;}
-                                \only<2>{\reduline{\textbf{O} $\leftarrow crossover(\textbf{M})$} \;}
-                                Add $O$ to $P'$ \;
-                            }
-                            { Add $M$ to $P'$ \; }
+                        $P_i \leftarrow \emptyset$ \;
+                        \textcolor{red}{Elitism: Copy some percentage of fittest inidividuals to $P_i$} \;
+                        \For{(population\_size - elites) $/2$ } {
+                            Select a pair of individuals  \;
+                            \textcolor{red}{Perform $crossover$ with some probability}\;
+                             Add new or original pair as it is to $P_i$\;
                         }
-                        \only<1>{Uniformly select $p_{m} \cdot (p - n_e)$ individuals from $P$, and apply $mutation$ operator to each \;}
-                        \only<2>{\reduline{Uniformly select $p_{m} \cdot (p - n_e)$ individuals from $P$, and apply $mutation$ operator to each} \;}
-                        Update $P\leftarrow P'$ \;
-                        Compute $fitness(\textbf{ind}_i); i \in [1, p]$\;
+                        \textcolor{red}{Apply \textit{mutation} to a fraction of individuals in $P_i$}\;
                         Update $i \leftarrow i + 1$ \;
                     }
                 \end{algorithm}
             \end{spacing}
         \end{column}
         \begin{column}{0.3\linewidth}
-            \only<2->
-            {
                 \begin{figure}
-                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_ga}}
-                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_ga_anim}}
-                    \caption*{\tiny Population for last generation of a run. Search becomes restricted to some local optimums}
+                    \only<1>{\centerline{\includegraphics[width=4cm]{../paper/FIG/algo_ga}}
+                    \caption*{\tiny Progress of GA applied fitness minimization problem. Each point shows the fitness of the best individual over generations.}}
+                    \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_ga_anim}}
+                    \caption*{\tiny Fitness of population shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex); at $gen_{max}$ over the contour plot. Population has less diversity.}}
                 \end{figure}
-            }
         \end{column}
     \end{columns}
 \end{frame}
@@ -473,33 +472,68 @@
 \begin{frame}{Evolutionary Strategy}
     \begin{columns}
         \begin{column}{0.66\linewidth}
+            \begin{spacing}{1.2}
             \fontsize{8}{12}\selectfont
             \setlength{\interspacetitleruled}{0pt}%
             \setlength{\algotitleheightrule}{0pt}%
             \begin{algorithm}[H]
-                \only<1>{\reduline{\textbf{P}$\leftarrow$ generate $\mu$ random individuals} \;}
-                \only<2>{\textbf{P}$\leftarrow$ generate $\mu$ random individuals \;}
-                $i=0$ \;
+                Generate initial populaiton $P_0$\;
+                Compute fitness of each individual\;
+                $i \leftarrow 1$ \;
                 \While{$i<gen_{max}$} {
-                    \only<1>{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator\;}
-                    Add all offsprings to \textbf{P} \;
-                    \only<2>{\reduline{Create $\lambda / \mu$ offsprings from  each $\mu$ individuals by applying $mutation$ operator} \;}
-                    Compute $fitness(\textbf{ind}_i), i \in [1,\lambda + \mu]$ \;
-                    \only<1>{Keep $\mu$ best individuals in \textbf{P}, and discard remaining $\lambda - \mu$ individuals \;}
-                    \only<2>{\reduline{Keep $\mu$ best individuals in \textbf{P}, and discard remaining $\lambda - \mu$ individuals} \;}
+                    $P_i \leftarrow \emptyset$ \;
+                    \textcolor{red}{Apply $mutation$ operator multiple times to each individual in $P_{i-1}$ to create offsprings} \;
+                    Compute fitness for all offsprings \;
+                    \textcolor{red}{Copy a fraction of $P_{i-1}$ individuals ordered by fitness into $P_i$} \;
                     Update $i \leftarrow i+1$
                 }
             \end{algorithm}
+        \end{spacing}
         \end{column}
         \begin{column}{0.3\linewidth}
-            \only<2->
-            {
                 \begin{figure}
-                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
-                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_es_anim}}
-                    \caption*{\tiny Population with greater diversity in comparison to GA}
+                    \only<1>{\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
+                    \caption*{\tiny Progress of ES applied to fitness minimization problem}}
+                    \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_es_anim}}
+                    \caption*{\tiny Fitness of a population (shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex);) at $gen_{max}$. Greater diversity in comparison to GA\protect\footnotemark}}
                 \end{figure}
-            }
+        \end{column}
+    \end{columns}
+    \vspace*{-.2cm}
+    \only<2->{{\tiny [1] Spears, William M., and Kenneth A. DeJong. "Dining with GAs: operator lunch theorems."}}
+\end{frame}
+
+\begin{frame}{Hill Climbing}
+    \begin{columns}
+        \begin{column}{0.66\linewidth}
+            \begin{spacing}{1.5}
+            \setlength{\interspacetitleruled}{0pt}%
+            \setlength{\algotitleheightrule}{0pt}%
+            \fontsize{8}{8}\selectfont
+            \begin{algorithm}[H]
+                Generate a random inidividual $ind_{curr}$ \;
+                Compute fitness of $ind_{curr}$  \;
+                $i \leftarrow 1$ \;
+                \While{$i<i_{max}$} 
+                {
+                    Create another individual $ind_{new}$ by $mutation$ of $ind_{curr}$ \; 
+                    \If{\textcolor{red}{$fitness(ind_{new}) < fitness(ind_{curr})$}}
+                    {
+                        \textcolor{red}{$ind_{curr} \leftarrow ind_{new}$}
+                    }
+                    $i \leftarrow i + 1$
+                }
+                \label{alg:ap-hc}
+            \end{algorithm}
+        \end{spacing}
+        \end{column}
+        \begin{column}{0.3\linewidth}
+                \begin{figure}
+                    \only<1>{\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_hc}}
+                    \caption*{\tiny Progress of HC applied to fitness minimization problem}}
+                    \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_hc_anim}}
+                    \caption*{\tiny Fitness of $ind_{curr}$ individuals over an entire run shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex);. Search is restricted due to greedy approach to accept only fitter (low fitness) individuals}}
+                \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
@@ -511,24 +545,20 @@
             \setlength{\algotitleheightrule}{0pt}%
             \fontsize{8}{8}\selectfont
             \begin{algorithm}[H]
-%\scriptsize
-                \only<1>{\reduline{\textbf{c} $\leftarrow$ generate a random individual} \;}
-                \only<2>{\textbf{c} $\leftarrow$ generate a random individual \;}
-                $i=0$ \;
-                \While{$i<i_max$} 
+                Generate a random inidividual $ind_{curr}$ \;
+                Compute fitness of $ind_{curr}$  \;
+                $i \leftarrow 1$ \;
+                \While{$i<i_{max}$} 
                 {
-                    \textbf{n} $\leftarrow mutate(\textbf{c})$ \; 
-                    \eIf{$fitness(\textbf{c}) < fitness(\textbf{n})$} 
+                    Create another individual $ind_{new}$ by $mutation$ of $ind_{curr}$ \; 
+                    \eIf{\textcolor{red}{$fitness(ind_{new}) > fitness(ind_{curr})$}}
                     {
-                        \If{\only<1>{$rand(0,1) < e^{-\delta f / T}$} \only<2>{\reduline{$rand(0,1) < e^{-\delta f / T}$}}} 
+                        \If{$rand() < e^{-\delta f / T}$}
                         {
-                            {\tiny \tcc{replace current individual by a higher fitness (less fitter) individual}}
-                            \only<1>{\textbf{c} $ \leftarrow $ \textbf{n}}
-                            \only<2>{\reduline{\textbf{c} $ \leftarrow $ \textbf{n}}}
+                            \textcolor{red}{$ind_{curr} \leftarrow ind_{new}$}
                         }
-                    }  {$\textbf{c} \leftarrow \textbf{n}$ \; }
-                    \only<1>{$T \leftarrow T \cdot f_{cooling}$ \;}
-                    \only<2>{\reduline{$T \leftarrow T \cdot f_{cooling}$} \;}
+                    }  {$ind_{curr} \leftarrow ind_{new}$}
+                    \textcolor{red}{$T \leftarrow T \cdot f_{cooling}$} \;
                     $i \leftarrow i + 1$ \;
                 } 
                 \label{alg:ap-sa}
@@ -539,51 +569,12 @@
                     %{
                     %    \movie[height=3.9cm,width=3.9cm]{\tiny Population over generations}{./animation/es.avi}
                     %}
-            \only<2->
-            {
                 \begin{figure}
-                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_sa}}
-                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_sa_anim}}
-                    \caption*{\tiny Temperature factor allows search distributed weacross the terrain}
+                    \only<1>{\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_sa}}
+                    \caption*{\tiny Progress of SA applied to fitness minimization problem. As iterations increase, worse individuals with lower delta fitness ($\delta f$) are accepted.}}
+                    \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_sa_anim}}
+                    \caption*{\tiny Fitness of $ind_{curr}$ individuals over an entire run shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex);. Search is distributed across the terrain}}
                 \end{figure}
-            }
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Hill Climbing}
-    \begin{columns}
-        \begin{column}{0.66\linewidth}
-            \setlength{\interspacetitleruled}{0pt}%
-            \setlength{\algotitleheightrule}{0pt}%
-            \fontsize{8}{8}\selectfont
-            \begin{algorithm}[H]
-                \only<1>{\reduline{Initialize \textbf{c} $\leftarrow$ generate a random inidividual} \;}
-                \only<2>{Initialize \textbf{c} $\leftarrow$ generate a random inidividual \;}
-                Compute $fitness(\textbf{c})$  \;
-                $i=0$ \;
-                \While{$i<i_{max}$} 
-                {
-                    \textbf{n} $\leftarrow mutate(\textbf{c})$ \; 
-                    \If{\only<1>{$fitness(\textbf{n}) < fitness(\textbf{c})$} \only<2>{\reduline{$fitness(n) < fitness(c)$}}} 
-                    {
-                        \only<1>{$\textbf{c} \leftarrow \textbf{n}$} 
-                        \only<2>{\reduline{$\textbf{c} \leftarrow \textbf{n}$}}
-                    }
-                    $i \leftarrow i + 1$
-                }
-                \label{alg:ap-hc}
-            \end{algorithm}
-        \end{column}
-        \begin{column}{0.3\linewidth}
-            \only<2->
-            {
-                \begin{figure}
-                            %\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_hc}}
-                    \centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_hc_anim}}
-                    \caption*{\tiny Restriced search due to greedy approach to accept only fitter (low fitness) individuals}
-                \end{figure}
-            }
         \end{column}
     \end{columns}
 \end{frame}
@@ -597,12 +588,15 @@
 
 \begin{frame}{Experimental Setup}
 \begin{enumerate}\itemsep1.2em
-        \item All test cases describe platforms which are representative of real-world use cases like mobile devices, trucks, and cars. If one were to scale up we will expect same behaviour to hold
-        \item We use a popular \textit{NEC2} simulator to get fitness parameters 
+        \item We use a popular NEC\footnotemark $~$ simulator to get fitness parameters 
         \item Evaluated the entire search space using an exhaustive algorithm to find the optimal antenna locations which is not ordinarily possible
         \item Termination criteria was set to be at most $50\%$ evaluations of the search spcae
         \item $1000$ independent runs of each test case against each algorithm with $\alpha = \beta = 1/2$
     \end{enumerate}
+    \vspace*{0.5cm}
+    {\tiny [2] Hornby, G., Lohn, J., \& Linden, D. (2011). Computer-automated evolution of an x-band antenna for nasa's space technology 5 mission. Evolutionary computation, 19(1), 1-23. }
+     
+    
     \vspace{10mm}
 \end{frame}
 
@@ -805,11 +799,12 @@
 \end{frame}
 
 \begin{frame}{Conclusion}
-\begin{itemize} \itemsep1.5em
-        \item Formalized the antenna placement problem
-        \item Generic problem formulation to accommodate multiple antennas and platforms
-        \item Optimal placements found using Evolutionary Strategy with at most $25\%$ evaluations of search space with $100\%$ success rate
-        \item Future work - Consider other techniques like \textit{Differential Evolution} and \textit{ALPS}
+\begin{itemize} \itemsep1.2em
+        \item Formulated an automated procedure for the antenna placement problem which aims to improve the working of multiple antenas on a platform
+        \item Results show Simulated Annealing was less successful but faster to converge 
+        \item Slower but more efficient Evolutionary Strategy had a mean of at most $16\%$ evaluations of search space 
+        \item Algorithms reduce search time to $1/4$ in comparison to an exhaustive algorithm
+        \item Future work - Consider other techniques like \textit{Differential Evolution}, \textit{Particle Swarm Optimization} and \textit{ALPS}
     \end{itemize}
 \end{frame}
 
