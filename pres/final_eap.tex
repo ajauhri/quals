@@ -114,7 +114,7 @@
 
 \begin{frame}{Motivation}
 \begin{itemize} \itemsep1.5em
-        \item Antenna placement study is generally ignored 
+        \item Antenna placement study is often ignored 
         \item Placing new antennas requires a long, manual effort to complete an antenna placement study, if at all
         \item Parasitic effects due to fixed or mobile platform 
         \item With multiple antennas systems offer interference, and thereby reduce each antenna's efficiency
@@ -188,7 +188,7 @@
 \end{frame}
 
 \begin{frame}[t]{Mutual Coupling}
-    When two antennas are in proximity, and one is transmitting, the second will receive some of the transmitted energy.\\ \vspace{2mm}
+    When two antennas are in proximity, and one is transmitting, the second will receive some of the transmitted power.\\ \vspace{2mm}
     \begin{figure}\centering
         \begin{tikzpicture} [
                 triangle/.style = {fill=blue!20, regular polygon, regular polygon sides=3 },
@@ -207,7 +207,7 @@
             \draw [-stealth,decorate,decoration=snake] ([yshift=.1cm] a1.north) -- (-1,4) node[above] {\scriptsize $A_{out}$};
             \draw [-stealth,decorate,decoration=snake] ([yshift=.1cm, xshift=.1cm] a2.north) -- (6,4) node[above] {\scriptsize $B_{out}$};
             \draw [-stealth,decorate,decoration=snake] ([yshift=.1cm] a2.north) -- (4,4) node[above] {\scriptsize $B_{out}$};
-            \node[draw, text width=3.8cm] at (8,3) {\tiny $B_{in}~$:  Energy from generator\\$B_{out}$: Energy radiated in space\\{\color{red}$B_c~~$: Coupled energy (undesirable)}\\$A_{out}$: Re-radiated energy\\}; 
+            \node[draw, text width=3.8cm] at (8,3) {\tiny $B_{in}~$:  Power from generator\\$B_{out}$: Power radiated in space\\{\color{red}$B_c~~$: Coupled power (undesirable)}\\$A_{out}$: Re-radiated power\\}; 
         \end{tikzpicture}
     \end{figure}
 \end{frame}
@@ -311,7 +311,7 @@
             F = \alpha F_{MC} + \beta F_{GP},
         \end{equation}
     \end{tcolorbox}
-    where $\alpha, \beta$ are adjustable weights for each of the objectives 
+    where $\alpha,~ \beta$ are adjustable weights for each of the objectives 
 \end{frame}
 
 \begin{frame}{\null}
@@ -460,9 +460,9 @@
         \begin{column}{0.3\linewidth}
                 \begin{figure}
                     \only<1>{\centerline{\includegraphics[width=4cm]{../paper/FIG/algo_ga}}
-                    \caption*{\tiny Progress of GA applied fitness minimization problem. Each point shows the fitness of the best individual over generations.}}
+                    \caption*{\tiny \textbf{Example:} Progress of GA applied fitness minimization problem. Each point shows the fitness of the best individual over iterations.}}
                     \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_ga_anim}}
-                    \caption*{\tiny Fitness of population shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex); at $gen_{max}$ over the contour plot. Population has less diversity.}}
+                    \caption*{\tiny Fitness of population shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex); for last iteration over the contour plot. Population has less diversity.}}
                 \end{figure}
         \end{column}
     \end{columns}
@@ -493,9 +493,9 @@
         \begin{column}{0.3\linewidth}
                 \begin{figure}
                     \only<1>{\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
-                    \caption*{\tiny Progress of ES applied to fitness minimization problem}}
+                    \caption*{\tiny \textbf{Example:} Progress of ES applied to fitness minimization problem}}
                     \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_es_anim}}
-                    \caption*{\tiny Fitness of a population (shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex);) at $gen_{max}$. Greater diversity in comparison to GA\protect\footnotemark}}
+                    \caption*{\tiny Fitness of a population shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex); for last iteration. Greater diversity in comparison to GA\protect\footnotemark}}
                 \end{figure}
         \end{column}
     \end{columns}
@@ -530,7 +530,7 @@
         \begin{column}{0.3\linewidth}
                 \begin{figure}
                     \only<1>{\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_hc}}
-                    \caption*{\tiny Progress of HC applied to fitness minimization problem}}
+                    \caption*{\tiny \textbf{Example:} Progress of HC applied to fitness minimization problem}}
                     \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_hc_anim}}
                     \caption*{\tiny Fitness of $ind_{curr}$ individuals over an entire run shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex);. Search is restricted due to greedy approach to accept only fitter (low fitness) individuals}}
                 \end{figure}
@@ -571,7 +571,7 @@
                     %}
                 \begin{figure}
                     \only<1>{\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_sa}}
-                    \caption*{\tiny Progress of SA applied to fitness minimization problem. As iterations increase, worse individuals with lower delta fitness ($\delta f$) are accepted.}}
+                    \caption*{\tiny \textbf{Example:} Progress of SA applied to fitness minimization problem. As iterations increase, worse individuals with lower delta fitness ($\delta f$) are accepted.}}
                     \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_sa_anim}}
                     \caption*{\tiny Fitness of $ind_{curr}$ individuals over an entire run shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex);. Search is distributed across the terrain}}
                 \end{figure}
@@ -588,15 +588,12 @@
 
 \begin{frame}{Experimental Setup}
 \begin{enumerate}\itemsep1.2em
-        \item We use a popular NEC\footnotemark $~$ simulator to get fitness parameters 
+        \item We use a popular NEC2 simulator to get fitness parameters 
         \item Evaluated the entire search space using an exhaustive algorithm to find the optimal antenna locations which is not ordinarily possible
         \item Termination criteria was set to be at most $50\%$ evaluations of the search spcae
         \item $1000$ independent runs of each test case against each algorithm with $\alpha = \beta = 1/2$
     \end{enumerate}
     \vspace*{0.5cm}
-    {\tiny [2] Hornby, G., Lohn, J., \& Linden, D. (2011). Computer-automated evolution of an x-band antenna for Nasa's space technology. Evolutionary computation, 19(1), 1-23. }
-     
-    
     \vspace{10mm}
 \end{frame}
 
@@ -750,7 +747,7 @@
 
 
 \begin{frame}{Results - Success Rates}
-    \textit{Success rate} report the percentage of runs in which the algorithm is able to find the optimum with $50\%$ evaluations as termination criteria
+    \textit{Success rate} reports percentage of runs in which the algorithm is able to find the optimum with $50\%$ evaluations as termination criteria
     \begin{figure}
         \vspace*{-0.35cm}
         \centering
@@ -759,13 +756,20 @@
 \end{frame}
 
 \begin{frame}{Conclusion}
-\begin{itemize} \itemsep1.2em
-        \item Formulated an automated procedure for the antenna placement problem which aims to improve the working of multiple antenas on a platform
-        \item Results show Simulated Annealing was less successful but faster to converge 
-        \item Evolutionary Strategy was slower but almost 100\% success rate, and a mean of at most $16\%$ evaluations of search space 
+\begin{itemize} \itemsep1.5em
+        \item First study to investigate optimizing multiple antenna placement on a single platform using multiple stochastic algorithms
+        \item Formulated an automated procedure for the antenna placement problem which aims to improve the working of multiple antennas on a platform
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize} \itemsep1.5em
+        \item Results show Simulated Annealing was less successful but faster to converge compared to Evolutionary Strategy
+        \item Evolutionary Strategy was slower to converge but success rate $\approx100\%$ with a mean of at most $16\%$ evaluations of search space 
         \item Algorithms reduce search time to at most $1/4$ in comparison to an exhaustive algorithm
         \item Future work - Consider other techniques like \textit{Differential Evolution}, \textit{Particle Swarm Optimization} and \textit{ALPS}
     \end{itemize}
 \end{frame}
+
 
 \end{document}
