@@ -33,6 +33,7 @@
 \usepackage[upright]{fourier}
 \usetikzlibrary{matrix,arrows,decorations.pathmorphing}
 \usepackage{xparse}
+\beamertemplatenavigationsymbolsempty
 \usepackage[nomessages]{fp}% http://ctan.org/pkg/fp
 \usetikzlibrary{calc}
 \usepackage{breqn} %for dmath
@@ -666,7 +667,7 @@
             \adjustbox{max width=\columnwidth}{\tiny
                 \begin{tabularx}{\columnwidth}{@{}l *4{>{\centering\arraybackslash}X}@{}} 
                     \toprule
-                    Algorith
+                    Algorithm
                     & \multicolumn{2}{c}{\%Evaluations vs. Exhaustive}  
                     & \multicolumn{2}{c}{Best fitness}\\
                     \cmidrule(lr){2-3} \cmidrule(l){4-5}
@@ -755,14 +756,14 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Conclusion}
+\begin{frame}{Conclusions}
 \begin{itemize} \itemsep1.5em
         \item First study to investigate optimizing multiple antenna placement on a single platform using multiple stochastic algorithms
         \item Formulated an automated procedure for the antenna placement problem which aims to improve the working of multiple antennas on a platform
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Conclusion}
+\begin{frame}{Conclusions}
 \begin{itemize} \itemsep1.5em
         \item Results show Simulated Annealing was less successful but faster to converge compared to Evolutionary Strategy
         \item Evolutionary Strategy was slower to converge but success rate $\approx100\%$ with a mean of at most $16\%$ evaluations of search space 
