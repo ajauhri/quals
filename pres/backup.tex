@@ -10,6 +10,7 @@
 \usepackage{tikz}
 \usepackage{fancyvrb}
 \usepackage{soul}
+\usepackage{setspace}
 \usepackage{tabularx, booktabs}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usepackage[update,prepend]{epstopdf}
@@ -242,7 +243,7 @@ Evolutionary Strategy
 \end{frame}
 
 \begin{frame}{Parameter Selection - Temperature (SA)}
-    Initial temperature selected using technique mentioned by [2]. It is important to note that acceptance rate drops monotonically with temperature. 
+    Initial temperature selected using technique mentioned by \textit{Dowsland et al.}. It is important to note that acceptance rate drops monotonically with temperature. 
     \vspace*{.5cm}
     \begin{enumerate}
         \item [Step 1:] Set a large initial temperature
@@ -250,7 +251,7 @@ Evolutionary Strategy
         \item [Step 3:] If the targetted acceptance ratio is not reached, then modify temperature 
         \item [Step 5:] Repeat steps 2 and 3 till predefined acceptance ratio is reached 
     \end{enumerate}
-    {\tiny [2] Dowsland, K. A., \& Thompson, J. M. (2012). Simulated annealing. In Handbook of Natural Computing (pp. 1623-1655). Springer Berlin Heidelberg. }
+    {\tiny Dowsland, K. A., \& Thompson, J. M. (2012). Simulated annealing. In Handbook of Natural Computing (pp. 1623-1655). Springer Berlin Heidelberg. }
 \end{frame}
 
 
@@ -349,6 +350,12 @@ HC & 0.13 & 0.08 & 0.50407 & 0.00761 \\
         \end{threeparttable}
     \end{table}
 \end{frame}
+\begin{frame}[t]{Future Work}
+    Experiments on numerous optimization problems\footnotemark have shown Differential Evolution and Particle Swarm Optimization to have convergence with high success rate. Another paper showed advantages of DE over GA\footnotemark \\
+    \vspace*{2cm}
+    {\tiny [2] Vesterstrom, Jakob, and Rene Thomsen. "A comparative study of differential evolution, particle swarm optimization, and evolutionary algorithms on numerical benchmark problems." Evolutionary Computation, 2004. CEC2004} \\  
+    {\tiny [3] Hegerty et al. "A Comparative Study on Differential Evolution and Genetic Algorithms for Some Combinatorial Problems" }
+\end{frame}
 
 \begin{frame}{Differential Evolution}
     \begin{enumerate}
@@ -365,8 +372,8 @@ HC & 0.13 & 0.08 & 0.50407 & 0.00761 \\
         \item [Step 4:] Selection: Compare trial vector $u_i^{g+1}$ and target vector $x_i^g$, and select the vector which yields a smaller cost function.\\
         \item [Step 5:] Termination check
     \end{enumerate}
-\end{frame}
 
+\end{frame}
 
 \begin{frame}{Particle Swarm Optimization}
     \begin{enumerate}
@@ -374,8 +381,7 @@ HC & 0.13 & 0.08 & 0.50407 & 0.00761 \\
         \item [Step 2:] At each iteration, updated velocity as follows:
             \[ v_i = wv_i + c_1 R_1 (p_{i,best} - p_i) + c_2 R_2 (g_{best} - p_i) ,\]
             where $p_{i,best}, g_{best}$ are positions with best objective value found so far by particle and entire population respectively, $c_1,c_2$ are weighting factors, $R_1,R_2 \thicksim \mathbb U(0,1)$, $w$ is parameter cooling
-        \item [Step 3:] Position updating
-            \[ p_i = p_i + v_i \]
+        \item [Step 3:] Position updating: $p_i = p_i + v_i$
         \item [Step 4:] Memory updating: Update $p_{i,best}$ and $g_{best}$
         \item [Step 5:] Termination check
     \end{enumerate}
