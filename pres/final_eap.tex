@@ -118,7 +118,7 @@
         \item Antenna placement study is often ignored 
         \item Placing new antennas requires a long, manual effort to complete an antenna placement study, if at all
         \item Parasitic effects due to fixed or mobile platform 
-        \item With multiple antennas systems offer interference, and thereby reduce each antenna's efficiency
+        \item Systems with multiple antennas offer interference, and thereby reduce each antenna's efficiency
     \end{itemize}
     \vspace{5mm}
 \end{frame}
@@ -172,7 +172,7 @@
 \begin{frame}[t]{Antenna Placement Problem}
     Given:
 \begin{itemize} \itemsep1.5em
-        \item platform $P$ with its surface gridded such that end points represent possible antenna placements
+        \item platform $P$ with its surface gridded such that end points represent allowable antenna placements
         \item set of  $n$ antennas $A = {A_1, A_2, \dots, A_n}$ such that $n > 1$
         \item for each $A_i$, $L_i$ denote the set of allowable placements $\in \mathbb R^3$ such that $\mid L_i \mid = m_i$ and $\forall i, m_i > 1$\[ L_i = \{(x_{1}, y_{1}, z_{1}) \dots (x_{m_i}, y_{m_i}, z_{m_i})\} \]
     \end{itemize}
@@ -441,7 +441,7 @@
                 \setlength{\interspacetitleruled}{0pt}%
                 \setlength{\algotitleheightrule}{0pt}%
                 \begin{algorithm}[H]
-                    Generate initial populaiton $P_0$\;
+                    Generate initial population $P_0$\;
                     Compute fitness of each individual\;
                     $i \leftarrow 1$ \;
                     \While{$i<gen_{max}$} {
@@ -461,7 +461,7 @@
         \begin{column}{0.3\linewidth}
                 \begin{figure}
                     \only<1>{\centerline{\includegraphics[width=4cm]{../paper/FIG/algo_ga}}
-                    \caption*{\tiny \textbf{Example:} Progress of GA applied fitness minimization problem. Each point shows the fitness of the best individual over iterations.}}
+                    \caption*{\tiny \textbf{Example:} Progress of GA applied to fitness minimization problem. Each point shows the fitness of the best individual over iterations.}}
                     \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_ga_anim}}
                     \caption*{\tiny Fitness of population shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex); for last iteration over the contour plot. Population has less diversity.}}
                 \end{figure}
@@ -478,7 +478,7 @@
             \setlength{\interspacetitleruled}{0pt}%
             \setlength{\algotitleheightrule}{0pt}%
             \begin{algorithm}[H]
-                Generate initial populaiton $P_0$\;
+                Generate initial population $P_0$\;
                 Compute fitness of each individual\;
                 $i \leftarrow 1$ \;
                 \While{$i<gen_{max}$} {
@@ -496,7 +496,7 @@
                     \only<1>{\centerline{\includegraphics[width=5cm]{../paper/FIG/algo_es}}
                     \caption*{\tiny \textbf{Example:} Progress of ES applied to fitness minimization problem}}
                     \only<2>{\centerline{\includegraphics[width=4cm]{../paper/FIG/tc1_es_anim}}
-                    \caption*{\tiny Fitness of a population shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex); for last iteration. Greater diversity in comparison to GA\protect\footnotemark}}
+                    \caption*{\tiny Fitness of a population shown with \tikz\draw[black,fill=white] (0,0) circle (.3ex); for last iteration. Greater diversity\protect\footnotemark in comparison to GA}}
                 \end{figure}
         \end{column}
     \end{columns}
@@ -512,7 +512,7 @@
             \setlength{\algotitleheightrule}{0pt}%
             \fontsize{8}{8}\selectfont
             \begin{algorithm}[H]
-                Generate a random inidividual $ind_{curr}$ \;
+                Generate a random individual $ind_{curr}$ \;
                 Compute fitness of $ind_{curr}$  \;
                 $i \leftarrow 1$ \;
                 \While{$i<i_{max}$} 
@@ -546,7 +546,7 @@
             \setlength{\algotitleheightrule}{0pt}%
             \fontsize{8}{8}\selectfont
             \begin{algorithm}[H]
-                Generate a random inidividual $ind_{curr}$ \;
+                Generate a random individual $ind_{curr}$ \;
                 Compute fitness of $ind_{curr}$  \;
                 $i \leftarrow 1$ \;
                 \While{$i<i_{max}$} 
@@ -591,7 +591,7 @@
 \begin{enumerate}\itemsep1.2em
         \item We use a popular NEC2 simulator to get fitness parameters 
         \item Evaluated the entire search space using an exhaustive algorithm to find the optimal antenna locations which is not ordinarily possible
-        \item Termination criteria was set to be at most $50\%$ evaluations of the search spcae
+        \item Termination criteria was set to be at most $50\%$ evaluations of the search space 
         \item $1000$ independent runs of each test case against each algorithm with $\alpha = \beta = 1/2$
     \end{enumerate}
     \vspace*{0.5cm}
@@ -758,7 +758,7 @@
 
 \begin{frame}{Conclusions}
 \begin{itemize} \itemsep1.5em
-        \item First study to investigate optimizing multiple antenna placement on a single platform using multiple stochastic algorithms
+        \item First study to investigate optimizing multiple antenna placements on a single platform using multiple stochastic algorithms
         \item Formulated an automated procedure for the antenna placement problem which aims to improve the working of multiple antennas on a platform
     \end{itemize}
 \end{frame}
