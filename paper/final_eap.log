@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  23 APR 2015 01:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  23 APR 2015 07:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -442,28 +442,10 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package epstopdf Info: Source file: <FIG/tc2_mf.eps>
-(epstopdf)                    date: 2015-04-23 01:15:33
-(epstopdf)                    size: 1648988 bytes
-(epstopdf)             Output file: <FIG/tc2_mf-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-04-20 17:25:58
-(epstopdf)                    size: 22958 bytes
-(epstopdf)             Command: <repstopdf --outfile=FIG/tc2_mf-eps-converted-t
-o.pdf FIG/tc2_mf.eps>
-(epstopdf)             \includegraphics on input line 73.
-runsystem(repstopdf --outfile=FIG/tc2_mf-eps-converted-to.pdf FIG/tc2_mf.eps)..
-.executed safely (allowed).
-
-Package epstopdf Info: Result file: <FIG/tc2_mf-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-04-23 01:16:18
-(epstopdf)                    size: 22392 bytes.
-
-<FIG/tc2_mf-eps-converted-to.pdf, id=1, 578.16pt x 433.62pt>
-File: FIG/tc2_mf-eps-converted-to.pdf Graphic file (type pdf)
-
-<use FIG/tc2_mf-eps-converted-to.pdf>
-Package pdftex.def Info: FIG/tc2_mf-eps-converted-to.pdf used on input line 73.
-
+<FIG/tc1_ss.png, id=1, 578.16pt x 433.62pt>
+File: FIG/tc1_ss.png Graphic file (type png)
+ <use FIG/tc1_ss.png>
+Package pdftex.def Info: FIG/tc1_ss.png used on input line 73.
 (pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 72--75
@@ -473,7 +455,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--75
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./FIG/tc2_mf-eps-converted-to.pdf>] [2]
+ <./FIG/tc1_ss.png>]
+[2]
 Package epstopdf Info: Source file: <FIG/tc1_figure.eps>
 (epstopdf)                    date: 2015-04-17 01:38:21
 (epstopdf)                    size: 57858 bytes
@@ -484,8 +467,7 @@ Package epstopdf Info: Source file: <FIG/tc1_figure.eps>
 ed-to.pdf FIG/tc1_figure.eps>
 (epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
-
-<FIG/tc1_figure-eps-converted-to.pdf, id=33, 578.16pt x 433.62pt>
+ <FIG/tc1_figure-eps-converted-to.pdf, id=25, 578.16pt x 433.62pt>
 File: FIG/tc1_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc1_figure-eps-converted-to.pdf>
@@ -503,7 +485,7 @@ ed-to.pdf FIG/tc2_figure.eps>
 (epstopdf)             \includegraphics on input line 147.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc2_figure-eps-converted-to.pdf, id=34, 578.16pt x 433.62pt>
+<FIG/tc2_figure-eps-converted-to.pdf, id=26, 578.16pt x 433.62pt>
 File: FIG/tc2_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc2_figure-eps-converted-to.pdf>
@@ -521,7 +503,7 @@ ed-to.pdf FIG/tc3_figure.eps>
 (epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc3_figure-eps-converted-to.pdf, id=35, 578.16pt x 433.62pt>
+<FIG/tc3_figure-eps-converted-to.pdf, id=27, 578.16pt x 433.62pt>
 File: FIG/tc3_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc3_figure-eps-converted-to.pdf>
@@ -539,7 +521,7 @@ ed-to.pdf FIG/tc4_figure.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc4_figure-eps-converted-to.pdf, id=36, 578.16pt x 433.62pt>
+<FIG/tc4_figure-eps-converted-to.pdf, id=28, 578.16pt x 433.62pt>
 File: FIG/tc4_figure-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc4_figure-eps-converted-to.pdf>
@@ -563,7 +545,7 @@ o.pdf FIG/tc1_mf.eps>
 (epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc1_mf-eps-converted-to.pdf, id=37, 578.16pt x 433.62pt>
+<FIG/tc1_mf-eps-converted-to.pdf, id=29, 578.16pt x 433.62pt>
 File: FIG/tc1_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc1_mf-eps-converted-to.pdf>
@@ -580,8 +562,11 @@ Package epstopdf Info: Source file: <FIG/tc2_mf.eps>
 o.pdf FIG/tc2_mf.eps>
 (epstopdf)             \includegraphics on input line 201.
 Package epstopdf Info: Output file is already uptodate.
+
+<FIG/tc2_mf-eps-converted-to.pdf, id=30, 578.16pt x 433.62pt>
 File: FIG/tc2_mf-eps-converted-to.pdf Graphic file (type pdf)
- <use FIG/tc2_mf-eps-converted-to.pdf>
+
+<use FIG/tc2_mf-eps-converted-to.pdf>
 Package pdftex.def Info: FIG/tc2_mf-eps-converted-to.pdf used on input line 201
 .
 (pdftex.def)             Requested size: 253.04987pt x 189.78767pt.
@@ -596,7 +581,7 @@ o.pdf FIG/tc3_mf.eps>
 (epstopdf)             \includegraphics on input line 206.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc3_mf-eps-converted-to.pdf, id=38, 578.16pt x 433.62pt>
+<FIG/tc3_mf-eps-converted-to.pdf, id=31, 578.16pt x 433.62pt>
 File: FIG/tc3_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc3_mf-eps-converted-to.pdf>
@@ -614,7 +599,7 @@ o.pdf FIG/tc4_mf.eps>
 (epstopdf)             \includegraphics on input line 211.
 Package epstopdf Info: Output file is already uptodate.
 
-<FIG/tc4_mf-eps-converted-to.pdf, id=39, 578.16pt x 433.62pt>
+<FIG/tc4_mf-eps-converted-to.pdf, id=32, 578.16pt x 433.62pt>
 File: FIG/tc4_mf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use FIG/tc4_mf-eps-converted-to.pdf>
@@ -635,33 +620,34 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4 <./FIG/tc1_mf-eps-converted-to.pdf> <./FIG/tc3_mf-eps-converted-to.pdf> <./F
-IG/tc4_mf-eps-converted-to.pdf>] (./final_eap.aux) ) 
+[4 <./FIG/tc1_mf-eps-converted-to.pdf> <./FIG/tc2_mf-eps-converted-to.pdf> <./F
+IG/tc3_mf-eps-converted-to.pdf> <./FIG/tc4_mf-eps-converted-to.pdf>]
+(./final_eap.aux) ) 
 Here is how much of TeX's memory you used:
- 5331 strings out of 495028
- 81525 string characters out of 6181498
+ 5336 strings out of 495028
+ 81610 string characters out of 6181498
  138276 words of memory out of 5000000
- 8428 multiletter control sequences out of 15000+600000
+ 8432 multiletter control sequences out of 15000+600000
  42939 words of font info for 88 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
  42i,13n,40p,1160b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-d
-ist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on final_eap.pdf (4 pages, 370042 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on final_eap.pdf (4 pages, 578842 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 259 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
